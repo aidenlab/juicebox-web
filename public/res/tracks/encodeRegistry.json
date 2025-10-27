@@ -1,0 +1,21 @@
+{
+  "hg19": [
+    "res/tracks/hg19_encode.json"
+  ],
+  "hg38": [
+    "res/tracks/hg38_encode.json"
+  ],
+  "hg38_1kg": [
+    "res/tracks/hg38_encode.json"
+  ],
+  "mm10": [
+    "res/tracks/mm10_encode.json"
+  ],
+  "dm3" : [
+    "res/tracks/dm3_encode.json"
+  ],
+  "dm6": [
+    "res/tracks/dm6_encode.json"
+  ]
+
+}

@@ -11,9 +11,9 @@ import {
     dropboxDropdownItem,
     googleDriveButtonImageBase64,
     googleDriveDropdownItem
-} from '../node_modules/igv-widgets/dist/igv-widgets.js'
+} from 'igv-widgets/dist/igv-widgets.js'
 
-import hic from "../node_modules/juicebox.js/dist/juicebox.esm.js"
+import hic from "juicebox.js/dist/juicebox.esm.js"
 import QRCode from "./qrcode.js";
 import configureContactMapLoaders from "./contactMapLoad.js";
 

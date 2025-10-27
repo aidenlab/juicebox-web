@@ -2,8 +2,8 @@
  * Target for rollup to create babelized juicebox for embed.html
  */
 
-import hic from "../node_modules/juicebox.js/dist/juicebox.esm.js"
-import * as GoogleAuth from "../node_modules/google-utils/src/googleAuth.js"
+import hic from "juicebox.js/dist/juicebox.esm.js"
+import * as GoogleAuth from "google-utils/src/googleAuth.js"
 
 async function init(container, config) {
 

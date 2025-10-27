@@ -21,10 +21,11 @@
  *
  */
 
-import hic from "../node_modules/juicebox.js/dist/juicebox.esm.js"
+import hic from "juicebox.js/dist/juicebox.esm.js"
 import * as GoogleAuth from '../node_modules/google-utils/src/googleAuth.js'
-import {AlertSingleton} from '../node_modules/igv-widgets/dist/igv-widgets.js'
+import {AlertSingleton} from 'igv-widgets/dist/igv-widgets.js'
 import {initializationHelper} from "./initializationHelper.js"
+import "../css/app.scss"
 
 document.addEventListener("DOMContentLoaded", async (event) => {
     await init(document.getElementById('app-container'))
