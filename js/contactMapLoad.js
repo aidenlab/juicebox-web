@@ -1,7 +1,6 @@
 import GenericDataSource from "../node_modules/data-modal/src/genericDataSource.js";
 import ModalTable from "../node_modules/data-modal/src/modalTable.js";
 
-import * as GooglePicker from '../node_modules/google-utils/src/googleFilePicker.js'
 import * as FileUtils from '../node_modules/igv-utils/src/fileUtils.js'
 import {aidenLabContactMapDatasourceConfigurator} from './aidenLabContactMapDatasourceConfig.js'
 import {encodeContactMapDatasourceConfiguration} from './encodeContactMapDatasourceConfig.js'
@@ -21,8 +20,6 @@ function configureContactMapLoaders({
                                         encodeHostedModalId,
                                         fourdnModalId,
                                         $dropboxButtons,
-                                        $googleDriveButtons,
-                                        googleEnabled,
                                         mapMenu,
                                         loadHandler
                                     }) {
@@ -72,24 +69,6 @@ function configureContactMapLoaders({
         Dropbox.choose(config);
 
     });
-
-    if (googleEnabled) {
-        $googleDriveButtons.on('click', () => {
-
-            GooglePicker.createDropdownButtonPicker(true, async responses => {
-
-                const paths = responses.map(({name, url: google_url}) => {
-                    return {filename: name, name, google_url};
-                });
-
-                let {name, google_url: path} = paths[0];
-                await loadHandler(path, name, mapType);
-
-            })
-        })
-    } else {
-        $googleDriveButtons.parent().hide();
-    }
 
     appendAndConfigureLoadURLModal(rootContainer, urlLoadModalId, path => {
         const name = FileUtils.getFilename(path);

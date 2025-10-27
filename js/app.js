@@ -22,7 +22,6 @@
  */
 
 import hic from "juicebox.js/dist/juicebox.esm.js"
-import * as GoogleAuth from '../node_modules/google-utils/src/googleAuth.js'
 import {AlertSingleton} from 'igv-widgets/dist/igv-widgets.js'
 import {initializationHelper} from "./initializationHelper.js"
 import { juiceboxConfig } from "../juicebox-config.js"
@@ -43,22 +42,6 @@ async function init(container) {
     AlertSingleton.init(container)
 
     const config = juiceboxConfig || {}   // Imported config
-
-    const google = config.google
-    config.googleEnabled = google && (window.location.protocol === "https:" || window.location.host.startsWith("localhost"))
-    if (config.googleEnabled) {
-        try {
-            await GoogleAuth.init({
-                client_id: google.clientId,
-                apiKey: google.apiKey,
-                scope: 'https://www.googleapis.com/auth/userinfo.profile'
-            })
-            await GoogleAuth.signOut()   // The await is important !!!
-        } catch (e) {
-            console.error(e)
-            AlertSingleton.present(e.message)
-        }
-    }
 
     initializationHelper(container, config)
 
