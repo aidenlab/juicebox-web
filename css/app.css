@@ -78,10 +78,6 @@ a#emailButton:active {
   margin-left: 8px;
   margin-right: 8px;
 }
-.hic-social-button-container div:first-child {
-  width: 65px;
-  margin-top: 4px;
-}
 
 .hic-social-button {
   float: left;

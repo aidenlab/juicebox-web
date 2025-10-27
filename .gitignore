@@ -9,3 +9,4 @@
 *.txt
 .sass-cache
 /package-lock.json
+.env

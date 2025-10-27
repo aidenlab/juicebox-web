@@ -1,24 +1,28 @@
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 import { resolve } from 'path'
 
-export default defineConfig({
-  // Multi-page app configuration
-  build: {
-    rollupOptions: {
-      input: {
-        main: resolve(__dirname, 'index.html'),
-        embed: resolve(__dirname, 'embed.html')
+export default defineConfig(({ mode }) => {
+  // Load env file based on `mode` in the current working directory.
+  const env = loadEnv(mode, process.cwd(), 'VITE_')
+  
+  return {
+    // Multi-page app configuration
+    build: {
+      rollupOptions: {
+        input: {
+          main: resolve(__dirname, 'index.html'),
+          embed: resolve(__dirname, 'embed.html')
+        }
+      },
+      outDir: 'dist',
+      // Remove console.log and debugger statements in production
+      minify: 'terser',
+      terserOptions: {
+        compress: {
+          drop_console: true,
+          drop_debugger: true
+        }
       }
-    },
-    outDir: 'dist',
-    // Remove console.log and debugger statements in production
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true
-      }
-    }
   },
   
   // Public directory for static assets
@@ -47,5 +51,6 @@ export default defineConfig({
     include: [
       'juicebox.js'
     ]
+  }
   }
 })

@@ -16,11 +16,16 @@ import {
 import hic from "juicebox.js/dist/juicebox.esm.js"
 import QRCode from "./qrcode.js";
 import configureContactMapLoaders from "./contactMapLoad.js";
+import {tinyURLShortener} from "./urlShortener.js";
 
 let currentGenomeId
 let genomeDerivedTrackConfigurations
+let shortenURL
 
 function initializationHelper(container, config) {
+
+    // Initialize URL shortener
+    shortenURL = tinyURLShortener(config.urlShortener || {})
 
     configureSequenceAndRefSeqGeneTrackToggle()
 
@@ -488,30 +493,21 @@ function configureShareModal(container, config) {
         $hic_share_url.val(shareUrl);
         $hic_share_url.get(0).select();
 
-        const tweetContainer = $('#tweetButtonContainer');
-        tweetContainer.empty();
-
         $('#emailButton').attr('href', 'mailto:?body=' + shareUrl);
 
-        if (shareUrl.length < 100) {
-
-            await window.twttr.widgets.createShareButton(shareUrl, tweetContainer.get(0), {text: 'Contact map: '});
-            console.log("Tweet button updated");
-
-            // QR code generation
-            if (qrcode) {
-                qrcode.clear();
-                $('hic-qr-code-image').empty();
-            } else {
-                qrcode = new QRCode(document.getElementById("hic-qr-code-image"), {
-                    width: 128,
-                    height: 128,
-                    correctLevel: QRCode.CorrectLevel.H
-                });
-            }
-
-            qrcode.makeCode(shareUrl);
+        // QR code generation
+        if (qrcode) {
+            qrcode.clear();
+            $('hic-qr-code-image').empty();
+        } else {
+            qrcode = new QRCode(document.getElementById("hic-qr-code-image"), {
+                width: 128,
+                height: 128,
+                correctLevel: QRCode.CorrectLevel.H
+            });
         }
+
+        qrcode.makeCode(shareUrl);
 
     });
 
@@ -596,23 +592,11 @@ function updateControlMapDropdown(browser) {
 }
 
 /**
- * Shorten the url
+ * Shorten the juicebox URL
  *
- * TODO -- this should be configurable
- * * *
- * @param url
+ * @param base The base URL
  * @returns {Promise<string>}
  */
-async function shortenURL (url) {
-    const enc = encodeURIComponent(url)
-    const response = await fetch(`https://2et6uxfezb.execute-api.us-east-1.amazonaws.com/dev/tinyurl/${enc}`)
-    if (response.ok) {
-        return response.text()
-    } else {
-        throw new Error(response.statusText)
-    }
-}
-
 async function shortJuiceboxURL(base) {
     const url = `${base}?${hic.compressedSession()}`;
     return shortenURL(url);

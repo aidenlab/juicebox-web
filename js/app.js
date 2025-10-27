@@ -25,6 +25,7 @@ import hic from "juicebox.js/dist/juicebox.esm.js"
 import * as GoogleAuth from '../node_modules/google-utils/src/googleAuth.js'
 import {AlertSingleton} from 'igv-widgets/dist/igv-widgets.js'
 import {initializationHelper} from "./initializationHelper.js"
+import { juiceboxConfig } from "../juicebox-config.js"
 import "../css/app.scss"
 
 document.addEventListener("DOMContentLoaded", async (event) => {
@@ -41,7 +42,7 @@ async function init(container) {
 
     AlertSingleton.init(container)
 
-    const config = window.juiceboxConfig || {}   // From script include.  Optional.
+    const config = juiceboxConfig || {}   // Imported config
 
     const google = config.google
     config.googleEnabled = google && (window.location.protocol === "https:" || window.location.host.startsWith("localhost"))

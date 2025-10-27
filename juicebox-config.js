@@ -2,7 +2,7 @@
  * @author Jim Robinson Nov-2019
  */
 
-var juiceboxConfig = {
+const juiceboxConfig = {
 
     genome:'https://igv.org/genomes/genomes.json',
 
@@ -21,6 +21,14 @@ var juiceboxConfig = {
 
     trackRegistryFile: "res/tracks/encodeRegistry.json",
 
+    // URL shortener configuration
+    urlShortener: {
+        provider: 'tinyURL',
+        apiKey: typeof import.meta.env !== 'undefined' && import.meta.env.VITE_TINYURL_JUICEBOX_API_KEY || 'YOUR_TINYURL_API_KEY',
+        domain: 't.3dg.io',
+        endpoint: 'https://api.tinyurl.com/create'
+    }
+
     // Supply a Google client id to enable loading of private Google files.  Supply an API key to
     // enable loading of public Google files without login.
     // google: {
@@ -28,3 +36,5 @@ var juiceboxConfig = {
     //     apiKey: "GOOGLE API KEY"
     // }
 }
+
+export { juiceboxConfig }
