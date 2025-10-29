@@ -1,0 +1,184 @@
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Juicebox</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+    <!-- Juicebox CSS-->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/aidenlab/juicebox.js@dat-modernize/dist/css/juicebox.css">
+
+</head>
+
+<body>
+<h1>Dynamic load example</h1>
+
+This example illustrates the use of the juicebox API to dynamically load a map and tracks from menu actions.
+
+<div style="margin-top: 50px;">
+    <h2>Step 1: Select a hic file to load</h2>
+    <label for="hic-select"><span style="font-size: large;font-weight: bold">Contact Matrix (.hic file)</span></label>
+    <select id="hic-select">
+        <option value="">None</option>
+        <option value="https://www.encodeproject.org/files/ENCFF718AWL/@@download/ENCFF718AWL.hic">GM12878</option>
+        <option value="https://www.encodeproject.org/files/ENCFF406HHC/@@download/ENCFF406HHC.hic">K562</option>
+    </select>
+</div>
+
+<div style="margin-top: 50px;margin-bottom: 50px">
+    <h2>Step 2: Select a track</h2>
+    <label for="tracks-select"><span style="font-size: large;font-weight: bold">Tracks</span></label>
+    <select id="tracks-select" disabled>
+        <option value="">None</option>
+        <option value="GM12878">GM12878 CTCF</option>
+        <option value="K562">K562 CTCF</option>
+    </select>
+</div>
+
+<div style="margin-top: 50px;margin-bottom: 50px">
+    <h2>Step 3: Load Session File (Optional)</h2>
+    <label for="session-input"><span style="font-size: large;font-weight: bold">Session File URL or Local File</span></label>
+    <div style="margin-top: 10px;">
+        <input type="text" id="session-input" placeholder="Enter session file URL or select local file" style="width: 400px; padding: 5px;">
+        <input type="file" id="session-file-input" accept=".json" style="margin-left: 10px;">
+        <button id="load-session-btn" style="margin-left: 10px; padding: 5px 15px;">Load Session</button>
+    </div>
+    <div style="margin-top: 10px;">
+        <small>You can load a session file to restore a previous Juicebox state with tracks, zoom level, and other settings.</small>
+        <br>
+        <small><strong>Note:</strong> Session loading will override any currently loaded Hi-C files and tracks.</small>
+        <br>
+        <small><strong>Supported URLs:</strong> Dropbox URLs are automatically converted to direct download links.</small>
+        <br>
+        <small><strong>Sample:</strong> You can test with a sample session file that includes GM12878 data and tracks.</small>
+    </div>
+</div>
+
+
+<div id="app-container"></div>
+
+
+<script type="module">
+
+    import juicebox from "https://cdn.jsdelivr.net/gh/aidenlab/juicebox.js@dat-modernize/dist/juicebox.esm.js"
+
+    const config = {}
+
+    const container = document.getElementById("app-container");
+
+    juicebox.init(container, config)
+        .then(function (hicBrowser) {
+            console.log("Juicebox loaded");
+            initMenus(hicBrowser);
+        })
+
+
+    function initMenus(hicBrowser) {
+        const hicSelect = document.getElementById("hic-select");
+        const tracksSelect = document.getElementById("tracks-select");
+        const sessionInput = document.getElementById("session-input");
+        const sessionFileInput = document.getElementById("session-file-input");
+        const loadSessionBtn = document.getElementById("load-session-btn");
+
+        hicSelect.onchange = async (e) => {
+            const idx = hicSelect.selectedIndex;
+            const option = hicSelect.options[idx];
+            const currentBrowser = juicebox.getCurrentBrowser();
+            if (currentBrowser) {
+                await currentBrowser.loadHicFile({url: option.value});
+                tracksSelect.removeAttribute("disabled")
+            }
+        }
+
+        tracksSelect.onchange = (e) => {
+            const idx = tracksSelect.selectedIndex;
+            const option = tracksSelect.options[idx];
+            const trackConfig = trackDictionary[option.value];
+            const currentBrowser = juicebox.getCurrentBrowser();
+            if (currentBrowser) {
+                currentBrowser.loadTracks([trackConfig]);
+            }
+        }
+
+        // Handle file input change
+        sessionFileInput.onchange = (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                sessionInput.value = file.name;
+            }
+        }
+
+        // Handle session loading
+        loadSessionBtn.onclick = async (e) => {
+            try {
+                let sessionData;
+                
+                // Check if a local file is selected
+                if (sessionFileInput.files.length > 0) {
+                    const file = sessionFileInput.files[0];
+                    const text = await file.text();
+                    sessionData = JSON.parse(text);
+                } else if (sessionInput.value.trim()) {
+                    // Load from URL using Juicebox's igvxhr (handles Dropbox URLs properly)
+                    const url = sessionInput.value.trim();
+                    const response = await juicebox.igvxhr.loadString(url);
+                    sessionData = JSON.parse(response);
+                } else {
+                    alert("Please enter a session file URL or select a local file.");
+                    return;
+                }
+
+                // Load the session using the correct API
+                await juicebox.restoreSession(container, sessionData);
+                console.log("Session loaded successfully");
+                
+                // Get the updated browser instance after session restore
+                const updatedBrowser = juicebox.getCurrentBrowser();
+                if (updatedBrowser) {
+                    // Enable tracks select if it was disabled
+                    tracksSelect.removeAttribute("disabled");
+                }
+                
+            } catch (error) {
+                console.error("Error loading session:", error);
+                alert(`Error loading session: ${error.message}`);
+            }
+        }
+
+    }
+
+
+    // Define a couple of track configurations
+    const trackDictionary = {
+
+        "GM12878": {
+            "name": "GM12878 CTCF ",
+            "url": "https://www.encodeproject.org/files/ENCFF000ARJ/@@download/ENCFF000ARJ.bigWig",
+            "autoscale": true,
+            "displayMode": "COLLAPSED",
+            "format": "bigwig",
+            "color": "rgb(0,150,0)",
+            "height": 40
+        },
+        "K562": {
+            "name": "K562 CTCF ",
+            "url": "https://www.encodeproject.org/files/ENCFF000YMA/@@download/ENCFF000YMA.bigWig",
+            "autoscale": true,
+            "displayMode": "COLLAPSED",
+            "format": "bigwig",
+            "color": "rgb(0, 150, 0)",
+            "height": 40
+        }
+    }
+
+    const t = []
+
+
+</script>
+
+</body>
+
+</html>

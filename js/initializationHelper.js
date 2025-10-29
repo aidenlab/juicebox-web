@@ -1,15 +1,8 @@
-import {loadString} from "./stringLoader.js"
+import hic from "../node_modules/juicebox.js/dist/juicebox.esm.js"
 import * as StringUtils from '../node_modules/igv-utils/src/stringUtils.js'
-import {
-    AlertSingleton,
-    createSessionWidgets,
-    createTrackWidgetsWithTrackRegistry,
-    updateTrackMenus,
-    dropboxButtonImageBase64,
-    dropboxDropdownItem,
-} from 'igv-widgets/dist/igv-widgets.js'
-
-import hic from "juicebox.js/dist/juicebox.esm.js"
+import {loadString} from "./stringLoader.js"
+import { AlertSingleton, createTrackWidgetsWithTrackRegistry, updateTrackMenus, dropboxButtonImageBase64 } from '../node_modules/igv-widgets/dist/igv-widgets.js'
+import { configureSessionWidgets } from "./sessionManager.js"
 import QRCode from "./qrcode.js";
 import configureContactMapLoaders from "./contactMapLoad.js";
 import {tinyURLShortener} from "./urlShortener.js";
@@ -432,27 +425,7 @@ function createAppCloneButton(container) {
 
 }
 
-function configureSessionWidgets(container) {
-
-    $('div#igv-session-dropdown-menu > :nth-child(1)').after(dropboxDropdownItem('igv-app-dropdown-dropbox-session-file-button'))
-
-    createSessionWidgets($(container),
-        'juicebox-webapp',
-        'igv-app-dropdown-local-session-file-input',
-        () => Promise.resolve(true),
-        'igv-app-dropdown-dropbox-session-file-button',
-        undefined,
-        'igv-app-session-url-modal',
-        'igv-app-session-save-modal',
-        false,
-        async config => await hic.restoreSession(container, config),
-        () => hic.toJSON()
-    )
-
-}
-
 let qrcode = undefined;
-
 
 function configureShareModal(container, config) {
 

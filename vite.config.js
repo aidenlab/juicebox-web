@@ -43,6 +43,9 @@ export default defineConfig(({ mode }) => {
     open: true
   },
   
+  // Suppress source map warnings
+  logLevel: 'warn',
+  
   // Asset handling
   assetsInclude: ['**/*.json', '**/*.svg'],
   

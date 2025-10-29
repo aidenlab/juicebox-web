@@ -1,43 +1,9 @@
 /**
- * Object mimics two methods from the igvxhr interface, purpose is to break dependency on igvxhr.
- * Widgets do not need the services provided by that object *
+ * Re-export loadString and loadJson functions from igv-utils
+ * This maintains the same interface while using the original implementations
  */
 
-async function loadJson (url) {
-    const result = await this.loadString(url)
-    if (result) {
-        return JSON.parse(result)
-    } else {
-        return result
-    }
-}
+import igvxhr from '../node_modules/igv-utils/src/igvxhr.js'
 
-async function loadString (path) {
-    if (path instanceof File) {
-        return loadStringFromFile(path)
-    } else {
-        return loadStringFromUrl(path)
-    }
-}
-
-async function loadStringFromFile(localfile) {
-
-    const blob = localfile
-    const arrayBuffer = await blob.arrayBuffer()
-    return arrayBufferToString(arrayBuffer)
-}
-
-
-async function loadStringFromUrl(url) {
-    const response = await fetch(url)
-    const data = await response.arrayBuffer()
-    return arrayBufferToString(data)
-}
-
-function arrayBufferToString(arraybuffer) {
-    let plain= new Uint8Array(arraybuffer)
-    return new TextDecoder().decode(plain)
-}
-
-
-export {loadString, loadJson}
+export const loadString = igvxhr.loadString.bind(igvxhr)
+export const loadJson = igvxhr.loadJson.bind(igvxhr)
