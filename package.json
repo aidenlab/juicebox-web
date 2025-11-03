@@ -13,13 +13,15 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build && node scripts/generateHtml.js index.html && node scripts/generateHtml.js ./aiden_lab_navbar_additions.html aidenLab.html",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "postinstall": "patch-package"
   },
   "devDependencies": {
     "data-modal": "github:igvteam/data-modal#v1.5.0",
     "igv-utils": "github:igvteam/igv-utils#v1.4.5",
     "igv-widgets": "github:igvteam/igv-widgets#master",
     "juicebox.js": "github:aidenlab/juicebox.js#dat-modernize",
+    "patch-package": "^8.0.1",
     "sass": "^1.93.2",
     "terser": "^5.44.0",
     "vite": "^7.1.12"
