@@ -13,8 +13,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build && node scripts/generateHtml.js index.html && node scripts/generateHtml.js ./aiden_lab_navbar_additions.html aidenLab.html",
-    "preview": "vite preview",
-    "postinstall": "patch-package"
+    "preview": "vite preview"
   },
   "devDependencies": {
     "data-modal": "github:igvteam/data-modal#v1.5.0",
