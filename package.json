@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "data-modal": "github:igvteam/data-modal#v1.5.0",
+    "dotenv": "^17.2.3",
     "igv-utils": "github:igvteam/igv-utils#v1.4.5",
     "igv-widgets": "github:igvteam/igv-widgets#master",
     "juicebox.js": "github:aidenlab/juicebox.js#v3.0.0-spacewalk",
