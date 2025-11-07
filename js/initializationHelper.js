@@ -1,4 +1,4 @@
-import hic from "../node_modules/juicebox.js/dist/juicebox.esm.js"
+import hic from "juicebox.js"
 import * as StringUtils from '../node_modules/igv-utils/src/stringUtils.js'
 import {loadString} from "./stringLoader.js"
 import { AlertSingleton, createTrackWidgetsWithTrackRegistry, updateTrackMenus, dropboxButtonImageBase64 } from '../node_modules/igv-widgets/dist/igv-widgets.js'

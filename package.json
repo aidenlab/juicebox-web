@@ -20,8 +20,8 @@
     "dotenv": "^17.2.3",
     "igv-utils": "github:igvteam/igv-utils#v1.4.5",
     "igv-widgets": "github:igvteam/igv-widgets#master",
-    "juicebox.js": "github:aidenlab/juicebox.js#v3.0.0-spacewalk",
-    "patch-package": "^8.0.1",
+    "juicebox.js": "github:aidenlab/juicebox.js#refactor-browser-god-object",
+    "patch-package": "^8.0.0",
     "sass": "^1.93.2",
     "terser": "^5.44.0",
     "vite": "^7.1.12"

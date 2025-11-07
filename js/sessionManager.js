@@ -2,10 +2,9 @@
  * Session Management Module
  * Handles loading and saving of Juicebox session files without jQuery dependencies
  */
-
-import {loadString} from "./stringLoader.js"
+import hic from "juicebox.js"
 import {AlertSingleton} from '../node_modules/igv-widgets/dist/igv-widgets.js'
-import hic from "../node_modules/juicebox.js/dist/juicebox.esm.js"
+import {loadString} from "./stringLoader.js"
 
 /**
  * Load session from a local File object
@@ -91,17 +90,17 @@ export function saveSession(sessionData) {
         const jsonString = JSON.stringify(sessionData, null, 2);
         const blob = new Blob([jsonString], { type: 'application/json' });
         const url = URL.createObjectURL(blob);
-        
+
         const timestamp = new Date().toISOString().replace(/[:.]/g, '-').slice(0, -5);
         const filename = `juicebox-session-${timestamp}.json`;
-        
+
         const a = document.createElement('a');
         a.href = url;
         a.download = filename;
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
-        
+
         // Clean up the object URL
         setTimeout(() => URL.revokeObjectURL(url), 100);
     } catch (error) {
@@ -115,12 +114,12 @@ export function saveSession(sessionData) {
  */
 export function showModal(modalElement) {
     if (!modalElement) return;
-    
+
     // Set tabindex for focus management
     if (!modalElement.hasAttribute('tabindex')) {
         modalElement.setAttribute('tabindex', '-1');
     }
-    
+
     // Add backdrop if it doesn't exist
     let backdrop = document.querySelector('.modal-backdrop');
     if (!backdrop) {
@@ -131,15 +130,15 @@ export function showModal(modalElement) {
         void backdrop.offsetWidth;
         backdrop.classList.add('show');
     }
-    
+
     // Show modal
     modalElement.classList.add('show');
     modalElement.style.display = 'block';
     document.body.classList.add('modal-open');
-    
+
     // Focus the modal
     modalElement.focus();
-    
+
     // Trigger shown event
     const shownEvent = new Event('shown.bs.modal', { bubbles: true });
     modalElement.dispatchEvent(shownEvent);
@@ -151,12 +150,12 @@ export function showModal(modalElement) {
  */
 export function hideModal(modalElement) {
     if (!modalElement) return;
-    
+
     // Hide modal
     modalElement.classList.remove('show');
     modalElement.style.display = 'none';
     document.body.classList.remove('modal-open');
-    
+
     // Remove backdrop
     const backdrop = document.querySelector('.modal-backdrop');
     if (backdrop) {
@@ -167,7 +166,7 @@ export function hideModal(modalElement) {
             }
         }, 150); // Match Bootstrap's transition duration
     }
-    
+
     // Trigger hidden event
     const hiddenEvent = new Event('hidden.bs.modal', { bubbles: true });
     modalElement.dispatchEvent(hiddenEvent);
@@ -205,30 +204,30 @@ export function createSessionModals(container) {
             </div>
         </div>
     `;
-    
+
     // Append modals to container (only load URL modal needed)
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = loadUrlModalHTML;
     while (tempDiv.firstChild) {
         container.appendChild(tempDiv.firstChild);
     }
-    
+
     const loadUrlModal = document.getElementById('igv-app-session-url-modal');
-    
+
     // Setup close buttons
     if (loadUrlModal) {
         const closeButtons = loadUrlModal.querySelectorAll('.close, [data-dismiss="modal"]');
         closeButtons.forEach(btn => {
             btn.addEventListener('click', () => hideModal(loadUrlModal));
         });
-        
+
         // Close on backdrop click
         loadUrlModal.addEventListener('click', (e) => {
             if (e.target === loadUrlModal) {
                 hideModal(loadUrlModal);
             }
         });
-        
+
         // Close on Escape key
         loadUrlModal.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && loadUrlModal.classList.contains('show')) {
@@ -236,7 +235,7 @@ export function createSessionModals(container) {
             }
         });
     }
-    
+
     return {
         loadUrlModal,
         showModal,
