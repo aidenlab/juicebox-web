@@ -19,7 +19,7 @@
     "data-modal": "github:igvteam/data-modal#v1.5.0",
     "igv-utils": "github:igvteam/igv-utils#v1.4.5",
     "igv-widgets": "github:igvteam/igv-widgets#master",
-    "juicebox.js": "github:aidenlab/juicebox.js#dat-modernize",
+    "juicebox.js": "github:aidenlab/juicebox.js#v3.0.0-spacewalk",
     "patch-package": "^8.0.1",
     "sass": "^1.93.2",
     "terser": "^5.44.0",
