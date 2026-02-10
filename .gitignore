@@ -10,3 +10,4 @@
 .sass-cache
 /package-lock.json
 .env
+/juicebox-web-dat-modernize/
