@@ -16,11 +16,15 @@ import {
 import hic from "../node_modules/juicebox.js/dist/juicebox.esm.js"
 import QRCode from "./qrcode.js";
 import configureContactMapLoaders from "./contactMapLoad.js";
+import {tinyURLShortener} from "./urlShortener.js";
 
 let currentGenomeId
 let genomeDerivedTrackConfigurations
+let shortenURL
 
 function initializationHelper(container, config) {
+
+    shortenURL = tinyURLShortener(config.urlShortener || {})
 
     configureSequenceAndRefSeqGeneTrackToggle()
 
@@ -596,23 +600,11 @@ function updateControlMapDropdown(browser) {
 }
 
 /**
- * Shorten the url
+ * Shorten the juicebox URL
  *
- * TODO -- this should be configurable
- * * *
- * @param url
+ * @param base The base URL
  * @returns {Promise<string>}
  */
-async function shortenURL (url) {
-    const enc = encodeURIComponent(url)
-    const response = await fetch(`https://2et6uxfezb.execute-api.us-east-1.amazonaws.com/dev/tinyurl/${enc}`)
-    if (response.ok) {
-        return response.text()
-    } else {
-        throw new Error(response.statusText)
-    }
-}
-
 async function shortJuiceboxURL(base) {
     const url = `${base}?${hic.compressedSession()}`;
     return shortenURL(url);

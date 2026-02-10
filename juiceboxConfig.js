@@ -21,6 +21,14 @@ var juiceboxConfig = {
 
     trackRegistryFile: "res/tracks/encodeRegistry.json",
 
+    // URL shortener configuration (__TINYURL_JUICEBOX_API_KEY__ replaced at build time)
+    urlShortener: {
+        provider: 'tinyURL',
+        apiKey: '__TINYURL_JUICEBOX_API_KEY__',
+        domain: 't.3dg.io',
+        endpoint: 'https://api.tinyurl.com/create'
+    },
+
     // Supply a Google client id to enable loading of private Google files.  Supply an API key to
     // enable loading of public Google files without login.
     // google: {
