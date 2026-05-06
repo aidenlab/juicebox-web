@@ -492,30 +492,20 @@ function configureShareModal(container, config) {
         $hic_share_url.val(shareUrl);
         $hic_share_url.get(0).select();
 
-        const tweetContainer = $('#tweetButtonContainer');
-        tweetContainer.empty();
-
         $('#emailButton').attr('href', 'mailto:?body=' + shareUrl);
 
-        if (shareUrl.length < 100) {
-
-            await window.twttr.widgets.createShareButton(shareUrl, tweetContainer.get(0), {text: 'Contact map: '});
-            console.log("Tweet button updated");
-
-            // QR code generation
-            if (qrcode) {
-                qrcode.clear();
-                $('hic-qr-code-image').empty();
-            } else {
-                qrcode = new QRCode(document.getElementById("hic-qr-code-image"), {
-                    width: 128,
-                    height: 128,
-                    correctLevel: QRCode.CorrectLevel.H
-                });
-            }
-
-            qrcode.makeCode(shareUrl);
+        if (qrcode) {
+            qrcode.clear();
+            $('hic-qr-code-image').empty();
+        } else {
+            qrcode = new QRCode(document.getElementById("hic-qr-code-image"), {
+                width: 128,
+                height: 128,
+                correctLevel: QRCode.CorrectLevel.H
+            });
         }
+
+        qrcode.makeCode(shareUrl);
 
     });
 
