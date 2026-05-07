@@ -27,12 +27,5 @@ var juiceboxConfig = {
         apiKey: '__TINYURL_JUICEBOX_API_KEY__',
         domain: 't.3dg.io',
         endpoint: 'https://api.tinyurl.com/create'
-    },
-
-    // Supply a Google client id to enable loading of private Google files.  Supply an API key to
-    // enable loading of public Google files without login.
-    // google: {
-    //     clientId: "GOOGLE CLIENT ID",
-    //     apiKey: "GOOGLE API KEY"
-    // }
+    }
 }

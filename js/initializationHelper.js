@@ -8,9 +8,7 @@ import {
     createTrackWidgetsWithTrackRegistry,
     updateTrackMenus,
     dropboxButtonImageBase64,
-    dropboxDropdownItem,
-    googleDriveButtonImageBase64,
-    googleDriveDropdownItem
+    dropboxDropdownItem
 } from '../node_modules/igv-widgets/dist/igv-widgets.js'
 
 import hic from "../node_modules/juicebox.js/dist/juicebox.esm.js"
@@ -35,16 +33,10 @@ function initializationHelper(container, config) {
 
     updateControlMapDropdownForAllBrowser()
 
-    configureSessionWidgets(container, config.googleEnabled)
+    configureSessionWidgets(container)
 
-    const str = 'track'
-    let imgElement
-
-    imgElement = document.querySelector(`img#igv-app-${str}-dropbox-button-image`)
-    imgElement.src = `data:image/svg+xml;base64,${dropboxButtonImageBase64()}`
-
-    imgElement = document.querySelector(`img#igv-app-${str}-google-drive-button-image`)
-    imgElement.src = `data:image/svg+xml;base64,${googleDriveButtonImageBase64()}`
+    const dropboxImg = document.querySelector('img#igv-app-track-dropbox-button-image')
+    dropboxImg.src = `data:image/svg+xml;base64,${dropboxButtonImageBase64()}`
 
     const initializeDropbox = async () => Promise.resolve(true)
 
@@ -54,8 +46,8 @@ function initializationHelper(container, config) {
         $('#hic-local-track-file-input'),
         initializeDropbox,
         $('#hic-track-dropdown-dropbox-button'),
-        config.googleEnabled,
-        $('#hic-track-dropdown-google-drive-button'),
+        undefined,
+        undefined,
         ['hic-app-encode-signals-chip-modal', 'hic-app-encode-signals-other-modal', 'hic-app-encode-others-modal'],
         'track-load-url-modal',
         undefined,
@@ -78,8 +70,6 @@ function initializationHelper(container, config) {
             encodeHostedModalId: 'hic-encode-hosted-contact-map-modal',
             fourdnModalId: 'hic-4dn-contact-map-modal',
             dropboxButtons: queryAllWithin(dropdowns, 'div[id$="-map-dropdown-dropbox-button"]'),
-            googleDriveButtons: queryAllWithin(dropdowns, 'div[id$="-map-dropdown-google-drive-button"]'),
-            googleEnabled: config.googleEnabled,
             mapMenu: config.mapMenu,
             loadHandler: (path, name, mapType) => loadHicFile(path, name, mapType)
         };
@@ -443,12 +433,10 @@ function createAppCloneButton(container) {
 
 }
 
-function configureSessionWidgets(container, googleEnabled) {
+function configureSessionWidgets(container) {
 
     document.querySelector('div#igv-session-dropdown-menu > :nth-child(1)')
         .insertAdjacentHTML('afterend', dropboxDropdownItem('igv-app-dropdown-dropbox-session-file-button'))
-    document.querySelector('div#igv-session-dropdown-menu > :nth-child(2)')
-        .insertAdjacentHTML('afterend', googleDriveDropdownItem('igv-app-dropdown-google-drive-session-file-button'))
 
     // TODO(jquery-purge): igv-widgets factory requires jQuery container
     createSessionWidgets($(container),
@@ -456,10 +444,10 @@ function configureSessionWidgets(container, googleEnabled) {
         'igv-app-dropdown-local-session-file-input',
         () => Promise.resolve(true),
         'igv-app-dropdown-dropbox-session-file-button',
-        'igv-app-dropdown-google-drive-session-file-button',
+        undefined,
         'igv-app-session-url-modal',
         'igv-app-session-save-modal',
-        /*googleEnabled*/false,
+        undefined,
         async config => await hic.restoreSession(container, config),
         () => hic.toJSON()
     )
