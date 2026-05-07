@@ -22,7 +22,7 @@
  */
 
 import hic from "../node_modules/juicebox.js/dist/juicebox.esm.js"
-import {AlertSingleton} from '../node_modules/igv-widgets/dist/igv-widgets.js'
+import {AlertSingleton} from './alertSingleton.js'
 import {initializationHelper} from "./initializationHelper.js"
 
 document.addEventListener("DOMContentLoaded", async (event) => {
