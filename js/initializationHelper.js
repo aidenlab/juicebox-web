@@ -1,5 +1,4 @@
 import {loadString} from "./stringLoader.js"
-import * as StringUtils from '../node_modules/igv-utils/src/stringUtils.js'
 
 
 import {
@@ -394,7 +393,7 @@ async function loadAnnotationDatalist(datalist, url, type) {
         }
     }
 
-    let lines = data ? StringUtils.splitLines(data) : []
+    let lines = data ? data.split(/\n|\r\n|\r/g) : []
     if (lines.length > 0) {
 
         for (let line of lines) {

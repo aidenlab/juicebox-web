@@ -1,7 +1,6 @@
 import GenericDataSource from "../node_modules/data-modal/src/genericDataSource.js";
 import ModalTable from "../node_modules/data-modal/src/modalTable.js";
 
-import * as FileUtils from '../node_modules/igv-utils/src/fileUtils.js'
 import {aidenLabContactMapDatasourceConfigurator} from './aidenLabContactMapDatasourceConfig.js'
 import {encodeContactMapDatasourceConfiguration} from './encodeContactMapDatasourceConfig.js'
 import { fourdnContactMapDatasourceConfiguration } from './fourdnContactMapDatasourceConfig.js';
@@ -55,7 +54,7 @@ function configureContactMapLoaders({
                     success: async dbFiles => {
                         const paths = dbFiles.map(dbFile => dbFile.link);
                         const path = paths[0];
-                        const name = FileUtils.getFilename(path);
+                        const name = getFilename(path);
                         await loadHandler(path, name, mapType);
                     },
                     cancel: () => {
@@ -70,7 +69,7 @@ function configureContactMapLoaders({
     });
 
     appendAndConfigureLoadURLModal(rootContainer, urlLoadModalId, path => {
-        const name = FileUtils.getFilename(path);
+        const name = getFilename(path);
         loadHandler(path, name, mapType);
     });
 
@@ -174,6 +173,13 @@ function appendAndConfigureLoadURLModal(root, id, input_handler) {
     });
 
     return html;
+}
+
+function getFilename(url) {
+    let i = url.lastIndexOf('/')
+    let name = i < 0 ? url : url.substring(i + 1)
+    i = name.indexOf('?')
+    return i > 0 ? name.substring(0, i) : name
 }
 
 export default configureContactMapLoaders
