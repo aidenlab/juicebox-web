@@ -1,8 +1,6 @@
 import GenericDataSource from "../node_modules/data-modal/src/genericDataSource.js";
 import ModalTable from "../node_modules/data-modal/src/modalTable.js";
 
-import * as GooglePicker from '../node_modules/google-utils/src/googleFilePicker.js'
-import * as FileUtils from '../node_modules/igv-utils/src/fileUtils.js'
 import {aidenLabContactMapDatasourceConfigurator} from './aidenLabContactMapDatasourceConfig.js'
 import {encodeContactMapDatasourceConfiguration} from './encodeContactMapDatasourceConfig.js'
 import { fourdnContactMapDatasourceConfiguration } from './fourdnContactMapDatasourceConfig.js';
@@ -14,85 +12,64 @@ let fourdnContactMapModal;
 
 function configureContactMapLoaders({
                                         rootContainer,
-                                        $dropdowns,
-                                        $localFileInputs,
+                                        dropdowns,
+                                        localFileInputs,
                                         urlLoadModalId,
                                         dataModalId,
                                         encodeHostedModalId,
                                         fourdnModalId,
-                                        $dropboxButtons,
-                                        $googleDriveButtons,
-                                        googleEnabled,
+                                        dropboxButtons,
                                         mapMenu,
                                         loadHandler
                                     }) {
 
-    $dropdowns.on('show.bs.dropdown', function () {
+    // Bootstrap 4 dispatches `*.bs.*` events through jQuery only — native
+    // addEventListener will not catch them. Documented seam.
+    dropdowns.forEach(dropdown => {
+        $(dropdown).on('show.bs.dropdown', function () {
+            // Contact or Control dropdown button
+            const child = this.querySelector('.dropdown-toggle');
+            const id = child.id;
 
-        // Contact or Control dropdown button
-        // NOTE:  this in the callback is a DOM element, jquery weirdness
-        const $child = $(this).children('.dropdown-toggle');
-
-        // button id
-        const id = $child.attr('id');
-
-        // Set map type based on dropdown selected, this is a transient variable, set every time this callback
-        // is invoked.
-        mapType = 'hic-contact-map-dropdown' === id ? 'contact-map' : 'control-map';
-
+            // transient — set every time this callback fires
+            mapType = 'hic-contact-map-dropdown' === id ? 'contact-map' : 'control-map';
+        });
     });
 
-    $localFileInputs.on('change', async function (e) {
-        const file = ($(this).get(0).files)[0];
+    localFileInputs.forEach(input => {
+        input.addEventListener('change', async function (e) {
+            const target = e.currentTarget;
+            const file = target.files[0];
+            target.value = "";
 
-        // NOTE:  this in the callback is a DOM element, jquery weirdness
-        $(this).val("");
-
-        const {name} = file;
-        await loadHandler(file, name, mapType);
+            const {name} = file;
+            await loadHandler(file, name, mapType);
+        });
     });
 
-    $dropboxButtons.on('click', function () {
+    dropboxButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const config =
+                {
+                    success: async dbFiles => {
+                        const paths = dbFiles.map(dbFile => dbFile.link);
+                        const path = paths[0];
+                        const name = getFilename(path);
+                        await loadHandler(path, name, mapType);
+                    },
+                    cancel: () => {
+                    },
+                    linkType: 'preview',
+                    multiselect: false,
+                    folderselect: false,
+                };
 
-        const config =
-            {
-                success: async dbFiles => {
-                    const paths = dbFiles.map(dbFile => dbFile.link);
-                    const path = paths[0];
-                    const name = FileUtils.getFilename(path);
-                    await loadHandler(path, name, mapType);
-                },
-                cancel: () => {
-                },
-                linkType: 'preview',
-                multiselect: false,
-                folderselect: false,
-            };
-
-        Dropbox.choose(config);
-
+            Dropbox.choose(config);
+        });
     });
-
-    if (googleEnabled) {
-        $googleDriveButtons.on('click', () => {
-
-            GooglePicker.createDropdownButtonPicker(true, async responses => {
-
-                const paths = responses.map(({name, url: google_url}) => {
-                    return {filename: name, name, google_url};
-                });
-
-                let {name, google_url: path} = paths[0];
-                await loadHandler(path, name, mapType);
-
-            })
-        })
-    } else {
-        $googleDriveButtons.parent().hide();
-    }
 
     appendAndConfigureLoadURLModal(rootContainer, urlLoadModalId, path => {
-        const name = FileUtils.getFilename(path);
+        const name = getFilename(path);
         loadHandler(path, name, mapType);
     });
 
@@ -180,22 +157,29 @@ function appendAndConfigureLoadURLModal(root, id, input_handler) {
             </div>
         </div>`;
 
-    $(root).append(html);
+    root.insertAdjacentHTML('beforeend', html);
 
-    const $modal = $(root).find(`#${id}`);
-    $modal.find('input').on('change', function () {
+    const modal = root.querySelector(`#${id}`);
+    const input = modal.querySelector('input');
+    input.addEventListener('change', function (e) {
+        const target = e.currentTarget;
+        const path = target.value;
+        target.value = "";
 
-        const path = $(this).val();
-        $(this).val("");
-
+        // BS4 modal control is jQuery-only — documented seam
         $(`#${id}`).modal('hide');
 
         input_handler(path);
-
-
     });
 
     return html;
+}
+
+function getFilename(url) {
+    let i = url.lastIndexOf('/')
+    let name = i < 0 ? url : url.substring(i + 1)
+    i = name.indexOf('?')
+    return i > 0 ? name.substring(0, i) : name
 }
 
 export default configureContactMapLoaders

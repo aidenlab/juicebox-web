@@ -1,17 +1,13 @@
 import {loadString} from "./stringLoader.js"
-import * as StringUtils from '../node_modules/igv-utils/src/stringUtils.js'
 
 
 import {
-    AlertSingleton,
     createSessionWidgets,
     createTrackWidgetsWithTrackRegistry,
-    updateTrackMenus,
-    dropboxButtonImageBase64,
-    dropboxDropdownItem,
-    googleDriveButtonImageBase64,
-    googleDriveDropdownItem
+    updateTrackMenus
 } from '../node_modules/igv-widgets/dist/igv-widgets.js'
+
+import {AlertSingleton} from './alertSingleton.js'
 
 import hic from "../node_modules/juicebox.js/dist/juicebox.esm.js"
 import QRCode from "./qrcode.js";
@@ -28,32 +24,28 @@ function initializationHelper(container, config) {
 
     configureSequenceAndRefSeqGeneTrackToggle()
 
+    // TODO(jquery-purge): jQuery wrapper retained for igv-widgets seam below
     const $trackDropdownMenu = $('#hic-track-dropdown-menu')
 
     createAppCloneButton(container)
 
     updateControlMapDropdownForAllBrowser()
 
-    configureSessionWidgets(container, config.googleEnabled)
+    configureSessionWidgets(container)
 
-    const str = 'track'
-    let imgElement
-
-    imgElement = document.querySelector(`img#igv-app-${str}-dropbox-button-image`)
-    imgElement.src = `data:image/svg+xml;base64,${dropboxButtonImageBase64()}`
-
-    imgElement = document.querySelector(`img#igv-app-${str}-google-drive-button-image`)
-    imgElement.src = `data:image/svg+xml;base64,${googleDriveButtonImageBase64()}`
+    const dropboxImg = document.querySelector('img#igv-app-track-dropbox-button-image')
+    dropboxImg.src = `data:image/svg+xml;base64,${dropboxButtonImageBase64()}`
 
     const initializeDropbox = async () => Promise.resolve(true)
 
+    // TODO(jquery-purge): igv-widgets factory requires jQuery objects as args
     createTrackWidgetsWithTrackRegistry($(container),
         $trackDropdownMenu,
         $('#hic-local-track-file-input'),
         initializeDropbox,
         $('#hic-track-dropdown-dropbox-button'),
-        config.googleEnabled,
-        $('#hic-track-dropdown-google-drive-button'),
+        undefined,
+        undefined,
         ['hic-app-encode-signals-chip-modal', 'hic-app-encode-signals-other-modal', 'hic-app-encode-others-modal'],
         'track-load-url-modal',
         undefined,
@@ -63,29 +55,29 @@ function initializationHelper(container, config) {
 
     createAnnotationDatalistModals(container);
 
-    const $dropdowns = $('a[id$=-map-dropdown]').parent()
+    const dropdowns = Array.from(document.querySelectorAll('a[id$=-map-dropdown]')).map(a => a.parentElement)
+    const queryAllWithin = (elements, selector) => elements.flatMap(el => Array.from(el.querySelectorAll(selector)))
 
     const contactMapLoadConfig =
         {
             rootContainer: document.querySelector('#hic-main'),
-            $dropdowns,
-            $localFileInputs: $dropdowns.find('input'),
+            dropdowns,
+            localFileInputs: queryAllWithin(dropdowns, 'input'),
             urlLoadModalId: 'hic-load-url-modal',
             dataModalId: 'hic-contact-map-modal',
             encodeHostedModalId: 'hic-encode-hosted-contact-map-modal',
             fourdnModalId: 'hic-4dn-contact-map-modal',
-            $dropboxButtons: $dropdowns.find('div[id$="-map-dropdown-dropbox-button"]'),
-            $googleDriveButtons: $dropdowns.find('div[id$="-map-dropdown-google-drive-button"]'),
-            googleEnabled: config.googleEnabled,
+            dropboxButtons: queryAllWithin(dropdowns, 'div[id$="-map-dropdown-dropbox-button"]'),
             mapMenu: config.mapMenu,
             loadHandler: (path, name, mapType) => loadHicFile(path, name, mapType)
         };
 
     configureContactMapLoaders(contactMapLoadConfig);
-    $('#hic-encode-hosted-contact-map-presentation-button').removeClass('disabled')
+    document.querySelector('#hic-encode-hosted-contact-map-presentation-button').classList.remove('disabled')
 
     configureShareModal(container, config)
 
+    // BS4 `*.bs.*` events are jQuery-only — documented seam
     $trackDropdownMenu.parent().on('shown.bs.dropdown', function () {
         const browser = hic.getCurrentBrowser();
         if (undefined === browser || undefined === browser.dataset) {
@@ -93,6 +85,7 @@ function initializationHelper(container, config) {
         }
     });
 
+    // BS4 event seam
     $('#hic-control-map-dropdown-menu').parent().on('shown.bs.dropdown', function () {
         const browser = hic.getCurrentBrowser();
         if (undefined === browser || undefined === browser.dataset) {
@@ -113,19 +106,19 @@ function initializationHelper(container, config) {
             }
 
             if (config.trackMenu) {
-
                 let tracksURL = config.trackMenu.items.replace("$GENOME_ID", data);
-                await loadAnnotationDatalist($(`#${config.trackMenu.id}`), tracksURL, "1D");
+                await loadAnnotationDatalist(document.getElementById(config.trackMenu.id), tracksURL, "1D");
             }
 
             if (config.trackMenu2D) {
                 let annotations2dURL = config.trackMenu2D.items.replace("$GENOME_ID", data);
-                await loadAnnotationDatalist($(`#${config.trackMenu2D.id}`), annotations2dURL, "2D");
+                await loadAnnotationDatalist(document.getElementById(config.trackMenu2D.id), annotations2dURL, "2D");
             }
 
             const response = await fetch(config.trackRegistryFile)
             const hash = await response.json()
 
+            // TODO(jquery-purge): igv-widgets `updateTrackMenus` requires jQuery object
             const $dropdownMenu = $('#hic-track-dropdown-menu')
 
             if (hash[ data ]) {
@@ -258,61 +251,59 @@ function createAnnotationDatalistModals(root) {
     let modal;
 
     // Annotation Datalist Modal
-    $(root).append(createGenericDataListModal('hic-annotation-datalist-modal', 'annotation-input', 'annotation-datalist', 'Enter annotation file name'));
+    root.insertAdjacentHTML('beforeend', createGenericDataListModal('hic-annotation-datalist-modal', 'annotation-input', 'annotation-datalist', 'Enter annotation file name'));
 
     modal = root.querySelector('#hic-annotation-datalist-modal');
     modal.querySelector('.modal-title').textContent = 'Annotations';
 
-    const $annotation_input = $('#annotation-input');
-    $annotation_input.on('change', function (e) {
+    const annotation_input = document.querySelector('#annotation-input');
+    annotation_input.addEventListener('change', function () {
 
         if (undefined === hic.getCurrentBrowser()) {
             AlertSingleton.present('ERROR: you must select a map panel.');
         } else {
 
-            const name = $annotation_input.val();
-            const $option = $('#annotation-datalist option').filter(function () {
-                const str = $(this).text().trim();
-                return /*str.includes(name)*/str === name;
-            });
-            const path = $option.data('url');
+            const name = annotation_input.value;
+            const option = Array.from(document.querySelectorAll('#annotation-datalist option'))
+                .find(o => o.textContent.trim() === name);
+            const path = option ? option.dataset.url : undefined;
 
             let config = {url: path, name};
 
-            if (path.indexOf("hgdownload.cse.ucsc.edu") > 0) {
+            if (path && path.indexOf("hgdownload.cse.ucsc.edu") > 0) {
                 config.indexed = false
             }
             loadTracks([config]);
         }
 
+        // BS4 modal API seam
         $('#hic-annotation-datalist-modal').modal('hide');
-        $annotation_input.val('');
+        annotation_input.value = '';
 
     });
 
     // 2D Annotation Datalist Modal
-    $(root).append(createGenericDataListModal('hic-annotation-2D-datalist-modal', 'annotation-2D-input', 'annotation-2D-datalist', 'Enter 2D annotation file name'));
+    root.insertAdjacentHTML('beforeend', createGenericDataListModal('hic-annotation-2D-datalist-modal', 'annotation-2D-input', 'annotation-2D-datalist', 'Enter 2D annotation file name'));
 
     modal = root.querySelector('#hic-annotation-2D-datalist-modal');
     modal.querySelector('.modal-title').textContent = '2D Annotations';
 
-    const $annotation_2D_input = $('#annotation-2D-input');
-    $annotation_2D_input.on('change', function (e) {
+    const annotation_2D_input = document.querySelector('#annotation-2D-input');
+    annotation_2D_input.addEventListener('change', function () {
 
         if (undefined === hic.getCurrentBrowser()) {
             AlertSingleton.present('ERROR: you must select a map panel.');
         } else {
-            const name = $annotation_2D_input.val();
-            const $option = $('#annotation-2D-datalist option').filter(function () {
-                const str = $(this).text().trim();
-                return /*str.includes(name)*/str === name;
-            });
-            const path = $option.data('url');
+            const name = annotation_2D_input.value;
+            const option = Array.from(document.querySelectorAll('#annotation-2D-datalist option'))
+                .find(o => o.textContent.trim() === name);
+            const path = option ? option.dataset.url : undefined;
             loadTracks([{url: path, name}]);
         }
 
+        // BS4 modal API seam
         $('#hic-annotation-2D-datalist-modal').modal('hide');
-        $annotation_2D_input.val('');
+        annotation_2D_input.value = '';
     });
 
 }
@@ -332,7 +323,7 @@ function createGenericDataListModal(id, input_id, datalist_id, placeholder) {
                             <span>&times;</span>
                         </button>
                     </div>
-        
+
                     <div class="modal-body">
                         <div class="form-group">
                             <input type="text" id="${input_id}" list="${datalist_id}" placeholder="${placeholder}" class="form-control">
@@ -375,16 +366,16 @@ async function loadHicFile(url, name, mapType) {
         } else {
             browser.reset();
             await browser.loadHicFile(config);
-            $('#hic-control-map-dropdown').removeClass('disabled');
+            document.querySelector('#hic-control-map-dropdown').classList.remove('disabled');
         }
     } catch (e) {
         AlertSingleton.present(`Error loading ${url}: ${e}`);
     }
 }
 
-async function loadAnnotationDatalist($datalist, url, type) {
+async function loadAnnotationDatalist(datalist, url, type) {
 
-    $datalist.empty();
+    datalist.replaceChildren();
 
     let data = undefined;
 
@@ -401,7 +392,7 @@ async function loadAnnotationDatalist($datalist, url, type) {
         }
     }
 
-    let lines = data ? StringUtils.splitLines(data) : []
+    let lines = data ? data.split(/\n|\r\n|\r/g) : []
     if (lines.length > 0) {
 
         for (let line of lines) {
@@ -411,7 +402,7 @@ async function loadAnnotationDatalist($datalist, url, type) {
 
                 if (tokens.length > 1) {
                     const [label, value] = tokens;
-                    $datalist.append($(`<option data-url="${value}">${label}</option>`));
+                    datalist.insertAdjacentHTML('beforeend', `<option data-url="${value}">${label}</option>`);
 
                 }
             }
@@ -440,20 +431,21 @@ function createAppCloneButton(container) {
 
 }
 
-function configureSessionWidgets(container, googleEnabled) {
+function configureSessionWidgets(container) {
 
-    $('div#igv-session-dropdown-menu > :nth-child(1)').after(dropboxDropdownItem('igv-app-dropdown-dropbox-session-file-button'))
-    $('div#igv-session-dropdown-menu > :nth-child(2)').after(googleDriveDropdownItem('igv-app-dropdown-google-drive-session-file-button'))
+    document.querySelector('div#igv-session-dropdown-menu > :nth-child(1)')
+        .insertAdjacentHTML('afterend', dropboxDropdownItem('igv-app-dropdown-dropbox-session-file-button'))
 
+    // TODO(jquery-purge): igv-widgets factory requires jQuery container
     createSessionWidgets($(container),
         'juicebox-webapp',
         'igv-app-dropdown-local-session-file-input',
         () => Promise.resolve(true),
         'igv-app-dropdown-dropbox-session-file-button',
-        'igv-app-dropdown-google-drive-session-file-button',
+        undefined,
         'igv-app-session-url-modal',
         'igv-app-session-save-modal',
-        /*googleEnabled*/false,
+        undefined,
         async config => await hic.restoreSession(container, config),
         () => hic.toJSON()
     )
@@ -465,9 +457,10 @@ let qrcode = undefined;
 
 function configureShareModal(container, config) {
 
-    const $hic_share_url_modal = $('#hic-share-url-modal');
+    const shareUrlModal = document.querySelector('#hic-share-url-modal');
 
-    $hic_share_url_modal.on('show.bs.modal', async function (e) {
+    // BS4 `*.bs.*` events are jQuery-only — documented seam
+    $(shareUrlModal).on('show.bs.modal', async function () {
 
         let href = String(window.location.href);
 
@@ -478,78 +471,69 @@ function configureShareModal(container, config) {
 
         const jbUrl = await shortJuiceboxURL(href);
 
-        const embedSnippet = await getEmbeddableSnippet($(container), config);
-        const $hic_embed_url = $('#hic-embed');
-        $hic_embed_url.val(embedSnippet);
-        $hic_embed_url.get(0).select();
+        const embedSnippet = await getEmbeddableSnippet(container, config);
+        const embedInput = document.querySelector('#hic-embed');
+        embedInput.value = embedSnippet;
+        embedInput.select();
 
         let shareUrl = jbUrl;
 
         // Shorten second time
         // e.g. converts https://aidenlab.org/juicebox?juiceboxURL=https://goo.gl/WUb1mL  to https://goo.gl/ERHp5u
 
-        const $hic_share_url = $('#hic-share-url');
-        $hic_share_url.val(shareUrl);
-        $hic_share_url.get(0).select();
+        const shareUrlInput = document.querySelector('#hic-share-url');
+        shareUrlInput.value = shareUrl;
+        shareUrlInput.select();
 
-        const tweetContainer = $('#tweetButtonContainer');
-        tweetContainer.empty();
+        document.querySelector('#emailButton').setAttribute('href', 'mailto:?body=' + shareUrl);
 
-        $('#emailButton').attr('href', 'mailto:?body=' + shareUrl);
-
-        if (shareUrl.length < 100) {
-
-            await window.twttr.widgets.createShareButton(shareUrl, tweetContainer.get(0), {text: 'Contact map: '});
-            console.log("Tweet button updated");
-
-            // QR code generation
-            if (qrcode) {
-                qrcode.clear();
-                $('hic-qr-code-image').empty();
-            } else {
-                qrcode = new QRCode(document.getElementById("hic-qr-code-image"), {
-                    width: 128,
-                    height: 128,
-                    correctLevel: QRCode.CorrectLevel.H
-                });
-            }
-
-            qrcode.makeCode(shareUrl);
+        if (qrcode) {
+            qrcode.clear();
+            document.querySelector('#hic-qr-code-image').replaceChildren();
+        } else {
+            qrcode = new QRCode(document.getElementById("hic-qr-code-image"), {
+                width: 128,
+                height: 128,
+                correctLevel: QRCode.CorrectLevel.H
+            });
         }
 
+        qrcode.makeCode(shareUrl);
+
     });
 
-    $hic_share_url_modal.on('hidden.bs.modal', function (e) {
-        $('#hic-embed-container').hide();
-        $('#hic-qr-code-image').hide();
+    // BS4 event seam
+    $(shareUrlModal).on('hidden.bs.modal', function () {
+        document.querySelector('#hic-embed-container').style.display = 'none';
+        document.querySelector('#hic-qr-code-image').style.display = 'none';
     });
 
-    $('#hic-qr-code-button').on('click', function (e) {
-        $('#hic-embed-container').hide();
-        $('#hic-qr-code-image').toggle();
+    document.querySelector('#hic-qr-code-button').addEventListener('click', function () {
+        document.querySelector('#hic-embed-container').style.display = 'none';
+        toggle(document.querySelector('#hic-qr-code-image'));
     });
 
-    $('#hic-embed-button').on('click', function (e) {
-        $('#hic-qr-code-image').hide();
-        $('#hic-embed-container').toggle();
+    document.querySelector('#hic-embed-button').addEventListener('click', function () {
+        document.querySelector('#hic-qr-code-image').style.display = 'none';
+        toggle(document.querySelector('#hic-embed-container'));
     });
 
-    $('#hic-copy-link').on('click', function (e) {
-        var success;
-        $('#hic-share-url')[0].select();
-        success = document.execCommand('copy');
+    document.querySelector('#hic-copy-link').addEventListener('click', function () {
+        document.querySelector('#hic-share-url').select();
+        const success = document.execCommand('copy');
         if (success) {
+            // BS4 modal API seam
             $('#hic-share-url-modal').modal('hide');
         } else {
             alert("Copy not successful");
         }
     });
 
-    $('#hic-embed-copy-link').on('click', function (e) {
-        var success;
-        $('#hic-embed')[0].select();
-        success = document.execCommand('copy');
+    document.querySelector('#hic-embed-copy-link').addEventListener('click', function () {
+        document.querySelector('#hic-embed').select();
+        const success = document.execCommand('copy');
         if (success) {
+            // BS4 modal API seam
             $('#hic-share-url-modal').modal('hide');
         } else {
             alert("Copy not successful");
@@ -557,10 +541,17 @@ function configureShareModal(container, config) {
     });
 }
 
-async function getEmbeddableSnippet($container, config) {
+// Matches jQuery's .toggle() semantics: reads computed display, then sets
+// inline style to '' (revert to CSS) or 'none'.
+function toggle(el) {
+    const hidden = window.getComputedStyle(el).display === 'none';
+    el.style.display = hidden ? '' : 'none';
+}
+
+async function getEmbeddableSnippet(container, config) {
     const base = (config.embedTarget || getEmbedTarget())
     const embedUrl = await shortJuiceboxURL(base);
-    const height = $container.height();
+    const height = container.getBoundingClientRect().height;
     return '<iframe src="' + embedUrl + '" width="100%" height="' + height + '" frameborder="0" style="border:0" allowfullscreen></iframe>';
 }
 
@@ -595,7 +586,7 @@ function checkControlMapDropdown() {
 
 function updateControlMapDropdown(browser) {
     if (browser && browser.dataset) {
-        $('#hic-control-map-dropdown').removeClass('disabled')
+        document.querySelector('#hic-control-map-dropdown').classList.remove('disabled')
     }
 }
 
@@ -609,5 +600,30 @@ async function shortJuiceboxURL(base) {
     const url = `${base}?${hic.compressedSession()}`;
     return shortenURL(url);
 }
+
+// Inlined from igv-widgets
+const dropboxButtonImageLiteral =
+    `<svg width="75px" height="64px" viewBox="0 0 75 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <title>Shape</title>
+        <desc>Created with Sketch.</desc>
+        <defs></defs>
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="dropbox" fill="#0061FF" fill-rule="nonzero">
+                <path d="M37.6,12 L18.8,24 L37.6,36 L18.8,48 L1.42108547e-14,35.9 L18.8,23.9 L1.42108547e-14,12 L18.8,0 L37.6,12 Z M18.7,51.8 L37.5,39.8 L56.3,51.8 L37.5,63.8 L18.7,51.8 Z M37.6,35.9 L56.4,23.9 L37.6,12 L56.3,0 L75.1,12 L56.3,24 L75.1,36 L56.3,48 L37.6,35.9 Z" id="Shape"></path>
+            </g>
+        </g>
+    </svg>`
+
+const dropboxButtonImageBase64 = () => window.btoa(dropboxButtonImageLiteral)
+
+const dropboxDropdownItem = id =>
+    `<div class="dropdown-item">
+        <div id="${id}" class="igv-app-dropdown-item-cloud-storage">
+            <div>Dropbox File</div>
+            <div>
+                <img src="data:image/svg+xml;base64,${dropboxButtonImageBase64()}" width="18" height="18">
+            </div>
+        </div>
+    </div>`
 
 export { initializationHelper }

@@ -22,8 +22,7 @@
  */
 
 import hic from "../node_modules/juicebox.js/dist/juicebox.esm.js"
-import * as GoogleAuth from '../node_modules/google-utils/src/googleAuth.js'
-import {AlertSingleton} from '../node_modules/igv-widgets/dist/igv-widgets.js'
+import {AlertSingleton} from './alertSingleton.js'
 import {initializationHelper} from "./initializationHelper.js"
 
 document.addEventListener("DOMContentLoaded", async (event) => {
@@ -41,22 +40,6 @@ async function init(container) {
     AlertSingleton.init(container)
 
     const config = window.juiceboxConfig || {}   // From script include.  Optional.
-
-    const google = config.google
-    config.googleEnabled = google && (window.location.protocol === "https:" || window.location.host.startsWith("localhost"))
-    if (config.googleEnabled) {
-        try {
-            await GoogleAuth.init({
-                client_id: google.clientId,
-                apiKey: google.apiKey,
-                scope: 'https://www.googleapis.com/auth/userinfo.profile'
-            })
-            await GoogleAuth.signOut()   // The await is important !!!
-        } catch (e) {
-            console.error(e)
-            AlertSingleton.present(e.message)
-        }
-    }
 
     initializationHelper(container, config)
 
