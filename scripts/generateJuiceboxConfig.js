@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 /**
- * Replaces __TINYURL_JUICEBOX_API_KEY__ in juiceboxConfig.js with the value from
- * TINYURL_JUICEBOX_API_KEY environment variable (loaded from .env). Writes the
- * result to dist/juiceboxConfig.js.
+ * Replaces process.env.TINYURL_JUICEBOX_API_KEY in juiceboxConfig.js with the
+ * value from the TINYURL_JUICEBOX_API_KEY environment variable (loaded from
+ * .env). Writes the result to dist/juiceboxConfig.js.
  */
 
 const fs = require('fs');
@@ -18,6 +18,6 @@ const apiKey = process.env.TINYURL_JUICEBOX_API_KEY || '';
 const replacement = JSON.stringify(apiKey);
 
 let content = fs.readFileSync(sourcePath, 'utf-8');
-content = content.replace(/'__TINYURL_JUICEBOX_API_KEY__'/g, replacement);
+content = content.replace(/process\.env\.TINYURL_JUICEBOX_API_KEY/g, replacement);
 
 fs.writeFileSync(destPath, content, 'utf-8');

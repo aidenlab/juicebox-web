@@ -1,6 +1,6 @@
 import strip from '@rollup/plugin-strip';
 import copy from 'rollup-plugin-copy'
-import {terser} from "rollup-plugin-terser"
+import terser from "@rollup/plugin-terser"
 
 export default [
     {

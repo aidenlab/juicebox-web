@@ -21,11 +21,12 @@ var juiceboxConfig = {
 
     trackRegistryFile: "res/tracks/encodeRegistry.json",
 
-    // URL shortener configuration (__TINYURL_JUICEBOX_API_KEY__ replaced at build time)
+    // URL shortener configuration (process.env.TINYURL_JUICEBOX_API_KEY replaced at build time)
     urlShortener: {
         provider: 'tinyURL',
-        apiKey: '__TINYURL_JUICEBOX_API_KEY__',
+        apiKey: process.env.TINYURL_JUICEBOX_API_KEY || 'YOUR_TINYURL_JUICEBOX_API_KEY',
         domain: 't.3dg.io',
-        endpoint: 'https://api.tinyurl.com/create'
+        endpoint: 'https://api.tinyurl.com/create',
+        tags: ['juicebox']
     }
 }
