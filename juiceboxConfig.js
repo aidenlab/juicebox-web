@@ -24,7 +24,7 @@ var juiceboxConfig = {
     // URL shortener configuration (process.env.TINYURL_JUICEBOX_API_KEY replaced at build time)
     urlShortener: {
         provider: 'tinyURL',
-        apiKey: process.env.TINYURL_JUICEBOX_API_KEY || 'YOUR_TINYURL_JUICEBOX_API_KEY',
+        apiKey: 'YOUR_TINYURL_JUICEBOX_API_KEY',
         domain: 't.3dg.io',
         endpoint: 'https://api.tinyurl.com/create',
         tags: ['juicebox']
