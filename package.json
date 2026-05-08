@@ -16,9 +16,9 @@
   "devDependencies": {
     "@rollup/plugin-strip": "^3.0.1",
     "@rollup/plugin-terser": "^1.0.0",
-    "data-modal": "github:igvteam/data-modal#v1.5.0",
     "dotenv": "^17.2.4",
-    "igv-widgets": "github:igvteam/igv-widgets#v1.5.4",
+    "igv-utils": "github:igvteam/igv-utils#v1.7.1",
+    "infinite-table": "github:igvteam/infinite-table#main",
     "juicebox.js": "github:igvteam/juicebox.js#master",
     "rollup": "^4.60.3",
     "rollup-plugin-copy": "^3.4.0"

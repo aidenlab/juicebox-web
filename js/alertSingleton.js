@@ -1,6 +1,5 @@
-// Inlined from igv-widgets/dist/igv-widgets.js. Styles are still provided by
-// igv-widgets' self-injected CSS (loaded as a side effect of the factory
-// imports in initializationHelper.js).
+// Inlined from igv-widgets/dist/igv-widgets.js. Styles are now provided by
+// css/widgets.css (extracted from igv-widgets v1.5.4 embedCSS.js).
 
 const httpMessages = {
     "401": "Access unauthorized",

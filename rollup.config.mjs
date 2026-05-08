@@ -21,6 +21,8 @@ export default [
                         {src: 'node_modules/juicebox.js/dist/css/img', dest: 'dist/css/'},
                         {src: 'scripts/embed.html', dest: 'dist/'},
                         {src: 'css/app.css', dest: 'dist/css/'},
+                        {src: 'css/widgets.css', dest: 'dist/css/'},
+                        {src: 'node_modules/infinite-table/css/infinite-table.css', dest: 'dist/css/'},
                         {src: 'img', dest: 'dist/'},
                         {src: 'juiceboxConfig.js', dest: 'dist/'},
 
