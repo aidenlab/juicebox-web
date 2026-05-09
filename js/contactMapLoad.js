@@ -1,5 +1,4 @@
-import GenericDataSource from "../node_modules/data-modal/src/genericDataSource.js";
-import ModalTable from "../node_modules/data-modal/src/modalTable.js";
+import { GenericDataSource, createModalTable } from "../node_modules/infinite-table/src/index.js"
 
 import {aidenLabContactMapDatasourceConfigurator} from './aidenLabContactMapDatasourceConfig.js'
 import {encodeContactMapDatasourceConfiguration} from './encodeContactMapDatasourceConfig.js'
@@ -23,10 +22,8 @@ function configureContactMapLoaders({
                                         loadHandler
                                     }) {
 
-    // Bootstrap 4 dispatches `*.bs.*` events through jQuery only — native
-    // addEventListener will not catch them. Documented seam.
     dropdowns.forEach(dropdown => {
-        $(dropdown).on('show.bs.dropdown', function () {
+        dropdown.addEventListener('show.bs.dropdown', function () {
             // Contact or Control dropdown button
             const child = this.querySelector('.dropdown-toggle');
             const id = child.id;
@@ -75,18 +72,15 @@ function configureContactMapLoaders({
 
     if (mapMenu) {
 
-        const modalTableConfig =
-            {
-                id: dataModalId,
-                title: 'Contact Map',
-                selectionStyle: 'single',
-                pageLength: 10,
-                okHandler: async ([selection]) => {
-                    const {url, name} = selection
-                    await loadHandler(url, name, mapType)
-                }
+        contactMapModal = createModalTable({
+            id: dataModalId,
+            title: 'Contact Map',
+            selectionStyle: 'single',
+            okHandler: async ([selection]) => {
+                const {url, name} = selection
+                await loadHandler(url, name, mapType)
             }
-        contactMapModal = new ModalTable(modalTableConfig)
+        })
 
         const path =  mapMenu.items
         const config = aidenLabContactMapDatasourceConfigurator(path)
@@ -94,36 +88,28 @@ function configureContactMapLoaders({
         contactMapModal.setDatasource(datasource)
     }
 
-    const encodeModalTableConfig =
-        {
-            id: encodeHostedModalId,
-            title: 'ENCODE Hosted Contact Map',
-            selectionStyle: 'single',
-            pageLength: 10,
-            okHandler: async ([{ HREF, Description }]) => {
-                const urlPrefix = 'https://www.encodeproject.org'
-                const path = `${urlPrefix}${HREF}`
-                await loadHandler(path, Description, mapType)
-            }
+    encodeHostedContactMapModal = createModalTable({
+        id: encodeHostedModalId,
+        title: 'ENCODE Hosted Contact Map',
+        selectionStyle: 'single',
+        okHandler: async ([{ HREF, Description }]) => {
+            const urlPrefix = 'https://www.encodeproject.org'
+            const path = `${urlPrefix}${HREF}`
+            await loadHandler(path, Description, mapType)
         }
-
-    encodeHostedContactMapModal = new ModalTable(encodeModalTableConfig)
+    })
     encodeHostedContactMapModal.setDatasource( new GenericDataSource(encodeContactMapDatasourceConfiguration) )
 
 
-    const fourdnModalTableConfig =
-        {
-            id: fourdnModalId,
-            title: '4DN Hosted Contact Map',
-            selectionStyle: 'single',
-            pageLength: 10,
-            okHandler: async ([ item ]) => {
-                const { url, Dataset } = item
-                await loadHandler(url, Dataset, mapType)
-            }
+    fourdnContactMapModal = createModalTable({
+        id: fourdnModalId,
+        title: '4DN Hosted Contact Map',
+        selectionStyle: 'single',
+        okHandler: async ([ item ]) => {
+            const { url, Dataset } = item
+            await loadHandler(url, Dataset, mapType)
         }
-
-    fourdnContactMapModal = new ModalTable(fourdnModalTableConfig)
+    })
     fourdnContactMapModal.setDatasource( new GenericDataSource(fourdnContactMapDatasourceConfiguration) )
 
 }
@@ -132,25 +118,19 @@ function configureContactMapLoaders({
 function appendAndConfigureLoadURLModal(root, id, input_handler) {
 
     const html =
-        `<div id="${id}" class="modal fade">
-            <div class="modal-dialog  modal-lg">
+        `<div id="${id}" class="modal fade" tabindex="-1">
+            <div class="modal-dialog modal-lg">
                 <div class="modal-content">
 
                 <div class="modal-header">
                     <div class="modal-title">Load URL</div>
-
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
 
                 <div class="modal-body">
-
-                    <div class="form-group">
+                    <div class="mb-3">
                         <input type="text" class="form-control" placeholder="Enter URL">
                     </div>
-
                 </div>
 
                 </div>
@@ -166,8 +146,7 @@ function appendAndConfigureLoadURLModal(root, id, input_handler) {
         const path = target.value;
         target.value = "";
 
-        // BS4 modal control is jQuery-only — documented seam
-        $(`#${id}`).modal('hide');
+        bootstrap.Modal.getOrCreateInstance(modal).hide();
 
         input_handler(path);
     });

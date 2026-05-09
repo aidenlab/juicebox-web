@@ -26,6 +26,10 @@ for (let line of lines) {
         fs.writeSync(fd, '<link rel="stylesheet" href="css/juicebox.css"/>\n', null, 'utf-8');
     }
 
+    else if(line.includes("infinite-table.css")) {
+        fs.writeSync(fd, '<link rel="stylesheet" href="css/infinite-table.css">\n', null, 'utf-8');
+    }
+
     else if (line.includes("@VERSION")) {
         line = line.replace("@VERSION", version);
         fs.writeSync(fd, line + '\n', null, 'utf-8');

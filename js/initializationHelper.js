@@ -1,11 +1,7 @@
 import {loadString} from "./stringLoader.js"
 
-
-import {
-    createSessionWidgets,
-    createTrackWidgetsWithTrackRegistry,
-    updateTrackMenus
-} from '../node_modules/igv-widgets/dist/igv-widgets.js'
+import {createSessionWidgets} from './widgets/sessionWidgets.js'
+import {createTrackWidgetsWithTrackRegistry, updateTrackMenus} from './widgets/trackWidgets.js'
 
 import {AlertSingleton} from './alertSingleton.js'
 
@@ -24,8 +20,7 @@ function initializationHelper(container, config) {
 
     configureSequenceAndRefSeqGeneTrackToggle()
 
-    // TODO(jquery-purge): jQuery wrapper retained for igv-widgets seam below
-    const $trackDropdownMenu = $('#hic-track-dropdown-menu')
+    const trackDropdownMenu = document.querySelector('#hic-track-dropdown-menu')
 
     createAppCloneButton(container)
 
@@ -38,17 +33,13 @@ function initializationHelper(container, config) {
 
     const initializeDropbox = async () => Promise.resolve(true)
 
-    // TODO(jquery-purge): igv-widgets factory requires jQuery objects as args
-    createTrackWidgetsWithTrackRegistry($(container),
-        $trackDropdownMenu,
-        $('#hic-local-track-file-input'),
+    createTrackWidgetsWithTrackRegistry(
+        container,
+        document.querySelector('#hic-local-track-file-input'),
         initializeDropbox,
-        $('#hic-track-dropdown-dropbox-button'),
-        undefined,
-        undefined,
+        document.querySelector('#hic-track-dropdown-dropbox-button'),
         ['hic-app-encode-signals-chip-modal', 'hic-app-encode-signals-other-modal', 'hic-app-encode-others-modal'],
         'track-load-url-modal',
-        undefined,
         undefined,
         config.trackRegistryFile,
         configurations => loadTracks(configurations))
@@ -77,21 +68,19 @@ function initializationHelper(container, config) {
 
     configureShareModal(container, config)
 
-    // BS4 `*.bs.*` events are jQuery-only — documented seam
-    $trackDropdownMenu.parent().on('shown.bs.dropdown', function () {
-        const browser = hic.getCurrentBrowser();
+    trackDropdownMenu.parentElement.addEventListener('shown.bs.dropdown', () => {
+        const browser = hic.getCurrentBrowser()
         if (undefined === browser || undefined === browser.dataset) {
-            AlertSingleton.present('Contact map must be loaded and selected before loading tracks');
+            AlertSingleton.present('Contact map must be loaded and selected before loading tracks')
         }
-    });
+    })
 
-    // BS4 event seam
-    $('#hic-control-map-dropdown-menu').parent().on('shown.bs.dropdown', function () {
-        const browser = hic.getCurrentBrowser();
+    document.querySelector('#hic-control-map-dropdown-menu').parentElement.addEventListener('shown.bs.dropdown', () => {
+        const browser = hic.getCurrentBrowser()
         if (undefined === browser || undefined === browser.dataset) {
-            AlertSingleton.present('Contact map must be loaded and selected before loading "B" map"');
+            AlertSingleton.present('Contact map must be loaded and selected before loading "B" map"')
         }
-    });
+    })
 
     const genomeChangeListener = async ({ data }) => {
 
@@ -118,11 +107,8 @@ function initializationHelper(container, config) {
             const response = await fetch(config.trackRegistryFile)
             const hash = await response.json()
 
-            // TODO(jquery-purge): igv-widgets `updateTrackMenus` requires jQuery object
-            const $dropdownMenu = $('#hic-track-dropdown-menu')
-
             if (hash[ data ]) {
-                updateTrackMenus(data, undefined, config.trackRegistryFile, $dropdownMenu)
+                updateTrackMenus(data, undefined, config.trackRegistryFile, document.querySelector('#hic-track-dropdown-menu'))
             }
 
 
@@ -276,8 +262,7 @@ function createAnnotationDatalistModals(root) {
             loadTracks([config]);
         }
 
-        // BS4 modal API seam
-        $('#hic-annotation-datalist-modal').modal('hide');
+        bootstrap.Modal.getInstance(document.querySelector('#hic-annotation-datalist-modal')).hide();
         annotation_input.value = '';
 
     });
@@ -301,8 +286,7 @@ function createAnnotationDatalistModals(root) {
             loadTracks([{url: path, name}]);
         }
 
-        // BS4 modal API seam
-        $('#hic-annotation-2D-datalist-modal').modal('hide');
+        bootstrap.Modal.getInstance(document.querySelector('#hic-annotation-2D-datalist-modal')).hide();
         annotation_2D_input.value = '';
     });
 
@@ -311,7 +295,7 @@ function createAnnotationDatalistModals(root) {
 function createGenericDataListModal(id, input_id, datalist_id, placeholder) {
 
     const generic_select_modal_string =
-        `<div id="${id}" class="modal">
+        `<div id="${id}" class="modal fade" tabindex="-1">
 
             <div class="modal-dialog modal-lg">
 
@@ -319,13 +303,11 @@ function createGenericDataListModal(id, input_id, datalist_id, placeholder) {
 
                     <div class="modal-header">
                         <div class="modal-title"></div>
-                        <button type="button" class="close" data-dismiss="modal">
-                            <span>&times;</span>
-                        </button>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
 
                     <div class="modal-body">
-                        <div class="form-group">
+                        <div class="mb-3">
                             <input type="text" id="${input_id}" list="${datalist_id}" placeholder="${placeholder}" class="form-control">
                             <datalist id="${datalist_id}"></datalist>
                         </div>
@@ -436,16 +418,14 @@ function configureSessionWidgets(container) {
     document.querySelector('div#igv-session-dropdown-menu > :nth-child(1)')
         .insertAdjacentHTML('afterend', dropboxDropdownItem('igv-app-dropdown-dropbox-session-file-button'))
 
-    // TODO(jquery-purge): igv-widgets factory requires jQuery container
-    createSessionWidgets($(container),
+    createSessionWidgets(
+        container,
         'juicebox-webapp',
         'igv-app-dropdown-local-session-file-input',
         () => Promise.resolve(true),
         'igv-app-dropdown-dropbox-session-file-button',
-        undefined,
         'igv-app-session-url-modal',
         'igv-app-session-save-modal',
-        undefined,
         async config => await hic.restoreSession(container, config),
         () => hic.toJSON()
     )
@@ -459,8 +439,7 @@ function configureShareModal(container, config) {
 
     const shareUrlModal = document.querySelector('#hic-share-url-modal');
 
-    // BS4 `*.bs.*` events are jQuery-only — documented seam
-    $(shareUrlModal).on('show.bs.modal', async function () {
+    shareUrlModal.addEventListener('show.bs.modal', async function () {
 
         let href = String(window.location.href);
 
@@ -502,8 +481,7 @@ function configureShareModal(container, config) {
 
     });
 
-    // BS4 event seam
-    $(shareUrlModal).on('hidden.bs.modal', function () {
+    shareUrlModal.addEventListener('hidden.bs.modal', function () {
         document.querySelector('#hic-embed-container').style.display = 'none';
         document.querySelector('#hic-qr-code-image').style.display = 'none';
     });
@@ -522,8 +500,7 @@ function configureShareModal(container, config) {
         document.querySelector('#hic-share-url').select();
         const success = document.execCommand('copy');
         if (success) {
-            // BS4 modal API seam
-            $('#hic-share-url-modal').modal('hide');
+            bootstrap.Modal.getInstance(shareUrlModal).hide();
         } else {
             alert("Copy not successful");
         }
@@ -533,8 +510,7 @@ function configureShareModal(container, config) {
         document.querySelector('#hic-embed').select();
         const success = document.execCommand('copy');
         if (success) {
-            // BS4 modal API seam
-            $('#hic-share-url-modal').modal('hide');
+            bootstrap.Modal.getInstance(shareUrlModal).hide();
         } else {
             alert("Copy not successful");
         }
