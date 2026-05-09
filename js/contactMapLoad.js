@@ -1,4 +1,4 @@
-import { GenericDataSource, createModalTable } from "../node_modules/infinite-table/src/index.js"
+import { GenericDataSource, createModalTable } from 'infinite-table'
 
 import {aidenLabContactMapDatasourceConfigurator} from './aidenLabContactMapDatasourceConfig.js'
 import {encodeContactMapDatasourceConfiguration} from './encodeContactMapDatasourceConfig.js'

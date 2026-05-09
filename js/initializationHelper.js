@@ -5,7 +5,7 @@ import {createTrackWidgetsWithTrackRegistry, updateTrackMenus} from './widgets/t
 
 import {AlertSingleton} from './alertSingleton.js'
 
-import hic from "../node_modules/juicebox.js/dist/juicebox.esm.js"
+import hic from 'juicebox.js'
 import QRCode from "./qrcode.js";
 import configureContactMapLoaders from "./contactMapLoad.js";
 import {tinyURLShortener} from "./urlShortener.js";

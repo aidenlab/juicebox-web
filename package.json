@@ -11,16 +11,17 @@
     }
   ],
   "scripts": {
-    "build": "npx rollup -c && node scripts/generateJuiceboxConfig.js && node scripts/generateHtml.js index.html && node scripts/generateHtml.js ./aiden_lab_navbar_additions.html aidenLab.html"
+    "dev": "vite",
+    "dev:aidenlab": "vite --mode aidenlab",
+    "build": "vite build",
+    "build:aidenlab": "vite build --mode aidenlab",
+    "preview": "vite preview",
+    "preview:aidenlab": "vite preview --mode aidenlab --outDir dist-aidenlab"
   },
   "devDependencies": {
-    "@rollup/plugin-strip": "^3.0.1",
-    "@rollup/plugin-terser": "^1.0.0",
-    "dotenv": "^17.2.4",
     "igv-utils": "github:igvteam/igv-utils#v1.7.1",
     "infinite-table": "github:igvteam/infinite-table#main",
     "juicebox.js": "github:igvteam/juicebox.js#master",
-    "rollup": "^4.60.3",
-    "rollup-plugin-copy": "^3.4.0"
+    "vite": "^8.0.11"
   }
 }

@@ -1,4 +1,4 @@
-import { GenericDataSource, createModalTable } from '../../node_modules/infinite-table/src/index.js'
+import { GenericDataSource, createModalTable } from 'infinite-table'
 import { encodeTrackDatasourceConfigurator, supportsGenome } from './encodeTrackDatasourceConfigurator.js'
 import { AlertSingleton } from '../alertSingleton.js'
 import { createGenericSelectModal } from './genericSelectModal.js'

@@ -1,11 +1,6 @@
-/**
- * Target for rollup to create babelized juicebox for embed.html
- */
+import hic from 'juicebox.js'
+import 'juicebox.js/dist/css/juicebox.css'
 
-import hic from "../node_modules/juicebox.js/dist/juicebox.esm.js"
-
-async function init(container, config) {
-    await hic.init(container, config)
-}
-
-export default {init}
+document.addEventListener('DOMContentLoaded', () => {
+    hic.init(document.getElementById('app-container'), {})
+})
