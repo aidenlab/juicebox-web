@@ -33,33 +33,13 @@
     <!-- Font Awesome CSS-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
-    <script type="application/javascript" src="js/juicebox-embed.min.js"></script>
-
-    <!-- Juicebox CSS-->
-    <link rel="stylesheet" type="text/css" href="css/juicebox.css">
-
-    <!-- To support google import gapi (platform.js) and juiceboxConfig -->
+    <script type="module" src="/js/embed.js"></script>
 
 </head>
 
 <body>
 
-
 <div id="app-container" class="juicebox-app-clone-container"></div>
-
-
-<script>
-
-    document.addEventListener("DOMContentLoaded", function () {
-
-        const container = document.getElementById("app-container");
-
-        const config = window.juiceboxConfig || {}
-
-        hic.init(container, config)
-    })
-
-</script>
 
 </body>
 

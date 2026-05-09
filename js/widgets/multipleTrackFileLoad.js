@@ -1,5 +1,5 @@
 import { AlertSingleton } from '../alertSingleton.js'
-import { FileUtils, URIUtils } from '../../node_modules/igv-utils/src/index.js'
+import { FileUtils, URIUtils } from 'igv-utils'
 
 /**
  * Track-loading equivalent of FileLoad, but with multi-file selection and
