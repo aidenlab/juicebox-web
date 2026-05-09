@@ -21,28 +21,25 @@
  *
  */
 
-import hic from "../node_modules/juicebox.js/dist/juicebox.esm.js"
+import hic from 'juicebox.js'
 import {AlertSingleton} from './alertSingleton.js'
 import {initializationHelper} from "./initializationHelper.js"
+import {juiceboxConfig} from './juiceboxConfig.js'
+import 'juicebox.js/dist/css/juicebox.css'
+import 'infinite-table/css/infinite-table.css'
+import '../css/widgets.css'
+import '../css/app.css'
 
 document.addEventListener("DOMContentLoaded", async (event) => {
     await init(document.getElementById('app-container'))
 })
 
-/**
- * Initialize the app in the given container (dom element).
- *
- * @param container
- * @returns {Promise<void>}
- */
 async function init(container) {
 
     AlertSingleton.init(container)
 
-    const config = window.juiceboxConfig || {}   // From script include.  Optional.
+    initializationHelper(container, juiceboxConfig)
 
-    initializationHelper(container, config)
-
-    await hic.init(container, config)
+    await hic.init(container, juiceboxConfig)
 
 }

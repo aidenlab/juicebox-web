@@ -1,4 +1,4 @@
-import { FileUtils } from '../../node_modules/igv-utils/src/index.js'
+import { FileUtils } from 'igv-utils'
 import FileLoadManager from './fileLoadManager.js'
 import FileLoadWidget from './fileLoadWidget.js'
 import SessionFileLoad from './sessionFileLoad.js'
