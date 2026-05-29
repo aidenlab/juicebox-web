@@ -4,7 +4,7 @@
  */
 function encodeTrackDatasourceConfigurator(genomeId, type) {
 
-    const root = 'https://s3.amazonaws.com/igv.org.app/encode/'
+    const root = 'https://raw.githubusercontent.com/igvteam/igv-data/main/data/encode/'
     let url
 
     switch (type) {
