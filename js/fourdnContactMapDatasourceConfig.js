@@ -1,7 +1,7 @@
 
 const fourdnContactMapDatasourceConfiguration =
     {
-            url: 'https://s3.amazonaws.com/igv.org.app/4dn/hic/4dn_hic.txt',
+            url: 'https://raw.githubusercontent.com/igvteam/igv-data/main/data/4dn/4dn_hic.txt',
             columns:
                 [
                         // 'url',
