@@ -10,9 +10,27 @@ import QRCode from "./qrcode.js";
 import configureContactMapLoaders from "./contactMapLoad.js";
 import {tinyURLShortener} from "./urlShortener.js";
 
+// CORS-enabled mirror of the genome list, used if config.genome is unreachable.
+// Matches the backup URL used by igv.js (genomeUtils.js BACKUP_GENOMES_URL).
+const BACKUP_GENOMES_URL = 'https://raw.githubusercontent.com/igvteam/igv-data/refs/heads/main/genomes/web/genomes.json'
+
 let currentGenomeId
 let genomeDerivedTrackConfigurations
 let shortenURL
+
+async function fetchGenomeList(url) {
+    try {
+        const response = await fetch(url)
+        if (!response.ok) {
+            throw new Error(`HTTP ${ response.status }`)
+        }
+        return await response.json()
+    } catch (error) {
+        console.error(`Error fetching genome list from ${ url }, falling back to backup`, error)
+        const response = await fetch(BACKUP_GENOMES_URL)
+        return await response.json()
+    }
+}
 
 function initializationHelper(container, config) {
 
@@ -89,8 +107,7 @@ function initializationHelper(container, config) {
             currentGenomeId = data
 
             if (config.genome) {
-                const response = await fetch(config.genome)
-                const list = await response.json()
+                const list = await fetchGenomeList(config.genome)
                 genomeDerivedTrackConfigurations = createGenomeDerivedTrackConfigurations(currentGenomeId, list)
             }
 
