@@ -1,6 +1,6 @@
 export const juiceboxConfig = {
 
-    genome: 'https://igv.org/genomes/genomes.json',
+    genome: 'https://igv.org/genomes/genomes3.json',
 
     mapMenu: {
         id: 'contact-map-datalist',
