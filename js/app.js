@@ -22,7 +22,7 @@
  */
 
 import hic from 'juicebox.js'
-import './devUrlMapper.js'
+import {registerDevUrlMapper} from './devUrlMapper.js'
 import {AlertSingleton} from './alertSingleton.js'
 import {initializationHelper} from "./initializationHelper.js"
 import {juiceboxConfig} from './juiceboxConfig.js'
@@ -36,6 +36,9 @@ document.addEventListener("DOMContentLoaded", async (event) => {
 })
 
 async function init(container) {
+
+    // Ahead of hic.init, so the mapper is in place before any map or track read.
+    await registerDevUrlMapper()
 
     AlertSingleton.init(container)
 
