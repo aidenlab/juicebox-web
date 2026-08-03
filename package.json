@@ -21,7 +21,7 @@
   "devDependencies": {
     "igv-utils": "github:igvteam/igv-utils#v1.7.1",
     "infinite-table": "github:igvteam/infinite-table#main",
-    "juicebox.js": "github:aidenlab/juicebox.js#v3.5.0",
+    "juicebox.js": "github:aidenlab/juicebox.js#v3.6.0",
     "vite": "^8.0.11"
   }
 }
