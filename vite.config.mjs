@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite'
+import { devProxy } from 'juicebox.js/dev-proxy/plugin'
 import { readFileSync, renameSync, existsSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { resolve } from 'node:path'
@@ -20,6 +21,9 @@ export default defineConfig(({ mode }) => {
             },
         },
         plugins: [
+            // Dev only (apply: 'serve'). Fetches WAF-challenged data hosts from Node, where the
+            // Origin header can be set to an allowlisted one. See aidenlab/juicebox-web#54.
+            devProxy(),
             {
                 name: 'juicebox-version',
                 transformIndexHtml: (html) => html.replace(/@VERSION/g, pkg.version),

@@ -22,6 +22,7 @@
  */
 
 import hic from 'juicebox.js'
+import './devUrlMapper.js'
 import {AlertSingleton} from './alertSingleton.js'
 import {initializationHelper} from "./initializationHelper.js"
 import {juiceboxConfig} from './juiceboxConfig.js'
