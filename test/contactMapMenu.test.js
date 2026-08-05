@@ -37,6 +37,20 @@ describe('contact map menu', () => {
     })
 
     /**
+     * The buckets these maps live in serve 403 to a browser — they admit only a User-Agent starting
+     * with `IGV`, which no browser can send — so in development they are reached through the dev
+     * proxy in juicebox.js. That proxy is keyed on host, and it deliberately declines path-style
+     * addressing (`s3.amazonaws.com/<bucket>/…`) because that endpoint fronts every bucket on S3,
+     * so claiming it would route strangers' data through the dev server. Virtual-host addressing
+     * names the bucket and is safe to claim.
+     */
+    it('addresses S3 buckets by virtual host, which the dev proxy can reach', () => {
+        const pathStyle = menuRows().filter(({ url }) => new URL(url).host === 's3.amazonaws.com')
+
+        expect(pathStyle).toEqual([])
+    })
+
+    /**
      * The normalization vector index saves a lookup round trip on load. These maps used to get it
      * from a 1268-entry table inside juicebox.js (js/nvi.js), matched on the exact URL string — so
      * editing a URL here silently cost seconds of load time rather than failing. Carrying the value
