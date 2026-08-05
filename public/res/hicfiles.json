@@ -36,7 +36,7 @@
 		"protocol":"in situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/maternal.hic":{
-		"NVI":"",
+		"NVI":"1380542661,17185",
 		"name":"Maternal",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -48,7 +48,7 @@
 		"protocol":"in situ"
 		},	
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/paternal.hic":{
-		"NVI":"",
+		"NVI":"1389001777,17185",
 		"name":"Paternal",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -60,7 +60,7 @@
 		"protocol":"in situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/imr90/in-situ/combined.hic":{
-		"NVI":"",
+		"NVI":"13433880319,35723",
 		"name":"Combined",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -72,7 +72,7 @@
 		"protocol":"in situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC001.hic":{
-		"NVI":"",
+		"NVI":"3409347253,35975",
 		"name":"HIC001",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -84,7 +84,7 @@
 		"protocol":"in situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC002.hic":{
-		"NVI":"",
+		"NVI":"4529947083,36479",
 		"name":"HIC002",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -96,7 +96,7 @@
 		"protocol":"in situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC003.hic":{
-		"NVI":"",
+		"NVI":"6894962500,36479",
 		"name":"HIC003",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -108,7 +108,7 @@
 		"protocol":"in situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC004.hic":{
-		"NVI":"",
+		"NVI":"3395593338,36479",
 		"name":"HIC004",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -120,7 +120,7 @@
 		"protocol":"in situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC005.hic":{
-		"NVI":"",
+		"NVI":"5204128636,36479",
 		"name":"HIC005",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -132,7 +132,7 @@
 		"protocol":"in situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC006.hic":{
-		"NVI":"",
+		"NVI":"3278363811,36479",
 		"name":"HIC006",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -144,7 +144,7 @@
 		"protocol":"in situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC007.hic":{
-		"NVI":"",
+		"NVI":"3585547340,36479",
 		"name":"HIC007",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -156,7 +156,7 @@
 		"protocol":"in situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC008.hic":{
-		"NVI":"",
+		"NVI":"4134197273,36479",
 		"name":"HIC008",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -168,7 +168,7 @@
 		"protocol":"in situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC009.hic":{
-		"NVI":"",
+		"NVI":"2851728310,36479",
 		"name":"HIC009",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -180,7 +180,7 @@
 		"protocol":"in situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC010.hic":{
-		"NVI":"",
+		"NVI":"1754216102,36479",
 		"name":"HIC010",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -192,7 +192,7 @@
 		"protocol":"in situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC011.hic":{
-		"NVI":"",
+		"NVI":"1716829574,36479",
 		"name":"HIC011",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -204,7 +204,7 @@
 		"protocol":"in situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC012.hic":{
-		"NVI":"",
+		"NVI":"4367980375,36479",
 		"name":"HIC012",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -216,7 +216,7 @@
 		"protocol":"in situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC013.hic":{
-		"NVI":"",
+		"NVI":"2309654671,36479",
 		"name":"HIC013",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -228,7 +228,7 @@
 		"protocol":"in situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC014.hic":{
-		"NVI":"",
+		"NVI":"5324950266,36479",
 		"name":"HIC014",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -240,7 +240,7 @@
 		"protocol":"in situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC015.hic":{
-		"NVI":"",
+		"NVI":"3132333594,36479",
 		"name":"HIC015",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -252,7 +252,7 @@
 		"protocol":"in situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC016.hic":{
-		"NVI":"",
+		"NVI":"3159154704,36479",
 		"name":"HIC016",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -264,7 +264,7 @@
 		"protocol":"in situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC017.hic":{
-		"NVI":"",
+		"NVI":"3262554627,36479",
 		"name":"HIC017",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -276,7 +276,7 @@
 		"protocol":"in situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC018.hic":{
-		"NVI":"",
+		"NVI":"3014216364,36479",
 		"name":"HIC018",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -288,7 +288,7 @@
 		"protocol":"in situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC019.hic":{
-		"NVI":"",
+		"NVI":"5025753246,36479",
 		"name":"HIC019",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -300,7 +300,7 @@
 		"protocol":"in situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC020.hic":{
-		"NVI":"",
+		"NVI":"5861584507,36479",
 		"name":"HIC020",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -312,7 +312,7 @@
 		"protocol":"in situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC021.hic":{
-		"NVI":"",
+		"NVI":"3542263275,36479",
 		"name":"HIC021",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -324,7 +324,7 @@
 		"protocol":"in situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC022.hic":{
-		"NVI":"",
+		"NVI":"5061949378,36479",
 		"name":"HIC022",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -336,7 +336,7 @@
 		"protocol":"in situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC023.hic":{
-		"NVI":"",
+		"NVI":"4816423919,36479",
 		"name":"HIC023",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -348,7 +348,7 @@
 		"protocol":"in situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC024.hic":{
-		"NVI":"",
+		"NVI":"2683781104,36479",
 		"name":"HIC024",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -360,7 +360,7 @@
 		"protocol":"in situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC025.hic":{
-		"NVI":"",
+		"NVI":"6522701781,36479",
 		"name":"HIC025",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -372,7 +372,7 @@
 		"protocol":"in situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC026.hic":{
-		"NVI":"",
+		"NVI":"6748846520,36479",
 		"name":"HIC026",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -384,7 +384,7 @@
 		"protocol":"in situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC027.hic":{
-		"NVI":"",
+		"NVI":"5642693007,36479",
 		"name":"HIC027",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -396,7 +396,7 @@
 		"protocol":"in situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC028.hic":{
-		"NVI":"",
+		"NVI":"2098921691,36479",
 		"name":"HIC028",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -408,7 +408,7 @@
 		"protocol":"in situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC029.hic":{
-		"NVI":"",
+		"NVI":"3886454027,36479",
 		"name":"HIC029",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -420,7 +420,7 @@
 		"protocol":"in situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/agar/HIC030.hic":{
-		"NVI":"",
+		"NVI":"2288984204,36479",
 		"name":"HIC030",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -432,7 +432,7 @@
 		"protocol":"agar"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/agar/HIC031.hic":{
-		"NVI":"",
+		"NVI":"2115342419,36479",
 		"name":"HIC031",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -444,7 +444,7 @@
 		"protocol":"agar"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/pellet/HIC032.hic":{
-		"NVI":"",
+		"NVI":"2063314324,36479",
 		"name":"HIC032",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -456,7 +456,7 @@
 		"protocol":"pellet"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/supernatant/HIC033.hic":{
-		"NVI":"",
+		"NVI":"1933908457,36479",
 		"name":"HIC033",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -468,7 +468,7 @@
 		"protocol":"supernatant"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/dilution/HIC034.hic":{
-		"NVI":"",
+		"NVI":"13555514595,36479",
 		"name":"HIC034",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -480,7 +480,7 @@
 		"protocol":"dilution"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/dilution/HIC035.hic":{
-		"NVI":"",
+		"NVI":"6129650900,36479",
 		"name":"HIC035",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -492,7 +492,7 @@
 		"protocol":"dilution"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/dilution/HIC036.hic":{
-		"NVI":"",
+		"NVI":"4307445019,36479",
 		"name":"HIC036",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -504,7 +504,7 @@
 		"protocol":"dilution"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/dilution/HIC037.hic":{
-		"NVI":"",
+		"NVI":"9375139867,36479",
 		"name":"HIC037",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -516,7 +516,7 @@
 		"protocol":"dilution"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/dilution/combined.hic":{
-		"NVI":"",
+		"NVI":"11664249584,33929",
 		"name":"Combined",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -528,7 +528,7 @@
 		"protocol":"dilution"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/combined_DpnII.hic":{
-		"NVI":"",
+		"NVI":"7003537290,36479",
 		"name":"DpnII combined",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -540,7 +540,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC038.hic":{
-		"NVI":"",
+		"NVI":"2099825544,36479",
 		"name":"HIC038",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -552,7 +552,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC039.hic":{
-		"NVI":"",
+		"NVI":"2096900138,36479",
 		"name":"HIC039",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -564,7 +564,7 @@
 		"protocol":"in-situ"
 		},		
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC040.hic":{
-		"NVI":"",
+		"NVI":"2593642141,36479",
 		"name":"HIC040",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -576,7 +576,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC041.hic":{
-		"NVI":"",
+		"NVI":"2263919098,36479",
 		"name":"HIC041",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -588,7 +588,7 @@
 		"protocol":"in-situ"
 		},		
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC042.hic":{
-		"NVI":"",
+		"NVI":"2684774693,36479",
 		"name":"HIC042",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -600,7 +600,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/combined_noXlink.hic":{
-		"NVI":"",
+		"NVI":"5574807456,36479",
 		"name":"No X link combined",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -612,7 +612,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC043.hic":{
-		"NVI":"",
+		"NVI":"2986114347,36479",
 		"name":"HIC043",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -624,7 +624,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC044.hic":{
-		"NVI":"",
+		"NVI":"1916378621,36479",
 		"name":"HIC044",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -636,7 +636,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC045.hic":{
-		"NVI":"",
+		"NVI":"746463126,36479",
 		"name":"HIC045",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -648,7 +648,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC046.hic":{
-		"NVI":"",
+		"NVI":"2338476164,36479",
 		"name":"HIC046",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -660,7 +660,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC047.hic":{
-		"NVI":"",
+		"NVI":"1167496250,36479",
 		"name":"HIC047",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -672,7 +672,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC048.hic":{
-		"NVI":"",
+		"NVI":"2231690794,36479",
 		"name":"ENCODE Batch 1, HIC048",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -684,7 +684,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/in-situ/HIC049.hic":{
-		"NVI":"",
+		"NVI":"2782308678,36479",
 		"name":"ENCODE Batch 2, HIC049",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -696,7 +696,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/imr90/in-situ/HIC050.hic":{
-		"NVI":"",
+		"NVI":"3633531346,36479",
 		"name":"HIC050",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -708,7 +708,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/imr90/in-situ/HIC051.hic":{
-		"NVI":"",
+		"NVI":"4063486444,36479",
 		"name":"HIC051",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -720,7 +720,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/imr90/in-situ/HIC052.hic":{
-		"NVI":"",
+		"NVI":"929756278,36479",
 		"name":"HIC052",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -732,7 +732,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/imr90/in-situ/HIC053.hic":{
-		"NVI":"",
+		"NVI":"2489657204,36479",
 		"name":"HIC053",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -744,7 +744,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/imr90/in-situ/HIC054.hic":{
-		"NVI":"",
+		"NVI":"4036419444,36479",
 		"name":"HIC054",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -756,7 +756,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/imr90/in-situ/HIC055.hic":{
-		"NVI":"",
+		"NVI":"4284185549,36479",
 		"name":"HIC055",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -768,7 +768,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/imr90/in-situ/HIC056.hic":{
-		"NVI":"",
+		"NVI":"4410546240,36479",
 		"name":"HIC056",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -780,7 +780,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/imr90/dilution/HIC057.hic":{
-		"NVI":"",
+		"NVI":"1491998259,36479",
 		"name":"HIC057",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -792,7 +792,7 @@
 		"protocol":"dilution"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/hmec/in-situ/combined.hic":{
-		"NVI":"",
+		"NVI":"7266425111,36479",
 		"name":"Combined",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -804,7 +804,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/hmec/in-situ/HIC058.hic":{
-		"NVI":"",
+		"NVI":"6532635593,36479",
 		"name":"HIC058",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -816,7 +816,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/hmec/in-situ/HIC059.hic":{
-		"NVI":"",
+		"NVI":"400684530,36479",
 		"name":"HIC059",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -828,7 +828,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/hmec/in-situ/HIC060.hic":{
-		"NVI":"",
+		"NVI":"645352187,36479",
 		"name":"HIC060",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -840,7 +840,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/hmec/in-situ/HIC061.hic":{
-		"NVI":"",
+		"NVI":"736291871,36479",
 		"name":"HIC061",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -852,7 +852,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/hmec/in-situ/HIC062.hic":{
-		"NVI":"",
+		"NVI":"762731037,36479",
 		"name":"HIC062",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -864,7 +864,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/hmec/in-situ/HIC063.hic":{
-		"NVI":"",
+		"NVI":"682917431,36479",
 		"name":"HIC063",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -876,7 +876,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/hmec/dilution/HIC064.hic":{
-		"NVI":"",
+		"NVI":"4550171307,36479",
 		"name":"HIC064",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -888,7 +888,7 @@
 		"protocol":"dilution"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/nhek/in-situ/combined.hic":{
-		"NVI":"",
+		"NVI":"11897184911,35789",
 		"name":"Combined",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -900,7 +900,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/nhek/in-situ/HIC065.hic":{
-		"NVI":"",
+		"NVI":"5425943567,36479",
 		"name":"HIC065",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -912,7 +912,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/nhek/in-situ/HIC066.hic":{
-		"NVI":"",
+		"NVI":"5942869818,36479",
 		"name":"HIC066",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -924,7 +924,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/nhek/in-situ/HIC067.hic":{
-		"NVI":"",
+		"NVI":"5191049261,35647",
 		"name":"HIC067",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -936,7 +936,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/nhek/dilution/HIC068.hic":{
-		"NVI":"",
+		"NVI":"2713318801,36479",
 		"name":"HIC068",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -948,7 +948,7 @@
 		"protocol":"dilution"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/k562/in-situ/combined.hic":{
-		"NVI":"",
+		"NVI":"12641555389,36479",
 		"name":"Combined",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -960,7 +960,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/k562/in-situ/HIC069.hic":{
-		"NVI":"",
+		"NVI":"5630177461,36479",
 		"name":"HIC069",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -972,7 +972,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/k562/in-situ/HIC070.hic":{
-		"NVI":"",
+		"NVI":"5926611269,36479",
 		"name":"HIC070",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -984,7 +984,7 @@
 		"protocol":"in-situ"
 		},		
 	"https://hicfiles.s3.amazonaws.com/hiseq/k562/in-situ/HIC071.hic":{
-		"NVI":"",
+		"NVI":"2486191351,36479",
 		"name":"HIC071",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -996,7 +996,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/k562/in-situ/HIC072.hic":{
-		"NVI":"",
+		"NVI":"2281343366,36479",
 		"name":"HIC072",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1008,7 +1008,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/k562/in-situ/HIC073.hic":{
-		"NVI":"",
+		"NVI":"2173074239,36479",
 		"name":"HIC073",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1020,7 +1020,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/k562/in-situ/HIC074.hic":{
-		"NVI":"",
+		"NVI":"2463700999,36479",
 		"name":"HIC074",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1032,7 +1032,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/kbm7/in-situ/combined.hic":{
-		"NVI":"",
+		"NVI":"14661922519,35639",
 		"name":"Combined",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1044,7 +1044,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/kbm7/in-situ/HIC075.hic":{
-		"NVI":"",
+		"NVI":"3685310515,36479",
 		"name":"HIC075",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1056,7 +1056,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/kbm7/in-situ/HIC076.hic":{
-		"NVI":"",
+		"NVI":"5833658487,35891",
 		"name":"HIC076",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1068,7 +1068,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/kbm7/in-situ/HIC077.hic":{
-		"NVI":"",
+		"NVI":"2406346486,36479",
 		"name":"HIC077",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1080,7 +1080,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/kbm7/in-situ/HIC078.hic":{
-		"NVI":"",
+		"NVI":"5241454987,35919",
 		"name":"HIC078",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1092,7 +1092,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/kbm7/in-situ/HIC079.hic":{
-		"NVI":"",
+		"NVI":"6297234263,36479",
 		"name":"HIC079",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1104,7 +1104,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/huvec/in-situ/combined.hic":{
-		"NVI":"",
+		"NVI":"9193858096,36479",
 		"name":"Combined",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1116,7 +1116,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/huvec/in-situ/HIC080.hic":{
-		"NVI":"",
+		"NVI":"5171405536,36479",
 		"name":"HIC080",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1128,7 +1128,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/huvec/in-situ/HIC081.hic":{
-		"NVI":"",
+		"NVI":"3489767688,35891",
 		"name":"HIC081",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1140,7 +1140,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/huvec/in-situ/HIC082.hic":{
-		"NVI":"",
+		"NVI":"4243339375,36479",
 		"name":"HIC082",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1152,7 +1152,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/huvec/dilution/HIC083.hic":{
-		"NVI":"",
+		"NVI":"1497495406,36479",
 		"name":"HIC083",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1164,7 +1164,7 @@
 		"protocol":"dilution"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/hela/in-situ/combined.hic":{
-		"NVI":"",
+		"NVI":"7923332224,35593",
 		"name":"Combined",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1176,7 +1176,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/hela/in-situ/HIC084.hic":{
-		"NVI":"",
+		"NVI":"867699123,36479",
 		"name":"HIC084",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1188,7 +1188,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/hela/in-situ/HIC085.hic":{
-		"NVI":"",
+		"NVI":"3669518514,36479",
 		"name":"HIC085",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1200,7 +1200,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/hela/in-situ/HIC086.hic":{
-		"NVI":"",
+		"NVI":"5306474712,35595",
 		"name":"HIC086",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1212,7 +1212,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/hela/in-situ/HIC087.hic":{
-		"NVI":"",
+		"NVI":"1490963755,36397",
 		"name":"HIC087",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1224,7 +1224,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/ch12-lx-b-lymphoblasts/in-situ/combined.hic":{
-		"NVI":"",
+		"NVI":"8956382853,50248",
 		"name":"B lymphoblasts combined",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1236,7 +1236,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/ch12-lx-b-lymphoblasts/in-situ/HIC088.hic":{
-		"NVI":"",
+		"NVI":"1874185366,32102",
 		"name":"HIC088",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1248,7 +1248,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/ch12-lx-b-lymphoblasts/in-situ/HIC089.hic":{
-		"NVI":"",
+		"NVI":"1301165236,32102",
 		"name":"HIC089",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1260,7 +1260,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/ch12-lx-b-lymphoblasts/in-situ/HIC090.hic":{
-		"NVI":"",
+		"NVI":"1105246282,32102",
 		"name":"HIC090",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1272,7 +1272,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/ch12-lx-b-lymphoblasts/in-situ/HIC091.hic":{
-		"NVI":"",
+		"NVI":"1338325770,32102",
 		"name":"HIC091",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1284,7 +1284,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/ch12-lx-b-lymphoblasts/in-situ/HIC092.hic":{
-		"NVI":"",
+		"NVI":"1307918730,32102",
 		"name":"HIC092",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1296,7 +1296,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/ch12-lx-b-lymphoblasts/in-situ/HIC093.hic":{
-		"NVI":"",
+		"NVI":"755136918,32102",
 		"name":"HIC093",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1308,7 +1308,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/ch12-lx-b-lymphoblasts/in-situ/HIC094.hic":{
-		"NVI":"",
+		"NVI":"1606583694,32102",
 		"name":"HIC094",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1320,7 +1320,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/ch12-lx-b-lymphoblasts/in-situ/HIC095.hic":{
-		"NVI":"",
+		"NVI":"2039711245,32102",
 		"name":"HIC095",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1332,7 +1332,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/ch12-lx-b-lymphoblasts/in-situ/HIC096.hic":{
-		"NVI":"",
+		"NVI":"1909573053,32102",
 		"name":"HIC096",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1344,7 +1344,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/ch12-lx-b-lymphoblasts/in-situ/HIC097.hic":{
-		"NVI":"",
+		"NVI":"1826710712,32102",
 		"name":"HIC097",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1356,7 +1356,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/ch12-lx-b-lymphoblasts/in-situ/HIC098.hic":{
-		"NVI":"",
+		"NVI":"1998793575,32102",
 		"name":"HIC098",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1368,7 +1368,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/ch12-lx-b-lymphoblasts/in-situ/HIC099.hic":{
-		"NVI":"",
+		"NVI":"1007740962,32102",
 		"name":"HIC099",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1380,7 +1380,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/ch12-lx-b-lymphoblasts/in-situ/HIC100.hic":{
-		"NVI":"",
+		"NVI":"736464120,32102",
 		"name":"HIC100",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1392,7 +1392,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/ch12-lx-b-lymphoblasts/in-situ/HIC101.hic":{
-		"NVI":"",
+		"NVI":"980505082,32102",
 		"name":"HIC101",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1404,7 +1404,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/ch12-lx-b-lymphoblasts/in-situ/HIC102.hic":{
-		"NVI":"",
+		"NVI":"1116083646,32102",
 		"name":"HIC102",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1416,7 +1416,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/ch12-lx-b-lymphoblasts/dilution/HIC103.hic":{
-		"NVI":"",
+		"NVI":"1096994310,32102",
 		"name":"HIC103",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1428,7 +1428,7 @@
 		"protocol":"dilution"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/ch12-lx-b-lymphoblasts/dilution/HIC104.hic":{
-		"NVI":"",
+		"NVI":"841063882,32102",
 		"name":"HIC104",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1440,7 +1440,7 @@
 		"protocol":"dilution"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC105.hic":{
-		"NVI":"",
+		"NVI":"107742864,36479",
 		"name":"HIC105",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1452,7 +1452,7 @@
 		"protocol":"dilution"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC106.hic":{
-		"NVI":"",
+		"NVI":"134295912,36479",
 		"name":"HIC106",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1464,7 +1464,7 @@
 		"protocol":"dilution"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC107.hic":{
-		"NVI":"",
+		"NVI":"110228014,36479",
 		"name":"HIC107",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1476,7 +1476,7 @@
 		"protocol":"dilution"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC108.hic":{
-		"NVI":"",
+		"NVI":"102761401,36479",
 		"name":"HIC108",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1488,7 +1488,7 @@
 		"protocol":"dilution"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC109.hic":{
-		"NVI":"",
+		"NVI":"100461491,36479",
 		"name":"HIC109",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1500,7 +1500,7 @@
 		"protocol":"dilution"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC110.hic":{
-		"NVI":"",
+		"NVI":"88828472,36479",
 		"name":"HIC110",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1512,7 +1512,7 @@
 		"protocol":"dilution"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC111.hic":{
-		"NVI":"",
+		"NVI":"81471064,36479",
 		"name":"HIC111",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1524,7 +1524,7 @@
 		"protocol":"dilution"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC112.hic":{
-		"NVI":"",
+		"NVI":"92297035,36479",
 		"name":"HIC112",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1536,7 +1536,7 @@
 		"protocol":"dilution"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC113.hic":{
-		"NVI":"",
+		"NVI":"65503916,36479",
 		"name":"HIC113",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1548,7 +1548,7 @@
 		"protocol":"dilution"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC114.hic":{
-		"NVI":"",
+		"NVI":"49181188,36479",
 		"name":"HIC114",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1560,7 +1560,7 @@
 		"protocol":"dilution"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC115.hic":{
-		"NVI":"",
+		"NVI":"46471102,36479",
 		"name":"HIC115",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1572,7 +1572,7 @@
 		"protocol":"dilution"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC116.hic":{
-		"NVI":"",
+		"NVI":"64284432,36479",
 		"name":"HIC116",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1584,7 +1584,7 @@
 		"protocol":"dilution"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC117.hic":{
-		"NVI":"",
+		"NVI":"60434076,36479",
 		"name":"HIC117",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1596,7 +1596,7 @@
 		"protocol":"dilution"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC118.hic":{
-		"NVI":"",
+		"NVI":"45248563,36479",
 		"name":"HIC118",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1608,7 +1608,7 @@
 		"protocol":"dilution"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC119.hic":{
-		"NVI":"",
+		"NVI":"60288782,36479",
 		"name":"HIC119",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1620,7 +1620,7 @@
 		"protocol":"dilution"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC120.hic":{
-		"NVI":"",
+		"NVI":"136888414,36479",
 		"name":"HIC120",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1632,7 +1632,7 @@
 		"protocol":"dilution"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC121.hic":{
-		"NVI":"",
+		"NVI":"125009003,33681",
 		"name":"HIC121",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1644,7 +1644,7 @@
 		"protocol":"dilution"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC122.hic":{
-		"NVI":"",
+		"NVI":"154011688,34127",
 		"name":"HIC122",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1656,7 +1656,7 @@
 		"protocol":"dilution"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC123.hic":{
-		"NVI":"",
+		"NVI":"177663372,35293",
 		"name":"HIC123",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1668,7 +1668,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC124.hic":{
-		"NVI":"",
+		"NVI":"382186226,35245",
 		"name":"HIC124",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1680,7 +1680,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC125.hic":{
-		"NVI":"",
+		"NVI":"158160717,35271",
 		"name":"HIC125",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1704,7 +1704,7 @@
 		"protocol":"dilution"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC127.hic":{
-		"NVI":"",
+		"NVI":"110261177,34659",
 		"name":"HIC127",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1716,7 +1716,7 @@
 		"protocol":"tethered in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC128.hic":{
-		"NVI":"",
+		"NVI":"246131875,35509",
 		"name":"HIC128",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1728,7 +1728,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC129.hic":{
-		"NVI":"",
+		"NVI":"260160119,35667",
 		"name":"HIC129",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1740,7 +1740,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC130.hic":{
-		"NVI":"",
+		"NVI":"117479562,34681",
 		"name":"HIC130",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1752,7 +1752,7 @@
 		"protocol":"dilution"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC131.hic":{
-		"NVI":"",
+		"NVI":"81508929,34673",
 		"name":"HIC131",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1764,7 +1764,7 @@
 		"protocol":"dilution"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC132.hic":{
-		"NVI":"",
+		"NVI":"105959102,34895",
 		"name":"HIC132",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1776,7 +1776,7 @@
 		"protocol":"dilution"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC133.hic":{
-		"NVI":"",
+		"NVI":"91504812,33451",
 		"name":"HIC133",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1788,7 +1788,7 @@
 		"protocol":"dilution"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC134.hic":{
-		"NVI":"",
+		"NVI":"52222546,33737",
 		"name":"HIC134",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1800,7 +1800,7 @@
 		"protocol":"dilution"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC135.hic":{
-		"NVI":"",
+		"NVI":"57763085,34159",
 		"name":"HIC135",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1812,7 +1812,7 @@
 		"protocol":"dilution"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC136.hic":{
-		"NVI":"",
+		"NVI":"50618489,33731",
 		"name":"HIC136",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1824,7 +1824,7 @@
 		"protocol":"dilution"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC137.hic":{
-		"NVI":"",
+		"NVI":"193163606,33363",
 		"name":"HIC105",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1836,7 +1836,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC138.hic":{
-		"NVI":"",
+		"NVI":"229876152,33777",
 		"name":"HIC138",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1848,7 +1848,7 @@
 		"protocol":"tethered in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC139.hic":{
-		"NVI":"",
+		"NVI":"201783666,33571",
 		"name":"HIC139",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1860,7 +1860,7 @@
 		"protocol":"tethered in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC140.hic":{
-		"NVI":"",
+		"NVI":"281163862,34125",
 		"name":"HIC140",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1872,7 +1872,7 @@
 		"protocol":"tethered in-situ"
 		},	
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC141.hic":{
-		"NVI":"",
+		"NVI":"275969727,33935",
 		"name":"HIC141",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1884,7 +1884,7 @@
 		"protocol":"tethered in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC142.hic":{
-		"NVI":"",
+		"NVI":"275020431,34125",
 		"name":"HIC142",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1908,7 +1908,7 @@
 		"protocol":"tethered in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC144.hic":{
-		"NVI":"",
+		"NVI":"223834810,34177",
 		"name":"HIC144",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1920,7 +1920,7 @@
 		"protocol":"tethered in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC145.hic":{
-		"NVI":"",
+		"NVI":"296632653,33937",
 		"name":"HIC145",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1932,7 +1932,7 @@
 		"protocol":"tethered in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC146.hic":{
-		"NVI":"",
+		"NVI":"290945216,33961",
 		"name":"HIC146",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1944,7 +1944,7 @@
 		"protocol":"tethered in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC147.hic":{
-		"NVI":"",
+		"NVI":"234459964,34231",
 		"name":"HIC147",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1956,7 +1956,7 @@
 		"protocol":"tethered in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC148.hic":{
-		"NVI":"",
+		"NVI":"295457850,34039",
 		"name":"HIC148",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1968,7 +1968,7 @@
 		"protocol":"tethered in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC149.hic":{
-		"NVI":"",
+		"NVI":"113569632,35695",
 		"name":"HIC149",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1980,7 +1980,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC150.hic":{
-		"NVI":"",
+		"NVI":"304381897,33963",
 		"name":"HIC150",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -1992,7 +1992,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC151.hic":{
-		"NVI":"",
+		"NVI":"289314545,33805",
 		"name":"HIC151",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2004,7 +2004,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC152.hic":{
-		"NVI":"",
+		"NVI":"284320182,33803",
 		"name":"HIC152",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2016,7 +2016,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC153.hic":{
-		"NVI":"",
+		"NVI":"401393947,34659",
 		"name":"HIC153",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2028,7 +2028,7 @@
 		"protocol":"tethered in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC154.hic":{
-		"NVI":"",
+		"NVI":"188065488,36479",
 		"name":"HIC154",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2040,7 +2040,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC155.hic":{
-		"NVI":"",
+		"NVI":"299157119,33967",
 		"name":"HIC155",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2052,7 +2052,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC156.hic":{
-		"NVI":"",
+		"NVI":"279289244,33787",
 		"name":"HIC156",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2064,7 +2064,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC157.hic":{
-		"NVI":"",
+		"NVI":"254852119,33917",
 		"name":"HIC157",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2076,7 +2076,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC158.hic":{
-		"NVI":"",
+		"NVI":"195969660,33477",
 		"name":"HIC158",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2088,7 +2088,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC159.hic":{
-		"NVI":"",
+		"NVI":"185720388,36479",
 		"name":"HIC159",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2100,7 +2100,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC160.hic":{
-		"NVI":"",
+		"NVI":"227709279,33599",
 		"name":"HIC160",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2112,7 +2112,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC161.hic":{
-		"NVI":"",
+		"NVI":"157225076,33209",
 		"name":"HIC161",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2124,7 +2124,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC162.hic":{
-		"NVI":"",
+		"NVI":"105703444,32033",
 		"name":"HIC162",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2136,7 +2136,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC163.hic":{
-		"NVI":"",
+		"NVI":"122665658,32121",
 		"name":"HIC163",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2148,7 +2148,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC164.hic":{
-		"NVI":"",
+		"NVI":"228048231,33761",
 		"name":"HIC164",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2160,7 +2160,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC165.hic":{
-		"NVI":"",
+		"NVI":"114440819,32011",
 		"name":"HIC165",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2172,7 +2172,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC166.hic":{
-		"NVI":"",
+		"NVI":"285147558,33891",
 		"name":"HIC166",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2184,7 +2184,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC167.hic":{
-		"NVI":"",
+		"NVI":"363116754,33943",
 		"name":"HIC167",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2196,7 +2196,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC168.hic":{
-		"NVI":"",
+		"NVI":"119592158,31937",
 		"name":"HIC168",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2208,7 +2208,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC169.hic":{
-		"NVI":"",
+		"NVI":"236853872,33785",
 		"name":"HIC169",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2220,7 +2220,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC170.hic":{
-		"NVI":"",
+		"NVI":"195187639,33395",
 		"name":"HIC170",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2232,7 +2232,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC171.hic":{
-		"NVI":"",
+		"NVI":"208044058,33309",
 		"name":"HIC171",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2244,7 +2244,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC172.hic":{
-		"NVI":"",
+		"NVI":"144645916,32877",
 		"name":"HIC172",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2256,7 +2256,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC173.hic":{
-		"NVI":"",
+		"NVI":"119115941,32203",
 		"name":"HIC173",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2280,7 +2280,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC175.hic":{
-		"NVI":"",
+		"NVI":"178030481,33525",
 		"name":"HIC175",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2292,7 +2292,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC176.hic":{
-		"NVI":"",
+		"NVI":"117220136,32169",
 		"name":"HIC176",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2304,7 +2304,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC177.hic":{
-		"NVI":"",
+		"NVI":"128586196,32659",
 		"name":"HIC177",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2316,7 +2316,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC178.hic":{
-		"NVI":"",
+		"NVI":"191419141,33629",
 		"name":"HIC178",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2328,7 +2328,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC179.hic":{
-		"NVI":"",
+		"NVI":"141556748,32959",
 		"name":"HIC179",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2340,7 +2340,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC180.hic":{
-		"NVI":"",
+		"NVI":"199825102,33185",
 		"name":"HIC180",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2352,7 +2352,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC181.hic":{
-		"NVI":"",
+		"NVI":"301022688,33783",
 		"name":"HIC181",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2364,7 +2364,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC182.hic":{
-		"NVI":"",
+		"NVI":"185384453,33205",
 		"name":"HIC182",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2376,7 +2376,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC183.hic":{
-		"NVI":"",
+		"NVI":"202189264,36367",
 		"name":"HIC183",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2388,7 +2388,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC184.hic":{
-		"NVI":"",
+		"NVI":"37464475,36479",
 		"name":"HIC184",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2400,7 +2400,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC185.hic":{
-		"NVI":"",
+		"NVI":"161938278,36099",
 		"name":"HIC185",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2412,7 +2412,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC186.hic":{
-		"NVI":"",
+		"NVI":"133853166,36179",
 		"name":"HIC186",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2436,7 +2436,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC188.hic":{
-		"NVI":"",
+		"NVI":"128068030,36237",
 		"name":"HIC188",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2448,7 +2448,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC189.hic":{
-		"NVI":"",
+		"NVI":"148053886,36177",
 		"name":"HIC189",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2460,7 +2460,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC190.hic":{
-		"NVI":"",
+		"NVI":"198946958,35803",
 		"name":"HIC190",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2472,7 +2472,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC191.hic":{
-		"NVI":"",
+		"NVI":"226584564,36063",
 		"name":"HIC191",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2484,7 +2484,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC192.hic":{
-		"NVI":"",
+		"NVI":"194412797,36341",
 		"name":"HIC192",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2496,7 +2496,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC193.hic":{
-		"NVI":"",
+		"NVI":"176408194,36479",
 		"name":"HIC193",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2508,7 +2508,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC194.hic":{
-		"NVI":"",
+		"NVI":"207215649,36055",
 		"name":"HIC194",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2520,7 +2520,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC195.hic":{
-		"NVI":"",
+		"NVI":"175185530,36315",
 		"name":"HIC195",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2532,7 +2532,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC196.hic":{
-		"NVI":"",
+		"NVI":"168969337,36479",
 		"name":"HIC196",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2544,7 +2544,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC197.hic":{
-		"NVI":"",
+		"NVI":"121231252,36339",
 		"name":"HIC197",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2556,7 +2556,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC198.hic":{
-		"NVI":"",
+		"NVI":"92713752,36479",
 		"name":"HIC198",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2568,7 +2568,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC199.hic":{
-		"NVI":"",
+		"NVI":"105130500,36479",
 		"name":"HIC199",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2580,7 +2580,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC200.hic":{
-		"NVI":"",
+		"NVI":"114526350,36479",
 		"name":"HIC200",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2592,7 +2592,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/miseq/rh2014/HIC201.hic":{
-		"NVI":"",
+		"NVI":"122689717,36479",
 		"name":"HIC201",
 		"author":"Rao and Huntley et al.",
 		"journal":"Cell",
@@ -2604,7 +2604,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/hap1/in-situ/combined.hic":{
-		"NVI":"",
+		"NVI":"9614983328,36479",
 		"name":"Combined",
 		"author":"Sanborn and Rao et al.",
 		"journal":"PNAS",
@@ -2616,7 +2616,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/external/ctbp_8_4_17/all_intra_megabase_michrom.hic":{
-		"NVI":"",
+		"NVI":"154205644,10960",
 		"name":"MEGABASE+MiChroM In Silico",
 		"author":"Di Pierro and Cheng et al.",
 		"journal":"Biorxiv",
@@ -2627,7 +2627,7 @@
 		"experiment type":"simulation"
 		},		
 	"https://hicfiles.s3.amazonaws.com/hiseq/rpe1/DarrowHuntley-2015/del-Xa-combined.hic":{
-		"NVI":"",
+		"NVI":"8843305329,36479",
 		"name":"DXZ4 deletion active X, Combined, HIC001",
 		"author":"Darrow and Huntley et al.",
 		"journal":"PNAS",
@@ -2639,7 +2639,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/rpe1/DarrowHuntley-2015/delXa-chrX-diploid.hic":{
-		"NVI":"",
+		"NVI":"11173520,1498",
 		"name":"DXZ4 deletion active X diploid",
 		"author":"Darrow and Huntley et al.",
 		"journal":"PNAS",
@@ -2651,7 +2651,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/rpe1/DarrowHuntley-2015/WT-combined.hic":{
-		"NVI":"",
+		"NVI":"13365182403,36479",
 		"name":"Control, Combined",
 		"author":"Darrow and Huntley et al.",
 		"journal":"PNAS",
@@ -2663,7 +2663,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/rpe1/DarrowHuntley-2015/WT-chrX-diploid.hic":{
-		"NVI":"",
+		"NVI":"17343459,1498",
 		"name":"Control, Diploid",
 		"author":"Darrow and Huntley et al.",
 		"journal":"PNAS",
@@ -2675,7 +2675,7 @@
 		"protocol":"in-situ"
 		},		
 	"https://hicfiles.s3.amazonaws.com/hiseq/rpe1/DarrowHuntley-2015/HIC002.hic":{
-		"NVI":"",
+		"NVI":"4279298739,36479",
 		"name":"Control, HIC002",
 		"author":"Darrow and Huntley et al.",
 		"journal":"PNAS",
@@ -2687,7 +2687,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/rpe1/DarrowHuntley-2015/HIC003.hic":{
-		"NVI":"",
+		"NVI":"3027365532,36479",
 		"name":"Control, HIC003",
 		"author":"Darrow and Huntley et al.",
 		"journal":"PNAS",
@@ -2699,7 +2699,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/rpe1/DarrowHuntley-2015/HIC004.hic":{
-		"NVI":"",
+		"NVI":"2896130835,36479",
 		"name":"Control, HIC004",
 		"author":"Darrow and Huntley et al.",
 		"journal":"PNAS",
@@ -2711,7 +2711,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/rpe1/DarrowHuntley-2015/HIC005.hic":{
-		"NVI":"",
+		"NVI":"4717830071,36479",
 		"name":"Control, HIC005",
 		"author":"Darrow and Huntley et al.",
 		"journal":"PNAS",
@@ -2723,7 +2723,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/rpe1/DarrowHuntley-2015/HIC006.hic":{
-		"NVI":"",
+		"NVI":"5066210154,36479",
 		"name":"Control, HIC006",
 		"author":"Darrow and Huntley et al.",
 		"journal":"PNAS",
@@ -2735,7 +2735,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/rpe1/DarrowHuntley-2015/HIC007.hic":{
-		"NVI":"",
+		"NVI":"3069516128,36479",
 		"name":"Control, HIC007",
 		"author":"Darrow and Huntley et al.",
 		"journal":"PNAS",
@@ -2747,7 +2747,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/rpe1/DarrowHuntley-2015/del-Xi-combined.hic":{
-		"NVI":"",
+		"NVI":"14551096423,36479",
 		"name":"DXZ4 deletion inactive X, Combined",
 		"author":"Darrow and Huntley et al.",
 		"journal":"PNAS",
@@ -2759,7 +2759,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/rpe1/DarrowHuntley-2015/delXi-chrX-diploid.hic":{
-		"NVI":"",
+		"NVI":"17362477,1498",
 		"name":"DXZ4 deletion inactive X, Diploid",
 		"author":"Darrow and Huntley et al.",
 		"journal":"PNAS",
@@ -2771,7 +2771,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/rpe1/DarrowHuntley-2015/HIC008.hic":{
-		"NVI":"",
+		"NVI":"2572386655,36479",
 		"name":"DXZ4 deletion inactive X, HIC008",
 		"author":"Darrow and Huntley et al.",
 		"journal":"PNAS",
@@ -2783,7 +2783,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/rpe1/DarrowHuntley-2015/HIC009.hic":{
-		"NVI":"",
+		"NVI":"2935931663,36479",
 		"name":"DXZ4 deletion inactive X, HIC009",
 		"author":"Darrow and Huntley et al.",
 		"journal":"PNAS",
@@ -2795,7 +2795,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/rpe1/DarrowHuntley-2015/HIC010.hic":{
-		"NVI":"",
+		"NVI":"2019085070,36479",
 		"name":"DXZ4 deletion inactive X, HIC010",
 		"author":"Darrow and Huntley et al.",
 		"journal":"PNAS",
@@ -2807,7 +2807,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/rpe1/DarrowHuntley-2015/HIC011.hic":{
-		"NVI":"",
+		"NVI":"6087610814,36479",
 		"name":"DXZ4 deletion inactive X, HIC011",
 		"author":"Darrow and Huntley et al.",
 		"journal":"PNAS",
@@ -2819,7 +2819,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/rpe1/DarrowHuntley-2015/HIC012.hic":{
-		"NVI":"",
+		"NVI":"2809618194,36479",
 		"name":"DXZ4 deletion inactive X, HIC012",
 		"author":"Darrow and Huntley et al.",
 		"journal":"PNAS",
@@ -2831,7 +2831,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/rpe1/DarrowHuntley-2015/HIC013.hic":{
-		"NVI":"",
+		"NVI":"2572386655,36479",
 		"name":"DXZ4 deletion inactive X, HIC013",
 		"author":"Darrow and Huntley et al.",
 		"journal":"PNAS",
@@ -2843,7 +2843,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/patski/DarrowHuntley-2015/combined.hic":{
-		"NVI":"",
+		"NVI":"6950423609,32102",
 		"name":"Combined",
 		"author":"Darrow and Huntley et al.",
 		"journal":"PNAS",
@@ -2855,7 +2855,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/patski/DarrowHuntley-2015/paternal.hic":{
-		"NVI":"",
+		"NVI":"220592749,15691",
 		"name":"Paternal",
 		"author":"Darrow and Huntley et al.",
 		"journal":"PNAS",
@@ -2867,7 +2867,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/patski/DarrowHuntley-2015/maternal.hic":{
-		"NVI":"",
+		"NVI":"323233095,15691",
 		"name":"Maternal",
 		"author":"Darrow and Huntley et al.",
 		"journal":"PNAS",
@@ -2879,7 +2879,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/patski/DarrowHuntley-2015/HIC014.hic":{
-		"NVI":"",
+		"NVI":"3183235800,32102",
 		"name":"HIC014",
 		"author":"Darrow and Huntley et al.",
 		"journal":"PNAS",
@@ -2891,7 +2891,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/patski/DarrowHuntley-2015/HIC015.hic":{
-		"NVI":"",
+		"NVI":"1739539801,32102",
 		"name":"HIC015",
 		"author":"Darrow and Huntley et al.",
 		"journal":"PNAS",
@@ -2903,7 +2903,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/patski/DarrowHuntley-2015/HIC016.hic":{
-		"NVI":"",
+		"NVI":"1105912758,32102",
 		"name":"HIC016",
 		"author":"Darrow and Huntley et al.",
 		"journal":"PNAS",
@@ -2915,7 +2915,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/patski/DarrowHuntley-2015/HIC017.hic":{
-		"NVI":"",
+		"NVI":"1060773319,32102",
 		"name":"HIC017",
 		"author":"Darrow and Huntley et al.",
 		"journal":"PNAS",
@@ -2927,7 +2927,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/patski/DarrowHuntley-2015/HIC018.hic":{
-		"NVI":"",
+		"NVI":"1203679874,32102",
 		"name":"HIC018",
 		"author":"Darrow and Huntley et al.",
 		"journal":"PNAS",
@@ -2939,7 +2939,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/patski/DarrowHuntley-2015/HIC019.hic":{
-		"NVI":"",
+		"NVI":"3321955269,32102",
 		"name":"HIC019",
 		"author":"Darrow and Huntley et al.",
 		"journal":"PNAS",
@@ -2951,7 +2951,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/rhesus/DarrowHuntley-2015/HIC020.hic":{
-		"NVI":"",
+		"NVI":"7108980626,32102",
 		"name":"rhesus macaque, HIC020",
 		"author":"Darrow and Huntley et al.",
 		"journal":"PNAS",
@@ -2962,7 +2962,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/gm12878/cola/DarrowHuntley-2015/HIC021.hic":{
-		"NVI":"",
+		"NVI":"3906448676,34955",
 		"name":"HIC021",
 		"author":"Darrow and Huntley et al.",
 		"journal":"PNAS",
@@ -2974,7 +2974,7 @@
 		"protocol":"COLA"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/assembly/aedes/combined.hic":{
-		"NVI":"",
+		"NVI":"390780490,2245",
 		"name":"AaegL4",
 		"author":"Dudchenko et al.",
 		"journal":"Science",
@@ -2985,7 +2985,7 @@
 		"protocol":"in-situ"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/assembly/hs2-hic.hic":{
-		"NVI":"",
+		"NVI":"1960284186,33561",
 		"name":"Homo sapiens Hs2-HiC",
 		"author":"Dudchenko et al.",
 		"journal":"Science",
@@ -2995,7 +2995,7 @@
 		"experiment type":"Assembly"
 		},
 	"https://hicfiles.s3.amazonaws.com/hiseq/assembly/CpipJ3.hic":{
-		"NVI":"",
+		"NVI":"766279097,4381",
 		"name":"CpipJ3",
 		"author":"Dudchenko et al.",
 		"journal":"Science",
@@ -3005,7 +3005,7 @@
 		"experiment type":"Assembly"
 		},
 	"https://s3.amazonaws.com/hicfiles/external/phanstiel/updated_O/Snyder_O.hic":{
-		"NVI":"",
+		"NVI":"8046980555,18679",
 		"name":"THP-1 Monocytes",
 		"author":"Phanstiel and Van Bortle et al.",
 		"journal":"Biorxiv",
@@ -3014,7 +3014,7 @@
 		"reference genome":"hg19"
 		},
 	"https://s3.amazonaws.com/hicfiles/external/phanstiel/A_inter.hic":{
-		"NVI":"",
+		"NVI":"10986005145,18679",
 		"name":"THP-1 Macrophages",
 		"author":"Phanstiel and Van Bortle et al.",
 		"journal":"Biorxiv",
@@ -3023,7 +3023,7 @@
 		"reference genome":"hg19"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/untreated/unsynchronized/combined.hic":{
-		"NVI":"",
+		"NVI":"30439217680,36479",
 		"name":"Untreated, Combined",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3035,7 +3035,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/treated_6hr/unsynchronized/combined.hic":{
-		"NVI":"",
+		"NVI":"33255540403,36479",
 		"name":"Auxin treated (6 hrs), Combined",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3047,7 +3047,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/time_course/deep/20min_withdraw_combined.hic":{
-		"NVI":"",
+		"NVI":"11078436933,36479",
 		"name":"Auxin treated (6 hrs) withdrawn (20 min), Combined",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3059,7 +3059,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/time_course/deep/40min_withdraw_combined.hic":{
-		"NVI":"",
+		"NVI":"11031830038,36479",
 		"name":"Auxin treated (6 hrs) withdrawn (40 min), Combined",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3071,7 +3071,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/time_course/deep/60min_withdraw_combined.hic":{
-		"NVI":"",
+		"NVI":"10312725340,36479",
 		"name":"Auxin treated (6 hrs) withdrawn (60 min), Combined",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3083,7 +3083,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/time_course/deep/180min_withdraw_combined.hic":{
-		"NVI":"",
+		"NVI":"10038610214,36479",
 		"name":"Auxin treated (6 hrs) withdrawn (180 min), Combined",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3095,7 +3095,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/untreated/unsynchronized/HIC001.hic":{
-		"NVI":"",
+		"NVI":"8004335785,36479",
 		"name":"Untreated, HIC001",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3107,7 +3107,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/untreated/unsynchronized/HIC002.hic":{
-		"NVI":"",
+		"NVI":"8453215933,36479",
 		"name":"Untreated, HIC002",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3119,7 +3119,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/untreated/unsynchronized/HIC003.hic":{
-		"NVI":"",
+		"NVI":"9118406189,36479",
 		"name":"Untreated, HIC003",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3131,7 +3131,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/untreated/unsynchronized/HIC004.hic":{
-		"NVI":"",
+		"NVI":"5973342894,36479",
 		"name":"Untreated, HIC004",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3143,7 +3143,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/untreated/unsynchronized/HIC005.hic":{
-		"NVI":"",
+		"NVI":"6846576837,36479",
 		"name":"Untreated, HIC005",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3155,7 +3155,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/untreated/unsynchronized/HIC006.hic":{
-		"NVI":"",
+		"NVI":"6075148017,36479",
 		"name":"Untreated, HIC006",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3167,7 +3167,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/untreated/unsynchronized/HIC007.hic":{
-		"NVI":"",
+		"NVI":"8192366992,36479",
 		"name":"Untreated, HIC007",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3179,7 +3179,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/treated_6hr/unsynchronized/HIC008.hic":{
-		"NVI":"",
+		"NVI":"6844159653,36479",
 		"name":"Auxin treated (6 hrs), HIC008",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3191,7 +3191,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/treated_6hr/unsynchronized/HIC009.hic":{
-		"NVI":"",
+		"NVI":"7282063059,36479",
 		"name":"Auxin treated (6 hrs), HIC009",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3203,7 +3203,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/treated_6hr/unsynchronized/HIC010.hic":{
-		"NVI":"",
+		"NVI":"10410578833,36479",
 		"name":"Auxin treated (6 hrs), HIC010",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3215,7 +3215,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/treated_6hr/unsynchronized/HIC011.hic":{
-		"NVI":"",
+		"NVI":"8192366992,36479",
 		"name":"Auxin treated (6 hrs), HIC011",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3227,7 +3227,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/treated_6hr/unsynchronized/HIC012.hic":{
-		"NVI":"",
+		"NVI":"7223422850,36479",
 		"name":"Auxin treated (6 hrs), HIC012",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3239,7 +3239,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/treated_6hr/unsynchronized/HIC013.hic":{
-		"NVI":"",
+		"NVI":"7435986997,36479",
 		"name":"Auxin treated (6 hrs), HIC013",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3251,7 +3251,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/treated_6hr/unsynchronized/HIC014.hic":{
-		"NVI":"",
+		"NVI":"9120113605,36479",
 		"name":"Auxin treated (6 hrs), HIC014",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3263,7 +3263,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/untreated/synchronized/combined.hic":{
-		"NVI":"",
+		"NVI":"4170577904,36479",
 		"name":"Untreated (synchronized), Combined",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3275,7 +3275,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/untreated/synchronized/HIC015.hic":{
-		"NVI":"",
+		"NVI":"1504084990,36479",
 		"name":"Untreated (synchronized), HIC015",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3287,7 +3287,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/untreated/synchronized/HIC016.hic":{
-		"NVI":"",
+		"NVI":"1686244500,36479",
 		"name":"Untreated (synchronized), HIC016",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3299,7 +3299,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/untreated/synchronized/HIC017.hic":{
-		"NVI":"",
+		"NVI":"1804802410,36479",
 		"name":"Untreated (synchronized), HIC017",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3311,7 +3311,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/untreated/synchronized/HIC018.hic":{
-		"NVI":"",
+		"NVI":"1533942067,36479",
 		"name":"Untreated (synchronized), HIC018",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3323,7 +3323,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/treated_6hr/synchronized/combined.hic":{
-		"NVI":"",
+		"NVI":"4572390198,36479",
 		"name":"Auxin treated (6 hrs synchronized), Combined",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3335,7 +3335,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/treated_6hr/synchronized/HIC019.hic":{
-		"NVI":"",
+		"NVI":"1543609666,36479",
 		"name":"Auxin treated (6 hrs synchronized), HIC019",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3347,7 +3347,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/treated_6hr/synchronized/HIC020.hic":{
-		"NVI":"",
+		"NVI":"1814133288,36479",
 		"name":"Auxin treated (6 hrs synchronized), HIC020",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3359,7 +3359,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/treated_6hr/synchronized/HIC021.hic":{
-		"NVI":"",
+		"NVI":"1942698243,36479",
 		"name":"Auxin treated (6 hrs synchronized), HIC021",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3371,7 +3371,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/treated_6hr/synchronized/HIC022.hic":{
-		"NVI":"",
+		"NVI":"1873587413,36479",
 		"name":"Auxin treated (6 hrs synchronized), HIC022",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3395,7 +3395,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/time_course/untreated/Rao-2017-HIC049.hic":{
-		"NVI":"",
+		"NVI":"405127557,36479",
 		"name":"Time Course, Untreated, HIC049",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3407,7 +3407,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/time_course/untreated/Rao-2017-HIC060.hic":{
-		"NVI":"",
+		"NVI":"326681741,36479",
 		"name":"Time Course, Untreated, HIC060",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3419,7 +3419,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/time_course/untreated/Rao-2017-HIC061.hic":{
-		"NVI":"",
+		"NVI":"300908673,36479",
 		"name":"Time Course, Untreated, HIC061",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3431,7 +3431,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/time_course/Auxin_treated_20min/Rao-2017-HIC050.hic":{
-		"NVI":"",
+		"NVI":"481758242,36479",
 		"name":"Auxin treated (20 min), HIC050",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3443,7 +3443,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/time_course/Auxin_treated_20min/Rao-2017-HIC051.hic":{
-		"NVI":"",
+		"NVI":"417577401,36479",
 		"name":"Auxin treated (20 min), HIC051",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3455,7 +3455,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/time_course/Auxin_treated_40min/Rao-2017-HIC052.hic":{
-		"NVI":"",
+		"NVI":"419353227,36479",
 		"name":"Auxin treated (40 min), HIC052",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3467,7 +3467,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/time_course/Auxin_treated_40min/Rao-2017-HIC053.hic":{
-		"NVI":"",
+		"NVI":"411554953,36479",
 		"name":"Auxin treated (40 min), HIC053",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3479,7 +3479,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/time_course/Auxin_treated_60min/Rao-2017-HIC054.hic":{
-		"NVI":"",
+		"NVI":"386655891,36479",
 		"name":"Auxin treated (60 min), HIC054",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3491,7 +3491,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/time_course/Auxin_treated_60min/Rao-2017-HIC055.hic":{
-		"NVI":"",
+		"NVI":"402170701,36479",
 		"name":"Auxin treated (60 min), HIC055",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3515,7 +3515,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/time_course/Auxin_treated_240min/Rao-2017-HIC057.hic":{
-		"NVI":"",
+		"NVI":"735906308,36479",
 		"name":"Auxin treated (240 min), HIC057",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3527,7 +3527,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/time_course/Auxin_treated_360min/Rao-2017-HIC058.hic":{
-		"NVI":"",
+		"NVI":"443789827,36479",
 		"name":"Auxin treated (360 min), HIC058",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3539,7 +3539,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/time_course/Auxin_treated_360min/Rao-2017-HIC059.hic":{
-		"NVI":"",
+		"NVI":"491422615,36479",
 		"name":"Auxin treated (360 min), HIC059",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3551,7 +3551,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/time_course/Auxin_treated_360min/Rao-2017-HIC062.hic":{
-		"NVI":"",
+		"NVI":"320261375,36479",
 		"name":"Auxin treated (360 min), HIC062",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3563,7 +3563,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/time_course/Auxin_treated_360min/Rao-2017-HIC063.hic":{
-		"NVI":"",
+		"NVI":"306590499,36479",
 		"name":"Auxin treated (360 min), HIC063",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3575,7 +3575,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/time_course/Auxin_treated_360min_withdraw_20min/Rao-2017-HIC032S.hic":{
-		"NVI":"",
+		"NVI":"367051742,36479",
 		"name":"Auxin treated (360 min) withdrawn (20 min), HIC032S",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3587,7 +3587,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/time_course/Auxin_treated_360min_withdraw_20min/Rao-2017-HIC033S.hic":{
-		"NVI":"",
+		"NVI":"344555339,36479",
 		"name":"Auxin treated (360 min) withdrawn (20 min), HIC033S",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3599,7 +3599,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/time_course/Auxin_treated_360min_withdraw_40min/Rao-2017-HIC036S.hic":{
-		"NVI":"",
+		"NVI":"349392947,36479",
 		"name":"Auxin treated (360 min) withdrawn (40 min), HIC036S",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3611,7 +3611,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/time_course/Auxin_treated_360min_withdraw_40min/Rao-2017-HIC037S.hic":{
-		"NVI":"",
+		"NVI":"317714554,36479",
 		"name":"Auxin treated (360 min) withdrawn (40 min), HIC037S",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3623,7 +3623,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/time_course/Auxin_treated_360min_withdraw_60min/Rao-2017-HIC040S.hic":{
-		"NVI":"",
+		"NVI":"266786397,36479",
 		"name":"Auxin treated (360 min) withdrawn (60 min), HIC040S",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3635,7 +3635,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/time_course/Auxin_treated_360min_withdraw_60min/Rao-2017-HIC041S.hic":{
-		"NVI":"",
+		"NVI":"279445530,36479",
 		"name":"Auxin treated (360 min) withdrawn (60 min), HIC041S",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3647,7 +3647,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/time_course/Auxin_treated_360min_withdraw_180min/Rao-2017-HIC044S.hic":{
-		"NVI":"",
+		"NVI":"898418269,36479",
 		"name":"Auxin treated (360 min) withdrawn (180 min), HIC044S",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3659,7 +3659,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/time_course/Auxin_treated_360min_withdraw_180min/Rao-2017-HIC045S.hic":{
-		"NVI":"",
+		"NVI":"961006347,36479",
 		"name":"Auxin treated (360 min) withdrawn (180 min), HIC045S",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3671,7 +3671,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/time_course/Auxin_treated_360min_withdraw_360min/Rao-2017-HIC064.hic":{
-		"NVI":"",
+		"NVI":"833576408,36479",
 		"name":"Auxin treated (360 min) withdrawn (360 min), HIC064",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3683,7 +3683,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/time_course/Auxin_treated_360min_withdraw_360min/Rao-2017-HIC065.hic":{
-		"NVI":"",
+		"NVI":"840881418,36479",
 		"name":"Auxin treated (360 min) withdrawn (360 min), HIC065",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3695,7 +3695,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/time_course/Auxin_treated_360min_withdraw_1080min/Rao-2017-HIC066.hic":{
-		"NVI":"",
+		"NVI":"980958864,36479",
 		"name":"Auxin treated (360 min) withdrawn (1080 min), HIC066",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3707,7 +3707,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/time_course/Auxin_treated_360min_withdraw_1080min/Rao-2017-HIC067.hic":{
-		"NVI":"",
+		"NVI":"882023129,36479",
 		"name":"Auxin treated (360 min) withdrawn (1080 min), HIC067",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3719,7 +3719,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/time_course/Auxin_treated_360min_withdraw_1440min/Rao-2017-HIC068.hic":{
-		"NVI":"",
+		"NVI":"1110292630,36479",
 		"name":"Auxin treated (360 min) withdrawn (1440 min), HIC068",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3731,7 +3731,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/degron/time_course/Auxin_treated_360min_withdraw_1440min/Rao-2017-HIC069.hic":{
-		"NVI":"",
+		"NVI":"1001747023,36479",
 		"name":"Auxin treated (360 min) withdrawn (1440 min), HIC069",
 		"author":"Rao et al.",
 		"journal":"Cell",
@@ -3743,7 +3743,7 @@
 		"protocol":"in-situ"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/external/rowley_nichols_mol_cell_2017/CP190_HiChIP.hic":{
-		"NVI":"",
+		"NVI":"144107588,6976",
 		"name":"D. mel CP190",
 		"author":"Rowley and Nichols et al.",
 		"journal":"Molecular Cell",
@@ -3752,7 +3752,7 @@
 		"experiment type":"HiChIP"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/external/rowley_nichols_mol_cell_2017/H3K27ac_HiChIP_combined.hic":{
-		"NVI":"",
+		"NVI":"43171370,5233",
 		"name":"D. mel H3K27ac",
 		"author":"Rowley and Nichols et al.",
 		"journal":"Molecular Cell",
@@ -3761,7 +3761,7 @@
 		"experiment type":"HiChIP"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/external/rowley_nichols_mol_cell_2017/H3K27me3_HiChIP_combined.hic":{
-		"NVI":"",
+		"NVI":"42906472,5233",
 		"name":"D. mel H3K27me3",
 		"author":"Rowley and Nichols et al.",
 		"journal":"Molecular Cell",
@@ -3770,7 +3770,7 @@
 		"experiment type":"HiChIP"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/external/rowley_nichols_mol_cell_2017/Pol2_ChIAPET.hic":{
-		"NVI":"",
+		"NVI":"41992430,6976",
 		"name":"D. mel RNAPII",
 		"author":"Rowley and Nichols et al.",
 		"journal":"Molecular Cell",
@@ -3779,7 +3779,7 @@
 		"experiment type":"ChIA-PET"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/external/rowley_nichols_mol_cell_2017/Pol2S2_HiChIP.hic":{
-		"NVI":"",
+		"NVI":"145842743,6976",
 		"name":"D. mel RNAPIISer2ph",
 		"author":"Rowley and Nichols et al.",
 		"journal":"Molecular Cell",
@@ -3788,7 +3788,7 @@
 		"experiment type":"HiChIP"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/external/rowley_nichols_mol_cell_2017/Arabidopsis_Wang2015_Liu2016.hic":{
-		"NVI":"",
+		"NVI":"1134391078,4984",
 		"name":"A. thaliana Wang2015,Liu2016",
 		"author":"Rowley and Nichols et al.",
 		"journal":"Molecular Cell",
@@ -3797,7 +3797,7 @@
 		"experiment type":"Hi-C"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/external/rowley_nichols_mol_cell_2017/Elegans_Crane2015.hic":{
-		"NVI":"",
+		"NVI":"387127568,8758",
 		"name":"C. elegans Crane2015",
 		"author":"Rowley and Nichols et al.",
 		"journal":"Molecular Cell",
@@ -3806,7 +3806,7 @@
 		"experiment type":"Hi-C"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/external/rowley_nichols_mol_cell_2017/Ncrassa_Galazka2016.hic":{
-		"NVI":"",
+		"NVI":"26555511,27725",
 		"name":"N. crassa Galazka2016",
 		"author":"Rowley and Nichols et al.",
 		"journal":"Molecular Cell",
@@ -3815,7 +3815,7 @@
 		"experiment type":"Hi-C"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/external/rowley_nichols_mol_cell_2017/Pfalciparum_trophozoite_Ay2014.hic":{
-		"NVI":"",
+		"NVI":"15640893,13948",
 		"name":"P. falciparum trophozoite Ay2014",
 		"author":"Rowley and Nichols et al.",
 		"journal":"Molecular Cell",
@@ -3824,83 +3824,83 @@
 		"experiment type":"Hi-C"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/duan/E-Me-A.hic":{
-		"NVI":"",
+		"NVI":"6897251,23348",
 		"name":"E-Me-A",
 		"author":"Duan et al.",
 		"journal":"Nature",
 		"year":"2010"
 		},		
 	"https://hicfiles.s3.amazonaws.com/external/duan/E-Me-B.hic":{
-		"NVI":"",
+		"NVI":"4959088,23348",
 		"name":"E-Me-B",
 		"author":"Duan et al.",
 		"journal":"Nature",
 		"year":"2010"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/duan/E-Mp-A.hic":{
-		"NVI":"",
+		"NVI":"5232286,23348",
 		"name":"E-Mp-A",
 		"author":"Duan et al.",
 		"journal":"Nature",
 		"year":"2010"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/duan/E-Mp-B.hic":{
-		"NVI":"",
+		"NVI":"5105292,23348",
 		"name":"E-Mp-B",
 		"author":"Duan et al.",
 		"journal":"Nature",
 		"year":"2010"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/duan/H-Me-A.hic":{
-		"NVI":"",
+		"NVI":"6900072,23348",
 		"name":"H-Me-A",
 		"author":"Duan et al.",
 		"journal":"Nature",
 		"year":"2010"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/duan/H-Me-B.hic":{
-		"NVI":"",
+		"NVI":"8653258,23348",
 		"name":"H-Me-B",
 		"author":"Duan et al.",
 		"journal":"Nature",
 		"year":"2010"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/duan/H-Mp-A.hic":{
-		"NVI":"",
+		"NVI":"7999058,23348",
 		"name":"H-Mp-A",
 		"author":"Duan et al.",
 		"journal":"Nature",
 		"year":"2010"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/duan/H-Mp-B.hic":{
-		"NVI":"",
+		"NVI":"8774657,23348",
 		"name":"H-Mp-B",
 		"author":"Duan et al.",
 		"journal":"Nature",
 		"year":"2010"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/dekker/4dn/h1hesc.hic":{
-		"NVI":"",
+		"NVI":"23671753603,36479",
 		"name":"4DN H1 hESC",
 		"author":"Dekker Lab"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/dekker/4dn/h1hesc_rep1.hic":{
-		"NVI":"",
+		"NVI":"23671754721,36479",
 		"name":"4DN H1 hESC rep1",
 		"author":"Dekker Lab"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/dekker/4dn/h1hesc_rep2.hic":{
-		"NVI":"",
+		"NVI":"22269909910,36479",
 		"name":"4DN H1 hESC rep2",
 		"author":"Dekker Lab"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/dekker/4dn/hffc6_rep1.hic":{
-		"NVI":"",
+		"NVI":"19016661622,36479",
 		"name":"4DN H1 hffc6 rep1",
 		"author":"Dekker Lab"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/lieberman_aiden_van_berkum/GM06990_NcoI.hic":{
-		"NVI":"",
+		"NVI":"480725203,36479",
 		"name":"NcoI",
 		"author":"Lieberman-Aiden and van Berkum et al.",
 		"journal":"Science",
@@ -3909,7 +3909,7 @@
 		"cell type":"GM06990"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/lieberman_aiden_van_berkum/302NH.hic":{
-		"NVI":"",
+		"NVI":"99948617,36479",
 		"name":"302NH",
 		"author":"Lieberman-Aiden and van Berkum et al.",
 		"journal":"Science",
@@ -3918,7 +3918,7 @@
 		"cell type":"GM06990"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/lieberman_aiden_van_berkum/K562.hic":{
-		"NVI":"",
+		"NVI":"470263605,36151",
 		"name":"302NH",
 		"author":"Lieberman-Aiden and van Berkum et al.",
 		"journal":"Science",
@@ -3927,7 +3927,7 @@
 		"cell type":"K562"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/lieberman_aiden_van_berkum/GM06990_HindIII.hic":{
-		"NVI":"",
+		"NVI":"293706559,36289",
 		"name":"HindIII, rep 1",
 		"author":"Lieberman-Aiden and van Berkum et al.",
 		"journal":"Science",
@@ -3936,7 +3936,7 @@
 		"cell type":"GM06990"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/lieberman_aiden_van_berkum/GM06990_rep_HindIII.hic":{
-		"NVI":"",
+		"NVI":"309673862,36087",
 		"name":"HindIII, rep 2",
 		"author":"Lieberman-Aiden and van Berkum et al.",
 		"journal":"Science",
@@ -3945,7 +3945,7 @@
 		"cell type":"GM06990"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/rudan/canis-lupus-rep1.hic":{
-		"NVI":"",
+		"NVI":"1531151371,56905",
 		"name":"Rep 1",
 		"author":"Rudan et al.",
 		"journal":"Cell Reports",
@@ -3953,7 +3953,7 @@
 		"organism":"Canis lupus"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/rudan/canis-lupus-rep2.hic":{
-		"NVI":"",
+		"NVI":"2851437676,56905",
 		"name":"Rep 2",
 		"author":"Rudan et al.",
 		"journal":"Cell Reports",
@@ -3961,7 +3961,7 @@
 		"organism":"Canis lupus"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/rudan/mouse-rep1.hic":{
-		"NVI":"",
+		"NVI":"582052544,32102",
 		"name":"Rep 1",
 		"author":"Rudan et al.",
 		"journal":"Cell Reports",
@@ -3977,7 +3977,7 @@
 		"organism":"mouse"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/rudan/macaque-rep1.hic":{
-		"NVI":"",
+		"NVI":"698509182,32102",
 		"name":"Rep 1",
 		"author":"Rudan et al.",
 		"journal":"Cell Reports",
@@ -3985,7 +3985,7 @@
 		"organism":"Macaque"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/rudan/macaque-rep2.hic":{
-		"NVI":"",
+		"NVI":"461410393,32102",
 		"name":"Rep 2",
 		"author":"Rudan et al.",
 		"journal":"Cell Reports",
@@ -3993,7 +3993,7 @@
 		"organism":"Macaque"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/rudan/rabbit-rep1.hic":{
-		"NVI":"",
+		"NVI":"691045338,33561",
 		"name":"Rep 1",
 		"author":"Rudan et al.",
 		"journal":"Cell Reports",
@@ -4001,7 +4001,7 @@
 		"organism":"rabbit"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/rudan/rabbit-rep2.hic":{
-		"NVI":"",
+		"NVI":"668888336,33561",
 		"name":"Rep 2",
 		"author":"Rudan et al.",
 		"journal":"Cell Reports",
@@ -4009,7 +4009,7 @@
 		"organism":"rabbit"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/sexton/combined.hic":{
-		"NVI":"",
+		"NVI":"50650087,4486",
 		"name":"Drosophila melanogaster",
 		"author":"Sexton et al.",
 		"journal":"Cell",
@@ -4017,28 +4017,28 @@
 		"organism":"Drosophila melanogaster"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/kalhor/tcc-hindiii.hic":{
-		"NVI":"",
+		"NVI":"1071142023,16500",
 		"name":"TCC HindIII",
 		"author":"Kalhor et al.",
 		"journal":"Nature Biotechnology",
 		"year":"2011"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/kalhor/tcc-mboi.hic":{
-		"NVI":"",
+		"NVI":"1508851093,16448",
 		"name":"TCC MboI",
 		"author":"Kalhor et al.",
 		"journal":"Nature Biotechnology",
 		"year":"2011"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/kalhor/non-tcc-hindiii.hic":{
-		"NVI":"",
+		"NVI":"395179229,36093",
 		"name":"non-TCC",
 		"author":"Kalhor et al.",
 		"journal":"Nature Biotechnology",
 		"year":"2011"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/kalhor/tcc-combined.hic":{
-		"NVI":"",
+		"NVI":"1050423847,36479",
 		"name":"TCC combined",
 		"author":"Kalhor et al.",
 		"journal":"Nature Biotechnology",
@@ -4065,7 +4065,7 @@
 		"cell type":"mouse embryonic stem cell"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/dixon/mm9-hindiii/split-read-run.hic":{
-		"NVI":"",
+		"NVI":"9599984876,32102",
 		"name":"mES, HindIII combined (our alignment)",
 		"author":"Dixon et al.",
 		"journal":"Nature",
@@ -4075,7 +4075,7 @@
 		"cell type":"mouse embryonic stem cell"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/dixon/hesc-hindiii.hic":{
-		"NVI":"",
+		"NVI":"1952555632,36479",
 		"name":"hESC, HindIII",
 		"author":"Dixon et al.",
 		"journal":"Nature",
@@ -4084,7 +4084,7 @@
 		"cell type":"human embryonic stem cell"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/dixon/imr90-hindiii.hic":{
-		"NVI":"",
+		"NVI":"9691260435,18679",
 		"name":"HindIII",
 		"author":"Dixon et al.",
 		"journal":"Nature",
@@ -4093,7 +4093,7 @@
 		"cell type":"IMR90"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/dixon/mm9-cortex.hic":{
-		"NVI":"",
+		"NVI":"3712072953,32102",
 		"name":"mES cortex, HindIII",
 		"author":"Dixon et al.",
 		"journal":"Nature",
@@ -4203,112 +4203,112 @@
 		"year":"2013"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/zhang/atm-i-scei-chr18.hic":{
-		"NVI":"",
+		"NVI":"2083350075,16438",
 		"name":"ATM I SceI chr18 HindIII",
 		"author":"Zhang et al.",
 		"journal":"Cell",
 		"year":"2012"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/zhang/atm-i-scei-chr2.hic":{
-		"NVI":"",
+		"NVI":"3362049644,16360",
 		"name":"ATM I SceI chr2 HindIII",
 		"author":"Zhang et al.",
 		"journal":"Cell",
 		"year":"2012"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/zhang/atm-i-scei-chr7.hic":{
-		"NVI":"",
+		"NVI":"1658399854,16438",
 		"name":"ATM I SceI chr7 HindIII",
 		"author":"Zhang et al.",
 		"journal":"Cell",
 		"year":"2012"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/zhang/wt-i-scei-chr15.hic":{
-		"NVI":"",
+		"NVI":"866691249,16438",
 		"name":"WT I SceI chr15 HindIII",
 		"author":"Zhang et al.",
 		"journal":"Cell",
 		"year":"2012"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/zhang/wt-i-scei-chr2.hic":{
-		"NVI":"",
+		"NVI":"3304782795,16386",
 		"name":"WT I SceI chr2 HindIII",
 		"author":"Zhang et al.",
 		"journal":"Cell",
 		"year":"2012"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/nagano/cell-1.hic":{
-		"NVI":"",
+		"NVI":"23673506,32102",
 		"name":"cell 1",
 		"author":"Nagano et al.",
 		"journal":"Nature",
 		"year":"2013"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/nagano/cell-2.hic":{
-		"NVI":"",
+		"NVI":"26873280,30643",
 		"name":"cell 2",
 		"author":"Nagano et al.",
 		"journal":"Nature",
 		"year":"2013"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/nagano/cell-3.hic":{
-		"NVI":"",
+		"NVI":"31066362,30643",
 		"name":"cell 3",
 		"author":"Nagano et al.",
 		"journal":"Nature",
 		"year":"2013"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/nagano/cell-4.hic":{
-		"NVI":"",
+		"NVI":"16807724,30643",
 		"name":"cell 4",
 		"author":"Nagano et al.",
 		"journal":"Nature",
 		"year":"2013"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/nagano/cell-5.hic":{
-		"NVI":"",
+		"NVI":"28665065,30643",
 		"name":"cell 5",
 		"author":"Nagano et al.",
 		"journal":"Nature",
 		"year":"2013"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/nagano/cell-6.hic":{
-		"NVI":"",
+		"NVI":"13124158,30643",
 		"name":"cell 6",
 		"author":"Nagano et al.",
 		"journal":"Nature",
 		"year":"2013"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/nagano/cell-7.hic":{
-		"NVI":"",
+		"NVI":"15118945,30643",
 		"name":"cell 7",
 		"author":"Nagano et al.",
 		"journal":"Nature",
 		"year":"2013"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/nagano/cell-8.hic":{
-		"NVI":"",
+		"NVI":"68316814,32102",
 		"name":"cell 8",
 		"author":"Nagano et al.",
 		"journal":"Nature",
 		"year":"2013"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/nagano/cell-9.hic":{
-		"NVI":"",
+		"NVI":"18965101,30643",
 		"name":"cell 9",
 		"author":"Nagano et al.",
 		"journal":"Nature",
 		"year":"2013"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/nagano/cell-10.hic":{
-		"NVI":"",
+		"NVI":"17020666,30643",
 		"name":"cell 10",
 		"author":"Nagano et al.",
 		"journal":"Nature",
 		"year":"2013"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/jin/imr90/combined.hic":{
-		"NVI":"",
+		"NVI":"6526601242,36427",
 		"name":"Combined",
 		"author":"Jin et al.",
 		"journal":"Nature",
@@ -4317,7 +4317,7 @@
 		"cell type":"IMR90"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/jin/imr90/rep1.hic":{
-		"NVI":"",
+		"NVI":"1861562891,36401",
 		"name":"Rep 1",
 		"author":"Jin et al.",
 		"journal":"Nature",
@@ -4326,7 +4326,7 @@
 		"cell type":"IMR90"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/jin/imr90/rep2.hic":{
-		"NVI":"",
+		"NVI":"3061013635,36479",
 		"name":"Rep 2",
 		"author":"Jin et al.",
 		"journal":"Nature",
@@ -4335,7 +4335,7 @@
 		"cell type":"IMR90"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/jin/imr90/rep3.hic":{
-		"NVI":"",
+		"NVI":"1564588211,35969",
 		"name":"Rep 3",
 		"author":"Jin et al.",
 		"journal":"Nature",
@@ -4344,7 +4344,7 @@
 		"cell type":"IMR90"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/jin/imr90/rep4.hic":{
-		"NVI":"",
+		"NVI":"1255543175,36153",
 		"name":"Rep 4",
 		"author":"Jin et al.",
 		"journal":"Nature",
@@ -4353,7 +4353,7 @@
 		"cell type":"IMR90"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/jin/imr90/rep5.hic":{
-		"NVI":"",
+		"NVI":"974683253,36179",
 		"name":"Rep 5",
 		"author":"Jin et al.",
 		"journal":"Nature",
@@ -4362,7 +4362,7 @@
 		"cell type":"IMR90"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/jin/imr90/rep6.hic":{
-		"NVI":"",
+		"NVI":"1040805629,36053",
 		"name":"Rep 6",
 		"author":"Jin et al.",
 		"journal":"Nature",
@@ -4371,7 +4371,7 @@
 		"cell type":"IMR90"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/jin/imr90-tnf-alpha/combined.hic":{
-		"NVI":"",
+		"NVI":"8424080116,36401",
 		"name":"TNF alpha, Combined",
 		"author":"Jin et al.",
 		"journal":"Nature",
@@ -4380,7 +4380,7 @@
 		"cell type":"IMR90"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/jin/imr90-tnf-alpha/rep1.hic":{
-		"NVI":"",
+		"NVI":"2697976702,36295",
 		"name":"TNF alpha, Rep 1",
 		"author":"Jin et al.",
 		"journal":"Nature",
@@ -4398,7 +4398,7 @@
 		"cell type":"IMR90"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/jin/imr90-tnf-alpha/rep3.hic":{
-		"NVI":"",
+		"NVI":"1718610467,36159",
 		"name":"TNF alpha, Rep 3",
 		"author":"Jin et al.",
 		"journal":"Nature",
@@ -4407,7 +4407,7 @@
 		"cell type":"IMR90"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/jin/imr90-tnf-alpha/rep4.hic":{
-		"NVI":"",
+		"NVI":"2029519405,36101",
 		"name":"TNF alpha, Rep 4",
 		"author":"Jin et al.",
 		"journal":"Nature",
@@ -4416,7 +4416,7 @@
 		"cell type":"IMR90"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/jin/imr90-tnf-alpha/rep5.hic":{
-		"NVI":"",
+		"NVI":"985310855,36069",
 		"name":"TNF alpha, Rep 5",
 		"author":"Jin et al.",
 		"journal":"Nature",
@@ -4425,7 +4425,7 @@
 		"cell type":"IMR90"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/jin/imr90-tnf-alpha/rep6.hic":{
-		"NVI":"",
+		"NVI":"1418750480,35967",
 		"name":"TNF alpha, Rep 6",
 		"author":"Jin et al.",
 		"journal":"Nature",
@@ -4434,35 +4434,35 @@
 		"cell type":"IMR90"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/cheng/mhh-call-4-cell-line.hic":{
-		"NVI":"",
+		"NVI":"538380253,35351",
 		"name":"MHH-CALL-4 B-cell acute lymphoblastic leukemia HindIII",
 		"author":"Wang et al.",
 		"journal":"PLoS One",
 		"year":"2013"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/cheng/primary-b-all.hic":{
-		"NVI":"",
+		"NVI":"773764191,35793",
 		"name":"Primary tumor B-cells acute lymphoblastic leukemia HindIII",
 		"author":"Wang et al.",
 		"journal":"PLoS One",
 		"year":"2013"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/cheng/normal-b-cell-line.hic":{
-		"NVI":"",
+		"NVI":"336271459,35005",
 		"name":"Normal B-cells HindIII",
 		"author":"Wang et al.",
 		"journal":"PLoS One",
 		"year":"2013"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/cheng/rl-cell-line.hic":{
-		"NVI":"",
+		"NVI":"484807998,35351",
 		"name":"RL follicular lymphoma HindIII",
 		"author":"Wang et al.",
 		"journal":"PLoS One",
 		"year":"2013"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/hou/kc167-biorep.hic":{
-		"NVI":"",
+		"NVI":"135932435,8758",
 		"name":"HindIII biological replicate",
 		"author":"Hou et al.",
 		"journal":"Molecular Cell",
@@ -4471,7 +4471,7 @@
 		"cell type":"Kc167"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/hou/kc167-techrep1.hic":{
-		"NVI":"",
+		"NVI":"160355961,8758",
 		"name":"HindIII biological replicate 1",
 		"author":"Hou et al.",
 		"journal":"Molecular Cell",
@@ -4480,7 +4480,7 @@
 		"cell type":"Kc167"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/hou/kc167-techrep2.hic":{
-		"NVI":"",
+		"NVI":"188809887,8758",
 		"name":"HindIII biological replicate 2",
 		"author":"Hou et al.",
 		"journal":"Molecular Cell",
@@ -4489,7 +4489,7 @@
 		"cell type":"Kc167"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/lin/pre-prob-egs.hic":{
-		"NVI":"",
+		"NVI":"2237792858,15483",
 		"name":"HindIII pre proB EGS",
 		"author":"Lin et al.",
 		"journal":"Nature Immunology",
@@ -4497,7 +4497,7 @@
 		"organism":"mouse"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/lin/prob-egs.hic":{
-		"NVI":"",
+		"NVI":"5744720377,16438",
 		"name":"HindIII proB EGS",
 		"author":"Lin et al.",
 		"journal":"Nature Immunology",
@@ -4505,7 +4505,7 @@
 		"organism":"mouse"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/lin/prob-fa.hic":{
-		"NVI":"",
+		"NVI":"2174866215,16438",
 		"name":"HindIII proB FA",
 		"author":"Lin et al.",
 		"journal":"Nature Immunology",
@@ -4513,7 +4513,7 @@
 		"organism":"mouse"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/li/hct116-rnapii-pilot.hic":{
-		"NVI":"",
+		"NVI":"396366166,35999",
 		"name":"RNAPII pilot",
 		"author":"Li et al.",
 		"journal":"Cell",
@@ -4523,7 +4523,7 @@
 		"experiment type":"ChIA-PET"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/li/hela-rnapii-pilot.hic":{
-		"NVI":"",
+		"NVI":"882516759,35107",
 		"name":"RNAPII pilot",
 		"author":"Li et al.",
 		"journal":"Cell",
@@ -4533,7 +4533,7 @@
 		"experiment type":"ChIA-PET"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/li/k562-rnapii-pilot.hic":{
-		"NVI":"",
+		"NVI":"1131576189,35969",
 		"name":"RNAPII pilot",
 		"author":"Li et al.",
 		"journal":"Cell",
@@ -4543,7 +4543,7 @@
 		"experiment type":"ChIA-PET"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/li/k562-rnapii-saturated.hic":{
-		"NVI":"",
+		"NVI":"571583828,36291",
 		"name":"RNAPII saturated",
 		"author":"Li et al.",
 		"journal":"Cell",
@@ -4563,7 +4563,7 @@
 		"experiment type":"ChIA-PET"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/li/mcf7-rnapii-saturated.hic":{
-		"NVI":"",
+		"NVI":"1282547841,36035",
 		"name":"RNAPII saturated",
 		"author":"Li et al.",
 		"journal":"Cell",
@@ -4573,7 +4573,7 @@
 		"experiment type":"ChIA-PET"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/li/nb4-rnapii-pilot.hic":{
-		"NVI":"",
+		"NVI":"761614686,34861",
 		"name":"RNAPII pilot",
 		"author":"Li et al.",
 		"journal":"Cell",
@@ -4583,7 +4583,7 @@
 		"experiment type":"ChIA-PET"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/jung/mouse_sperm.hic":{
-		"NVI":"",
+		"NVI":"1730231642,29184",
 		"name":"Mouse Sperm",
 		"author":"Jung et al.",
 		"journal":"Cell Reports",
@@ -4592,7 +4592,7 @@
 		"cell type":"sperm"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/tang/gm12878.hic":{
-		"NVI":"",
+		"NVI":"1953518212,20505",
 		"name":"GM12878",
 		"author":"Tang Luo Li et al.",
 		"journal":"Cell",
@@ -4601,7 +4601,7 @@
 		"cell type":"GM12878"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/rutledge/SRR1791299.hic":{
-		"NVI":"",
+		"NVI":"5723484,11956",
 		"name":"Quiescent growth",
 		"author":"Rutledge et al.",
 		"journal":"Nucleic Acids Research",
@@ -4610,7 +4610,7 @@
 		"experiment type":"Hi-C"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/rutledge/SRR1791297.hic":{
-		"NVI":"",
+		"NVI":"16534743,23348",
 		"name":"Exponential growth",
 		"author":"Rutledge et al.",
 		"journal":"Nucleic Acids Research",
@@ -4619,7 +4619,7 @@
 		"experiment type":"Hi-C"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/zuin/hek293t-rad21cv-hrv.hic":{
-		"NVI":"",
+		"NVI":"5094525579,36289",
 		"name":"RAD21cv HRV Combined",
 		"author":"Zuin et al.",
 		"journal":"PNAS",
@@ -4628,7 +4628,7 @@
 		"cell type":"HEK293T"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/zuin/hek293t-rad21cv-hrv-rep1.hic":{
-		"NVI":"",
+		"NVI":"2574358912,36373",
 		"name":"RAD21cv HRV Rep 1",
 		"author":"Zuin et al.",
 		"journal":"PNAS",
@@ -4637,7 +4637,7 @@
 		"cell type":"HEK293T"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/zuin/hek293t-rad21cv-hrv-rep2.hic":{
-		"NVI":"",
+		"NVI":"3417099433,36243",
 		"name":"RAD21cv HRV Rep 2",
 		"author":"Zuin et al.",
 		"journal":"PNAS",
@@ -4646,7 +4646,7 @@
 		"cell type":"HEK293T"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/zuin/hek293t-rad21cv-tev.hic":{
-		"NVI":"",
+		"NVI":"4785157552,36323",
 		"name":"RAD21cv, TEV Combined",
 		"author":"Zuin et al.",
 		"journal":"PNAS",
@@ -4655,7 +4655,7 @@
 		"cell type":"HEK293T"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/zuin/hek293t-rad21cv-tev-rep1.hic":{
-		"NVI":"",
+		"NVI":"2648268465,36321",
 		"name":"RAD21cv, TEV Rep 1",
 		"author":"Zuin et al.",
 		"journal":"PNAS",
@@ -4664,7 +4664,7 @@
 		"cell type":"HEK293T"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/zuin/hek293t-rad21cv-tev-rep2.hic":{
-		"NVI":"",
+		"NVI":"2994727980,36107",
 		"name":"RAD21cv, TEV Rep 2",
 		"author":"Zuin et al.",
 		"journal":"PNAS",
@@ -4673,7 +4673,7 @@
 		"cell type":"HEK293T"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/zuin/hek293t-sirna-ctcf.hic":{
-		"NVI":"",
+		"NVI":"5391791815,36063",
 		"name":"siRNA, CTCF Combined",
 		"author":"Zuin et al.",
 		"journal":"PNAS",
@@ -4682,7 +4682,7 @@
 		"cell type":"HEK293T"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/zuin/hek293t-sirna-ctcf-rep1.hic":{
-		"NVI":"",
+		"NVI":"3325842095,36269",
 		"name":"siRNA, CTCF Rep 1",
 		"author":"Zuin et al.",
 		"journal":"PNAS",
@@ -4691,7 +4691,7 @@
 		"cell type":"HEK293T"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/zuin/hek293t-sirna-ctcf-rep2.hic":{
-		"NVI":"",
+		"NVI":"3096215920,36167",
 		"name":"siRNA, CTCF Rep 2",
 		"author":"Zuin et al.",
 		"journal":"PNAS",
@@ -4700,7 +4700,7 @@
 		"cell type":"HEK293T"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/zuin/hek293t-sirna-ctrl.hic":{
-		"NVI":"",
+		"NVI":"3830902383,36167",
 		"name":"siRNA, Control Combined",
 		"author":"Zuin et al.",
 		"journal":"PNAS",
@@ -4709,7 +4709,7 @@
 		"cell type":"HEK293T"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/zuin/hek293t-sirna-ctrl-rep1.hic":{
-		"NVI":"",
+		"NVI":"1346712252,36079",
 		"name":"siRNA, Control Rep 1",
 		"author":"Zuin et al.",
 		"journal":"PNAS",
@@ -4718,7 +4718,7 @@
 		"cell type":"HEK293T"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/zuin/hek293t-sirna-ctrl_rep2.hic":{
-		"NVI":"",
+		"NVI":"3098067367,36271",
 		"name":"siRNA, Control Rep 2",
 		"author":"Zuin et al.",
 		"journal":"PNAS",
@@ -4727,7 +4727,7 @@
 		"cell type":"HEK293T"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/ay/p-falciparum-3d7-0h-hiseq.hic":{
-		"NVI":"",
+		"NVI":"38174042,21889",
 		"name":"0h",
 		"author":"Ay et al.",
 		"journal":"Genome Research",
@@ -4735,7 +4735,7 @@
 		"organism":"Plasmodium falciparum"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/ay/p-falciparum-3d7-18h-hiseq.hic":{
-		"NVI":"",
+		"NVI":"26506099,21889",
 		"name":"18h",
 		"author":"Ay et al.",
 		"journal":"Genome Research",
@@ -4743,7 +4743,7 @@
 		"organism":"Plasmodium falciparum"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/ay/p-falciparum-3d7-18h-hiseq-non-crosslinked_control.hic":{
-		"NVI":"",
+		"NVI":"3545496,21889",
 		"name":"18h non-crosslinked control",
 		"author":"Ay et al.",
 		"journal":"Genome Research",
@@ -4751,7 +4751,7 @@
 		"organism":"Plasmodium falciparum"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/ay/p-falciparum-3d7-36h-hiseq.hic":{
-		"NVI":"",
+		"NVI":"70754194,21889",
 		"name":"36h",
 		"author":"Ay et al.",
 		"journal":"Genome Research",
@@ -4759,7 +4759,7 @@
 		"organism":"Plasmodium falciparum"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/naumova/helas3/g1mid-r1.hic":{
-		"NVI":"",
+		"NVI":"200863476,17185",
 		"name":"G1mid, R1",
 		"author":"Naumova et al.",
 		"journal":"Science",
@@ -4779,7 +4779,7 @@
 		"cell type":"HeLa S3"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/naumova/helas3/m-r1.hic":{
-		"NVI":"",
+		"NVI":"249021190,17185",
 		"name":"M R1",
 		"author":"Naumova et al.",
 		"journal":"Science",
@@ -4789,7 +4789,7 @@
 		"cell type":"HeLa S3"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/naumova/helas3/m-r2.hic":{
-		"NVI":"",
+		"NVI":"212341157,17185",
 		"name":"M R2",
 		"author":"Naumova et al.",
 		"journal":"Science",
@@ -4799,7 +4799,7 @@
 		"cell type":"HeLa S3"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/naumova/helas3ccl2p2/g1-0-25fa.hic":{
-		"NVI":"",
+		"NVI":"583572265,17185",
 		"name":"CCL2p2, G1-0.25FA",
 		"author":"Naumova et al.",
 		"journal":"Science",
@@ -4809,7 +4809,7 @@
 		"cell type":"HeLa S3"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/naumova/helas3ccl2p2/g1-1fa.hic":{
-		"NVI":"",
+		"NVI":"354502306,17185",
 		"name":"CCL2p2, G1-1FA",
 		"author":"Naumova et al.",
 		"journal":"Science",
@@ -4819,7 +4819,7 @@
 		"cell type":"HeLa S3"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/naumova/helas3ccl2p2/m-0-25fa.hic":{
-		"NVI":"",
+		"NVI":"149308791,17185",
 		"name":"CCL2p2, M-0.25FA",
 		"author":"Naumova et al.",
 		"journal":"Science",
@@ -4829,7 +4829,7 @@
 		"cell type":"HeLa S3"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/naumova/helas3ccl2p2/m-98percent.hic":{
-		"NVI":"",
+		"NVI":"778175225,17185",
 		"name":"CCL2p2, M-98percent",
 		"author":"Naumova et al.",
 		"journal":"Science",
@@ -4839,7 +4839,7 @@
 		"cell type":"HeLa S3"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/naumova/helas3ccl2p2/m-1fa.hic":{
-		"NVI":"",
+		"NVI":"158091047,17185",
 		"name":"CCL2p2, M-1FA",
 		"author":"Naumova et al.",
 		"journal":"Science",
@@ -4849,7 +4849,7 @@
 		"cell type":"HeLa S3"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/naumova/hff1/cchic-hff1-ns-r1.hic":{
-		"NVI":"",
+		"NVI":"801670039,17185",
 		"name":"NS",
 		"author":"Naumova et al.",
 		"journal":"Science",
@@ -4859,7 +4859,7 @@
 		"cell type":"HFF1"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/naumova/hff1/cchic-hff1-m-r1.hic":{
-		"NVI":"",
+		"NVI":"875922086,17185",
 		"name":"M",
 		"author":"Naumova et al.",
 		"journal":"Science",
@@ -4869,7 +4869,7 @@
 		"cell type":"HFF1"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/naumova/k562/m-r1.hic":{
-		"NVI":"",
+		"NVI":"130959943,17185",
 		"name":"M R1",
 		"author":"Naumova et al.",
 		"journal":"Science",
@@ -4879,7 +4879,7 @@
 		"cell type":"K562"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/naumova/k562/m-r2.hic":{
-		"NVI":"",
+		"NVI":"237861106,17185",
 		"name":"M R2",
 		"author":"Naumova et al.",
 		"journal":"Science",
@@ -4889,231 +4889,231 @@
 		"cell type":"K562"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/sofueva/mAST-WT.hic ":{
-		"NVI":"",
+		"NVI":"496104039,30643",
 		"name":"mAST_WT, rep1",
 		"author":"Sofueva et al.",
 		"journal":"EMBO Journal",
 		"year":"2013"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/sofueva/mAST-WT-adv-cre.hic ":{
-		"NVI":"",
+		"NVI":"438608517,30643",
 		"name":"mAST_WT_adv_cre, rep1",
 		"author":"Sofueva et al.",
 		"journal":"EMBO Journal",
 		"year":"2013"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/sofueva/mAST-floxed-rep1.hic  ":{
-		"NVI":"",
+		"NVI":"446205712,32102",
 		"name":"mAST_floxed, rep1",
 		"author":"Sofueva et al.",
 		"journal":"EMBO Journal",
 		"year":"2013"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/sofueva/mAST-floxed-rep2.hic ":{
-		"NVI":"",
+		"NVI":"386354767,32102",
 		"name":"mAST_floxed, rep2",
 		"author":"Sofueva et al.",
 		"journal":"EMBO Journal",
 		"year":"2013"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/sofueva/mAST-deleted-rep1.hic  ":{
-		"NVI":"",
+		"NVI":"621998722,30643",
 		"name":"mAST_deleted, rep1",
 		"author":"Sofueva et al.",
 		"journal":"EMBO Journal",
 		"year":"2013"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/sofueva/mAST-deleted-rep2.hic   ":{
-		"NVI":"",
+		"NVI":"583840829,32102",
 		"name":"mAST_deleted, rep2",
 		"author":"Sofueva et al.",
 		"journal":"EMBO Journal",
 		"year":"2013"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/sofueva/mNSC-floxed-rep1.hic":{
-		"NVI":"",
+		"NVI":"801290988,30643",
 		"name":"mNSC_floxed, rep1",
 		"author":"Sofueva et al.",
 		"journal":"EMBO Journal",
 		"year":"2013"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/sofueva/mNSC-floxed-rep2.hic  ":{
-		"NVI":"",
+		"NVI":"819406658,30643",
 		"name":"mNSC_floxed, rep2",
 		"author":"Sofueva et al.",
 		"journal":"EMBO Journal",
 		"year":"2013"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/sofueva/mNSC-deleted-rep1.hic":{
-		"NVI":"",
+		"NVI":"792825269,32102",
 		"name":"mNSC_deleted, rep1",
 		"author":"Sofueva et al.",
 		"journal":"EMBO Journal",
 		"year":"2013"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/sofueva/mNSC-deleted-rep2.hic":{
-		"NVI":"",
+		"NVI":"746189884,30643",
 		"name":"mNSC_deleted, rep2",
 		"author":"Sofueva et al.",
 		"journal":"EMBO Journal",
 		"year":"2013"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/sofueva/mNSC-WT.hic":{
-		"NVI":"",
+		"NVI":"309353372,30643",
 		"name":"mNSC_WT, rep1",
 		"author":"Sofueva et al.",
 		"journal":"EMBO Journal",
 		"year":"2013"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/sofueva/mNSC-WT-OHT.hic":{
-		"NVI":"",
+		"NVI":"274229679,30643",
 		"name":"mNSC_WT_OHT, rep1",
 		"author":"Sofueva et al.",
 		"journal":"EMBO Journal",
 		"year":"2013"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/seitan/Tcell-Rad21KO-R1.hic":{
-		"NVI":"",
+		"NVI":"1490362251,32102",
 		"name":"Tcell Rad21KO R1",
 		"author":"Seitan et al.",
 		"journal":"Genome Research",
 		"year":"2013"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/seitan/Tcell-Rad21KO-R3.hic":{
-		"NVI":"",
+		"NVI":"2403664421,32102",
 		"name":"Tcell Rad21KO R3",
 		"author":"Seitan et al.",
 		"journal":"Genome Research",
 		"year":"2013"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/seitan/Tcell-Rad21WT-R1.hic":{
-		"NVI":"",
+		"NVI":"1377124538,32102",
 		"name":"Tcell Rad21WT R1",
 		"author":"Seitan et al.",
 		"journal":"Genome Research",
 		"year":"2013"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/seitan/Tcell-Rad21WT-R3.hic":{
-		"NVI":"",
+		"NVI":"2646201369,32102",
 		"name":"Tcell Rad21WT R3",
 		"author":"Seitan et al.",
 		"journal":"Genome Research",
 		"year":"2013"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/moissiard/crh6-mutant.hic":{
-		"NVI":"",
+		"NVI":"105261071,10217",
 		"name":"crh6 mutant",
 		"author":"Moissiard et al.",
 		"journal":"Science",
 		"year":"2012"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/moissiard/WT.hic":{
-		"NVI":"",
+		"NVI":"127506388,10217",
 		"name":"WT",
 		"author":"Moissiard et al.",
 		"journal":"Science",
 		"year":"2012"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/grob/Col.hic":{
-		"NVI":"",
+		"NVI":"153638500,10217",
 		"name":"Col",
 		"author":"Grob et al.",
 		"journal":"Molecular Cell",
 		"year":"2014"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/grob/crwn1.hic":{
-		"NVI":"",
+		"NVI":"211213220,10217",
 		"name":"crwn1",
 		"author":"Grob et al.",
 		"journal":"Molecular Cell",
 		"year":"2014"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/grob/crwn4.hic":{
-		"NVI":"",
+		"NVI":"134236837,10217",
 		"name":"crwn4",
 		"author":"Grob et al.",
 		"journal":"Molecular Cell",
 		"year":"2014"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/xie/primary.hic":{
-		"NVI":"",
+		"NVI":"92936173,10217",
 		"name":"Arabidopsis",
 		"author":"Xie et al.",
 		"journal":"Molecular Plant",
 		"year":"2015"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/feng/6wt-control6wt337.hic":{
-		"NVI":"",
+		"NVI":"318737891,10217",
 		"name":"6WT control 6WT 337",
 		"author":"Feng et al.",
 		"journal":"Molecular Cell",
 		"year":"2014"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/feng/6wt-control6wt67.hic":{
-		"NVI":"",
+		"NVI":"348123956,10217",
 		"name":"6WT control 6WT 67",
 		"author":"Feng et al.",
 		"journal":"Molecular Cell",
 		"year":"2014"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/feng/6wt337.hic":{
-		"NVI":"",
+		"NVI":"251107279,10217",
 		"name":"6WT 337",
 		"author":"Feng et al.",
 		"journal":"Molecular Cell",
 		"year":"2014"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/feng/6wt67.hic":{
-		"NVI":"",
+		"NVI":"351840994,10217",
 		"name":"6WT 67",
 		"author":"Feng et al.",
 		"journal":"Molecular Cell",
 		"year":"2014"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/feng/Col0.hic":{
-		"NVI":"",
+		"NVI":"345969497,10217",
 		"name":"Col0",
 		"author":"Feng et al.",
 		"journal":"Molecular Cell",
 		"year":"2014"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/feng/clf28-swn7.hic":{
-		"NVI":"",
+		"NVI":"299585025,10217",
 		"name":"CLF28 SWN7",
 		"author":"Feng et al.",
 		"journal":"Molecular Cell",
 		"year":"2014"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/feng/cmt3-11.hic":{
-		"NVI":"",
+		"NVI":"253427706,10217",
 		"name":"CMT3 11",
 		"author":"Feng et al.",
 		"journal":"Molecular Cell",
 		"year":"2014"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/feng/ddm1-2.hic":{
-		"NVI":"",
+		"NVI":"303626924,10217",
 		"name":"DDM 1-2",
 		"author":"Feng et al.",
 		"journal":"Molecular Cell",
 		"year":"2014"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/feng/met1-3.hic":{
-		"NVI":"",
+		"NVI":"347697973,10217",
 		"name":"MET 1-3",
 		"author":"Feng et al.",
 		"journal":"Molecular Cell",
 		"year":"2014"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/feng/suvh4-suvh5-suvh6.hic":{
-		"NVI":"",
+		"NVI":"263122019,10217",
 		"name":"SUVH4 SUVH5 SUVH6",
 		"author":"Feng et al.",
 		"journal":"Molecular Cell",
 		"year":"2014"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/ma/DNase-HiC-WG-K562.hic":{
-		"NVI":"",
+		"NVI":"892955840,18679",
 		"name":"DNase WG",
 		"author":"Ma et al.",
 		"journal":"Nature Methods",
@@ -5123,7 +5123,7 @@
 		"experiment type":"Hi-C"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/ma/DNaseHiC-WG-H1.hic":{
-		"NVI":"",
+		"NVI":"696922695,18679",
 		"name":"DNase WG",
 		"author":"Ma et al.",
 		"journal":"Nature Methods",
@@ -5133,7 +5133,7 @@
 		"experiment type":"Hi-C"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/ma/targetedDNaseHiC-lincRNA-K562-rep1.hic":{
-		"NVI":"",
+		"NVI":"341917716,18679",
 		"name":"Targeted DNase lincRNA rep1",
 		"author":"Ma et al.",
 		"journal":"Nature Methods",
@@ -5143,7 +5143,7 @@
 		"experiment type":"Hi-C"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/ma/targeredDNaseHiC-lincRNA-K562-rep2.hic":{
-		"NVI":"",
+		"NVI":"214841185,18679",
 		"name":"Targeted DNase lincRNA rep2",
 		"author":"Ma et al.",
 		"journal":"Nature Methods",
@@ -5153,7 +5153,7 @@
 		"experiment type":"Hi-C"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/ma/targetedDNaseHiC-lincRNA-H1-rep1.hic":{
-		"NVI":"",
+		"NVI":"616326137,18679",
 		"name":"Targeted DNase lincRNA rep1",
 		"author":"Ma et al.",
 		"journal":"Nature Methods",
@@ -5163,7 +5163,7 @@
 		"experiment type":"Hi-C"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/ma/targetedDNaseHiC-lincRNA-H1-rep2.hic":{
-		"NVI":"",
+		"NVI":"579654013,18679",
 		"name":"Targeted DNase lincRNA rep2",
 		"author":"Ma et al.",
 		"journal":"Nature Methods",
@@ -5173,7 +5173,7 @@
 		"experiment type":"Hi-C"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/ma/targetedDNaseHiC-pe-H1-rep1.hic":{
-		"NVI":"",
+		"NVI":"519810544,18679",
 		"name":"Targeted DNase pe",
 		"author":"Ma et al.",
 		"journal":"Nature Methods",
@@ -5183,7 +5183,7 @@
 		"experiment type":"Hi-C"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/ma/targetedDNaseHiC-pe-K562-rep1.hic":{
-		"NVI":"",
+		"NVI":"199553123,18679",
 		"name":"Targeted DNase pe",
 		"author":"Ma et al.",
 		"journal":"Nature Methods",
@@ -5283,7 +5283,7 @@
 		"experiment type":"5C"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/rowley/Kc167_DpnII.hic":{
-		"NVI":"",
+		"NVI":"1319373594,6976",
 		"name":"DpnII",
 		"author":"Cubenas-Potts and Rowley et al.",
 		"journal":"Nucleic Acids Research",
@@ -5293,7 +5293,7 @@
 		"cell type":"Kc167"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/rowley/Kc167_HinfI.hic":{
-		"NVI":"",
+		"NVI":"1465493873,6976",
 		"name":"HinfI",
 		"author":"Cubenas-Potts and Rowley et al.",
 		"journal":"Nucleic Acids Research",
@@ -5303,7 +5303,7 @@
 		"cell type":"Kc167"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/rowley/Kc167_DpnII_HinfI_combo.hic":{
-		"NVI":"",
+		"NVI":"753062558,5814",
 		"name":"DpnII HinfI",
 		"author":"Cubenas-Potts and Rowley et al.",
 		"journal":"Nucleic Acids Research",
@@ -5313,21 +5313,21 @@
 		"cell type":"Kc167"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/barutcu/MCF-10A.hic":{
-		"NVI":"",
+		"NVI":"2784956115,36479",
 		"name":"MCF-10A",
 		"author":"Barutcu et al.",
 		"journal":"Genome Biology",
 		"year":"2015"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/barutcu/MCF-7.hic":{
-		"NVI":"",
+		"NVI":"2700457411,36479",
 		"name":"MCF-7",
 		"author":"Barutcu et al.",
 		"journal":"Genome Biology",
 		"year":"2015"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/batullin/sperm.hic":{
-		"NVI":"",
+		"NVI":"501052169,32102",
 		"name":"Sperm, HindIII",
 		"author":"Batullin et al.",
 		"journal":"Genome Biology",
@@ -5335,7 +5335,7 @@
 		"experiment type":"Hi-C"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/minajigi/WT_hiC_rep1.hic":{
-		"NVI":"",
+		"NVI":"1450697530,32102",
 		"name":"WT rep1",
 		"author":"Minajigi and Froberg et al.",
 		"journal":"Science",
@@ -5343,7 +5343,7 @@
 		"experiment type":"Hi-C"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/minajigi/WT_hiC_rep2.hic":{
-		"NVI":"",
+		"NVI":"1189371558,32102",
 		"name":"WT rep2",
 		"author":"Minajigi and Froberg et al.",
 		"journal":"Science",
@@ -5351,7 +5351,7 @@
 		"experiment type":"Hi-C"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/minajigi/combined.hic":{
-		"NVI":"",
+		"NVI":"2262007875,32102",
 		"name":"rep1+rep2",
 		"author":"Minajigi and Froberg et al.",
 		"journal":"Science",
@@ -5359,7 +5359,7 @@
 		"experiment type":"Hi-C"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/minajigi/inactive.hic":{
-		"NVI":"",
+		"NVI":"4444564,751",
 		"name":"inactive",
 		"author":"Minajigi and Froberg et al.",
 		"journal":"Science",
@@ -5367,7 +5367,7 @@
 		"experiment type":"Hi-C"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/minajigi/active.hic":{
-		"NVI":"",
+		"NVI":"3993495,751",
 		"name":"active",
 		"author":"Minajigi and Froberg et al.",
 		"journal":"Science",
@@ -5375,7 +5375,7 @@
 		"experiment type":"Hi-C"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/deng/patski_rep1.hic":{
-		"NVI":"",
+		"NVI":"1650838357,32102",
 		"name":"Rep1",
 		"author":"Deng and Ma et al.",
 		"journal":"Genome Biology",
@@ -5384,7 +5384,7 @@
 		"cell type":"Patski"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/deng/patski_rep2.hic":{
-		"NVI":"",
+		"NVI":"1258038606,32102",
 		"name":"Rep2",
 		"author":"Deng and Ma et al.",
 		"journal":"Genome Biology",
@@ -5393,7 +5393,7 @@
 		"cell type":"Patski"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/deng/patski.hic":{
-		"NVI":"",
+		"NVI":"499827296,16438",
 		"name":"rep1+rep2",
 		"author":"Deng and Ma et al.",
 		"journal":"Genome Biology",
@@ -5402,7 +5402,7 @@
 		"cell type":"Patski"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/deng/patski_active.hic":{
-		"NVI":"",
+		"NVI":"79175714,15691",
 		"name":"active",
 		"author":"Deng and Ma et al.",
 		"journal":"Genome Biology",
@@ -5411,7 +5411,7 @@
 		"cell type":"Patski"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/deng/patski_inactive.hic":{
-		"NVI":"",
+		"NVI":"98947881,15691",
 		"name":"inactive",
 		"author":"Deng and Ma et al.",
 		"journal":"Genome Biology",
@@ -5420,7 +5420,7 @@
 		"cell type":"Patski"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/deng/brain_dnase.hic":{
-		"NVI":"",
+		"NVI":"4298088401,32102",
 		"name":"Brain DNase",
 		"author":"Deng and Ma et al.",
 		"journal":"Genome Biology",
@@ -5428,7 +5428,7 @@
 		"organism":"mouse"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/deng/brain_in_situ_dnase.hic":{
-		"NVI":"",
+		"NVI":"609321852,32102",
 		"name":"Brain in-situ DNase",
 		"author":"Deng and Ma et al.",
 		"journal":"Genome Biology",
@@ -5436,7 +5436,7 @@
 		"organism":"mouse"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/deng/brain.hic":{
-		"NVI":"",
+		"NVI":"1028196506,16438",
 		"name":"Mouse brain combined",
 		"author":"Deng and Ma et al.",
 		"journal":"Genome Biology",
@@ -5444,7 +5444,7 @@
 		"organism":"mouse"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/deng/brain_active.hic":{
-		"NVI":"",
+		"NVI":"79175714,15691",
 		"name":"Brain active",
 		"author":"Deng and Ma et al.",
 		"journal":"Genome Biology",
@@ -5452,7 +5452,7 @@
 		"organism":"mouse"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/deng/brain_inactive.hic":{
-		"NVI":"",
+		"NVI":"98947881,15691",
 		"name":"Brain inactive",
 		"author":"Deng and Ma et al.",
 		"journal":"Genome Biology",
@@ -5460,28 +5460,28 @@
 		"organism":"mouse"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/le/BglII_rep1.hic":{
-		"NVI":"",
+		"NVI":"1283306,1463",
 		"name":"BglII rep1",
 		"author":"Le et al.",
 		"journal":"Science",
 		"year":"2013"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/le/BglII_rep2.hic":{
-		"NVI":"",
+		"NVI":"1263227,1463",
 		"name":"BglII rep2",
 		"author":"Le et al.",
 		"journal":"Science",
 		"year":"2013"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/le/NcoI_rep1.hic":{
-		"NVI":"",
+		"NVI":"4380906,1463",
 		"name":"NcoI rep1",
 		"author":"Le et al.",
 		"journal":"Science",
 		"year":"2013"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/eagen/GSE89112_Kc167combined.hic":{
-		"NVI":"",
+		"NVI":"1829549643,25624",
 		"name":"Combined",
 		"author":"Eagen et al.",
 		"journal":"Biorxiv",
@@ -5490,7 +5490,7 @@
 		"cell type":"Kc167"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/eagen/GSE89112_Kc167combined_randomized.hic":{
-		"NVI":"",
+		"NVI":"1859742654,25624",
 		"name":"Combined randomized",
 		"author":"Eagen et al.",
 		"journal":"Biorxiv",
@@ -5499,7 +5499,7 @@
 		"cell type":"Kc167"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/mumbach/GSE80820_HiChIP_GM_cohesin.hic":{
-		"NVI":"",
+		"NVI":"1231264781,17932",
 		"name":"cohesin combined",
 		"author":"Mumbach Rubin and Flynn et al.",
 		"journal":"Nature Methods",
@@ -5509,7 +5509,7 @@
 		"experiment type":"HiChIP"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/mumbach/GSE80820_HiChIP_mES_cohesin_all.hic":{
-		"NVI":"",
+		"NVI":"1152008628,16438",
 		"name":"cohesin combined",
 		"author":"Mumbach Rubin and Flynn et al.",
 		"journal":"Nature Methods",
@@ -5519,7 +5519,7 @@
 		"experiment type":"HiChIP"
 		},
 	"https://hicfiles.s3.amazonaws.com/external/mumbach/GSE80820_HiChIP_mES_Oct4.hic":{
-		"NVI":"",
+		"NVI":"912828146,16438",
 		"name":"oct4 combined",
 		"author":"Mumbach Rubin and Flynn et al.",
 		"journal":"Nature Methods",
@@ -5529,7 +5529,7 @@
 		"experiment type":"HiChIP"
 		},
 	"https://s3.amazonaws.com/hicfiles/external/wapl_hic/SCC4KO.hic":{
-		"NVI":"",
+		"NVI":"1767906138,18679",
 		"name":"knockout SCC4",
 		"author":"Haarhuis et al.",
 		"journal":"Cell",
@@ -5539,7 +5539,7 @@
 		"experiment type":"Hi-C"
 		},
 	"https://s3.amazonaws.com/hicfiles/external/wapl_hic/DKO.hic":{
-		"NVI":"",
+		"NVI":"1487228787,18679",
 		"name":"double knockout WAPL/SCC4",
 		"author":"Haarhuis et al.",
 		"journal":"Cell",
@@ -5549,7 +5549,7 @@
 		"experiment type":"Hi-C"
 		},
 	"https://s3.amazonaws.com/hicfiles/external/wapl_hic/WaplKO_1.14.hic":{
-		"NVI":"",
+		"NVI":"1189751862,18679",
 		"name":"knockout WAPL clone 1",
 		"author":"Haarhuis et al.",
 		"journal":"Cell",
@@ -5559,7 +5559,7 @@
 		"experiment type":"Hi-C"
 		},
 	"https://s3.amazonaws.com/hicfiles/external/wapl_hic/WaplKO_3.3.hic":{
-		"NVI":"",
+		"NVI":"1155057696,18679",
 		"name":"knockout WAPL clone 2",
 		"author":"Haarhuis et al.",
 		"journal":"Cell",
@@ -5569,7 +5569,7 @@
 		"experiment type":"Hi-C"
 		},
 	"https://s3.amazonaws.com/hicfiles/external/wapl_hic/WT.hic":{
-		"NVI":"",
+		"NVI":"1522401568,18679",
 		"name":"Control",
 		"author":"Haarhuis et al.",
 		"journal":"Cell",
@@ -5579,7 +5579,7 @@
 		"experiment type":"Hi-C"
 		},
 	"https://s3.amazonaws.com/hicfiles/hiseq/skfuwi4fnsjkdf9jekrw2/mega_Liverpool/mega.hic":{
-		"NVI":"",
+		"NVI":"2612171975,4381",
                 "name":"Aedes aegypti Liverpool strain Megamap",
                 "author":"Matthews, Dudchenko, & Kingan et al.",
                 "journal":"Nature",
@@ -5589,7 +5589,7 @@
                 "experiment type":"Hi-C"
 	  },
 	"https://s3.amazonaws.com/hicfiles/hiseq/skfuwi4fnsjkdf9jekrw2/HIC2836_Liverpool1/Liverpool1.hic":{
-		"NVI":"",
+		"NVI":"191729195,2245",
                 "name":"Aedes aegypti Liverpool strain animal 1",
                 "author":"Matthews, Dudchenko, & Kingan et al.",
                 "journal":"Nature",
@@ -5599,7 +5599,7 @@
                 "experiment type":"Hi-C"
 	  },
 	"https://s3.amazonaws.com/hicfiles/hiseq/skfuwi4fnsjkdf9jekrw2/HIC2861_Liverpool2/Liverpool2.hic":{
-		"NVI":"",
+		"NVI":"1637096030,4381",
                 "name":"Aedes aegypti Liverpool strain animal 2",
                 "author":"Matthews, Dudchenko, & Kingan et al.",
                 "journal":"Nature",
@@ -5609,7 +5609,7 @@
                 "experiment type":"Hi-C"
 	  },
 	"https://s3.amazonaws.com/hicfiles/hiseq/skfuwi4fnsjkdf9jekrw2/HIC2862_Liverpool3/Liverpool3.hic":{
-		"NVI":"",
+		"NVI":"1160045602,4381",
                 "name":"Aedes aegypti Liverpool strain animal 3",
                 "author":"Matthews, Dudchenko, & Kingan et al.",
                 "journal":"Nature",
@@ -5619,7 +5619,7 @@
                 "experiment type":"Hi-C"
 	  },
 	  "https://s3.amazonaws.com/hicfiles/external/goodell/HSPC.hic":{
-		"NVI":"",
+		"NVI":"11857786247,36479",
                 "name":"Hematopoietic Stem and Progenitor Cells",
                 "author":"Jeong et al.",
                 "journal":"Molecular Cell",
@@ -5629,7 +5629,7 @@
                 "experiment type":"Hi-C"
 	 },
 	 "https://s3.amazonaws.com/hicfiles/external/goodell/HSPC_CanyonDel.hic":{
-		"NVI":"",
+		"NVI":"8139168836,36479",
                 "name":"Edited HSPCs with a CRISPR deletion of geneless DNA methylation canyon",
                 "author":"Jeong et al.",
                 "journal":"Molecular Cell",
@@ -5639,7 +5639,7 @@
                 "experiment type":"Hi-C"
 	 },
 	 "https://s3.amazonaws.com/hicfiles/external/goodell/tcell.hic":{
-		"NVI":"",
+		"NVI":"9871547081,36479",
                 "name":"T cells",
                 "author":"Jeong et al.",
                 "journal":"Molecular Cell",
@@ -5649,7 +5649,7 @@
                 "experiment type":"Hi-C"
 	 },
 	 "https://s3.amazonaws.com/hicfiles/external/goodell/ep.hic":{
-		"NVI":"",
+		"NVI":"17479335373,36479",
                 "name":"Erythroid Progenitor Cells",
                 "author":"Jeong et al.",
                 "journal":"Molecular Cell",
@@ -5659,7 +5659,7 @@
                 "experiment type":"Hi-C"
 	 },
 	 "https://hicfiles.s3.amazonaws.com/external/nagano/Th1_ensemble.hic":{
-		"NVI":"",
+		"NVI":"1690592868,32102",
 		"name":"T helper cell ensemble",
 		"author":"Nagano et al.",
 		"journal":"Nature",
@@ -5669,7 +5669,7 @@
 		"experiment type":"single cell Hi-C"
 	},
 	"https://hicfiles.s3.amazonaws.com/external/bonev/ES_mapq30.hic":{
-		"NVI":"",
+		"NVI":"32930498831,32386",
 		"name":"Embryonic stem cells MAPQ 30",
 		"author":"Bonev et al.",
 		"journal":"Cell",
@@ -5679,7 +5679,7 @@
 		"experiment type":"Hi-C"
 	},
 	"https://hicfiles.s3.amazonaws.com/external/bonev/NPC_mapq30.hic":{
-		"NVI":"",
+		"NVI":"55053730986,32386",
 		"name":"Neural progenitors MAPQ 30",
 		"author":"Bonev et al.",
 		"journal":"Cell",
@@ -5689,7 +5689,7 @@
 		"experiment type":"Hi-C"
 	},
 	"https://hicfiles.s3.amazonaws.com/external/bonev/CN_mapq30.hic":{
-		"NVI":"",
+		"NVI":"53138031154,32386",
 		"name":"Cortical neurons MAPQ 30",
 		"author":"Bonev et al.",
 		"journal":"Cell",
@@ -5699,7 +5699,7 @@
 		"experiment type":"Hi-C"
 	},
 	"https://hicfiles.s3.amazonaws.com/hiseq/Kieffer-Kwon_et_al_2017/Main_maps/Kieffer-Kwon-2017-activated_B_cells_72_hours_WT.hic":{
-		"NVI":"",
+		"NVI":"16492991184,32102",
 		"name":"activated B cells 72 hours wild type",
 		"author":"Kieffer-Kwon et al.",
 		"journal":"Molecular Cell",
@@ -5709,7 +5709,7 @@
 		"experiment type":"Hi-C"
 	},
 	"https://hicfiles.s3.amazonaws.com/hiseq/Kieffer-Kwon_et_al_2017/Main_maps/Kieffer-Kwon-2017-resting_B_cells_WT.hic":{
-		"NVI":"",
+		"NVI":"23057795398,32102",
 		"name":"resting B cells wild type",
 		"author":"Kieffer-Kwon et al.",
 		"journal":"Molecular Cell",
@@ -5719,7 +5719,7 @@
 		"experiment type":"Hi-C"
 	},
 	"https://hicfiles.s3.amazonaws.com/hiseq/Kieffer-Kwon_et_al_2017/Main_maps/Kieffer-Kwon-2017-activated_B_cells_24_hours_MYC_KO.hic":{
-		"NVI":"",
+		"NVI":"21245554876,32102",
 		"name":"activated B cells 24h MYC KO",
 		"author":"Kieffer-Kwon et al.",
 		"journal":"Molecular Cell",
@@ -5729,7 +5729,7 @@
 		"experiment type":"Hi-C"
 	},
 	"https://hicfiles.s3.amazonaws.com/hiseq/Kieffer-Kwon_et_al_2017/Main_maps/Kieffer-Kwon-2017-resting_B_cells_TSA.hic":{
-		"NVI":"",
+		"NVI":"13933346059,32102",
 		"name":"resting B cells TSA",
 		"author":"Kieffer-Kwon et al.",
 		"journal":"Molecular Cell",
@@ -5739,7 +5739,7 @@
 		"experiment type":"Hi-C"
 	},
 	"https://hicfiles.s3.amazonaws.com/hiseq/Kieffer-Kwon_et_al_2017/Main_maps/Kieffer-Kwon-2017-activated_B_cells_24_hours_oligomycin.hic":{
-		"NVI":"",
+		"NVI":"21902506832,32102",
 		"name":"activated B cells 24h oligomycin",
 		"author":"Kieffer-Kwon et al.",
 		"journal":"Molecular Cell",
@@ -5749,7 +5749,7 @@
 		"experiment type":"Hi-C"
 	},
 	"https://hicfiles.s3.amazonaws.com/hiseq/Kieffer-Kwon_et_al_2017/Main_maps/Kieffer-Kwon-2017-mES_WT.hic":{
-		"NVI":"",
+		"NVI":"9451969795,32102",
 		"name":"mES WT",
 		"author":"Kieffer-Kwon et al.",
 		"journal":"Molecular Cell",
@@ -5759,7 +5759,7 @@
 		"experiment type":"Hi-C"
 	},
 	"https://hicfiles.s3.amazonaws.com/hiseq/Vian_et_al_2018/Main_maps/Vian-2018-activated_B_cells_24_hours_WT.hic":{
-		"NVI":"",
+		"NVI":"3600188564,16438",
 		"name":"activated B cells 24h WT",
 		"author":"Vian et al.",
 		"journal":"Cell",
@@ -5769,7 +5769,7 @@
 		"experiment type":"Hi-C"
 	},
 	"https://hicfiles.s3.amazonaws.com/hiseq/Vian_et_al_2018/Main_maps/Vian-2018-activated_B_cells_30_hours_WT.hic":{
-		"NVI":"",
+		"NVI":"1309503359,16438",
 		"name":"activated B cells 30h WT",
 		"author":"Vian et al.",
 		"journal":"Cell",
@@ -5779,7 +5779,7 @@
 		"experiment type":"Hi-C"
 	},
 	"https://hicfiles.s3.amazonaws.com/hiseq/Vian_et_al_2018/Main_maps/Vian-2018-activated_B_cells_30_hours_HU_treated.hic":{
-		"NVI":"",
+		"NVI":"1477252396,16438",
 		"name":"activated B cells 30h HU treated",
 		"author":"Vian et al.",
 		"journal":"Cell",
@@ -5789,7 +5789,7 @@
 		"experiment type":"Hi-C"
 	},
 	"https://hicfiles.s3.amazonaws.com/hiseq/Vian_et_al_2018/Main_maps/Vian-2018-activated_B_cells_24_hours_flavopiridol.hic":{
-		"NVI":"",
+		"NVI":"15711773490,32102",
 		"name":"activated B cells 24h flavopiridol treated",
 		"author":"Vian et al.",
 		"journal":"Cell",
@@ -5829,7 +5829,7 @@
 		"experiment type":"Hi-C"
 	},
 	"https://hicfiles.s3.amazonaws.com/external/pgp/PGP1F_mega_090118/PGP1F_mega_090118_30.hic":{
-		"NVI":"",
+		"NVI":"24786676166,36479",
 		"name":"PGP1 fibroblasts combined MAPQ 30",
 		"author":"Nir, Farabella, Estrada, Ebeling et al.",
 		"journal":"PLOS Genetics",
@@ -5839,7 +5839,7 @@
 		"experiment type":"Hi-C"
 	},
 	"https://hicfiles.s3.amazonaws.com/external/pgp/HIC7145/HIC7145_30.hic":{
-		"NVI":"",
+		"NVI":"4554644616,36479",
 		"name":"PGP1 fibroblasts replicate 1",
 		"author":"Nir, Farabella, Estrada, Ebeling et al.",
 		"journal":"PLOS Genetics",
@@ -5849,7 +5849,7 @@
 		"experiment type":"Hi-C"
 	},
 	"https://hicfiles.s3.amazonaws.com/external/pgp/HIC7146/HIC7146_30.hic":{
-		"NVI":"",
+		"NVI":"4174848944,36479",
 		"name":"PGP1 fibroblasts replicate 2",
 		"author":"Nir, Farabella, Estrada, Ebeling et al.",
 		"journal":"PLOS Genetics",
@@ -5859,7 +5859,7 @@
 		"experiment type":"Hi-C"
 	},	
 	"https://hicfiles.s3.amazonaws.com/external/pgp/HIC7147/HIC7147_30.hic":{
-		"NVI":"",
+		"NVI":"5062229182,36479",
 		"name":"PGP1 fibroblasts replicate 3",
 		"author":"Nir, Farabella, Estrada, Ebeling et al.",
 		"journal":"PLOS Genetics",
@@ -5879,7 +5879,7 @@
 		"experiment type":"Hi-C"
 	},	
 	"https://hicfiles.s3.amazonaws.com/external/pgp/HIC7862/HIC7862_30.hic":{
-		"NVI":"",
+		"NVI":"4520990620,36479",
 		"name":"PGP1 fibroblasts replicate 5",
 		"author":"Nir, Farabella, Estrada, Ebeling et al.",
 		"journal":"PLOS Genetics",
@@ -5889,7 +5889,7 @@
 		"experiment type":"Hi-C"
 	},
 	"https://hicfiles.s3.amazonaws.com/external/pgp/HIC7863/HIC7863_30.hic":{
-		"NVI":"",
+		"NVI":"4330354773,36479",
 		"name":"PGP1 fibroblasts replicate 6",
 		"author":"Nir, Farabella, Estrada, Ebeling et al.",
 		"journal":"PLOS Genetics",
@@ -5899,7 +5899,7 @@
 		"experiment type":"Hi-C"
 	},	
 	"https://hicfiles.s3.amazonaws.com/external/pgp/HIC7864/HIC7864_30.hic":{
-		"NVI":"",
+		"NVI":"5880640268,36479",
 		"name":"PGP1 fibroblasts replicate 7",
 		"author":"Nir, Farabella, Estrada, Ebeling et al.",
 		"journal":"PLOS Genetics",
@@ -5909,7 +5909,7 @@
 		"experiment type":"Hi-C"
 	},	
 	"https://hicfiles.s3.amazonaws.com/external/pgp/HIC7865/HIC7865_30.hic":{
-		"NVI":"",
+		"NVI":"4431632469,36479",
 		"name":"PGP1 fibroblasts replicate 8",
 		"author":"Nir, Farabella, Estrada, Ebeling et al.",
 		"journal":"PLOS Genetics",
@@ -5919,7 +5919,7 @@
 		"experiment type":"Hi-C"
 	},	
 	"https://hicfiles.s3.amazonaws.com/external/pgp/HIC7866/HIC7866_30.hic":{
-		"NVI":"",
+		"NVI":"4686000222,36479",
 		"name":"PGP1 fibroblasts replicate 9",
 		"author":"Nir, Farabella, Estrada, Ebeling et al.",
 		"journal":"PLOS Genetics",
@@ -5929,7 +5929,7 @@
 		"experiment type":"Hi-C"
 	},
 	"https://encode-public.s3.amazonaws.com/2018/10/19/b122542b-306c-4631-bdc3-2e155e89af55/ENCFF718AWL.hic":{
-		"NVI":"",
+		"NVI":"39544267907,58932",
 		"name":"ENCODE Hi-C experiments | in-situ GM12878 MboI combined replicates (MAPQ 30)",
 		"organism":"human",
 		"reference genome":"hg19",
@@ -5939,7 +5939,7 @@
 	},
 	"https://encode-public.s3.amazonaws.com/2019/02/15/8e787cd8-e388-4bc2-a236-7a5e6f39e0c0/ENCFF999YXX.hic":{	
 	
-		"NVI":"",
+		"NVI":"9255069996,56883",
 		"name":"ENCODE Hi-C experiments | in-situ IMR90 MboI combined replicates (MAPQ 30)",
 		"organism":"human",
                 "reference genome":"hg19",
@@ -5948,7 +5948,7 @@
                 "protocol":"in situ"
 	},
 	"https://encode-public.s3.amazonaws.com/2019/02/08/fc1d9d5d-8fa0-4e29-9080-3da674d9490d/ENCFF543USQ.hic":{
-		"NVI":"",
+		"NVI":"5005263062,36479",
 		"name":"ENCODE Hi-C experiments | in-situ HMEC MboI combined replicates (MAPQ 30)",
 		"organism":"human",
                 "reference genome":"hg19",
@@ -5957,7 +5957,7 @@
                 "protocol":"in situ"
    },
 	"https://s3.us-east-1.wasabisys.com/hicfiles/internal/LCL_mega_42B_500bp_30.hic":{
-		"NVI":"",
+		"NVI":"106482584851,22829",
 		"name":"LCL Ultra Resolution",
 		"author":"Harris HL, Gu H et al.",
 		"journal":"Nature Communications",
