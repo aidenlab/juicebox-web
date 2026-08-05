@@ -3,7 +3,6 @@ export const juiceboxConfig = {
     genome: 'https://igv.org/genomes/genomes3.json',
 
     mapMenu: {
-        id: 'contact-map-datalist',
         items: 'res/hicfiles.json',
     },
     trackMenu: {
