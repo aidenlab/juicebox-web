@@ -16,12 +16,14 @@
     "build": "vite build",
     "build:aidenlab": "vite build --mode aidenlab",
     "preview": "vite preview",
-    "preview:aidenlab": "vite preview --mode aidenlab --outDir dist-aidenlab"
+    "preview:aidenlab": "vite preview --mode aidenlab --outDir dist-aidenlab",
+    "test": "vitest run"
   },
   "devDependencies": {
     "igv-utils": "github:igvteam/igv-utils#v1.7.1",
     "infinite-table": "github:igvteam/infinite-table#main",
     "juicebox.js": "github:aidenlab/juicebox.js#v3.6.1",
-    "vite": "^8.0.11"
+    "vite": "^8.0.11",
+    "vitest": "^4.1.10"
   }
 }

@@ -4,7 +4,7 @@ export const juiceboxConfig = {
 
     mapMenu: {
         id: 'contact-map-datalist',
-        items: 'https://aidenlab.org/juicebox/res/hicfiles.json',
+        items: 'res/hicfiles.json',
     },
     trackMenu: {
         id: 'annotation-datalist',
