@@ -9,6 +9,7 @@ import hic from 'juicebox.js'
 import QRCode from "./qrcode.js";
 import configureContactMapLoaders from "./contactMapLoad.js";
 import {tinyURLShortener} from "./urlShortener.js";
+import {createControlMapDropdown} from "./controlMapDropdown.js";
 
 // CORS-enabled mirror of the genome list, used if config.genome is unreachable.
 // Matches the backup URL used by igv.js (genomeUtils.js BACKUP_GENOMES_URL).
@@ -17,6 +18,7 @@ const BACKUP_GENOMES_URL = 'https://raw.githubusercontent.com/igvteam/igv-data/r
 let currentGenomeId
 let genomeDerivedTrackConfigurations
 let shortenURL
+let controlMapDropdown
 
 async function fetchGenomeList(url) {
     try {
@@ -40,9 +42,14 @@ function initializationHelper(container, config) {
 
     const trackDropdownMenu = document.querySelector('#hic-track-dropdown-menu')
 
+    controlMapDropdown = createControlMapDropdown({
+        getBrowsers: () => hic.getAllBrowsers(),
+        element: document.querySelector('#hic-control-map-dropdown')
+    })
+
     createAppCloneButton(container)
 
-    updateControlMapDropdownForAllBrowser()
+    controlMapDropdown.sync()
 
     configureSessionWidgets(container)
 
@@ -134,7 +141,7 @@ function initializationHelper(container, config) {
 
     hic.EventBus.globalBus.subscribe("GenomeChange", genomeChangeListener)
 
-    hic.EventBus.globalBus.subscribe("BrowserSelect", event => updateControlMapDropdown(event.data))
+    hic.EventBus.globalBus.subscribe("BrowserSelect", event => controlMapDropdown.enableIfMapLoaded(event.data))
 }
 
 function createGenomeDerivedTrackConfigurations(currentGenomeId, list) {
@@ -365,7 +372,7 @@ async function loadHicFile(url, name, mapType) {
         } else {
             browser.reset();
             await browser.loadHicFile(config);
-            document.querySelector('#hic-control-map-dropdown').classList.remove('disabled');
+            controlMapDropdown.enableIfMapLoaded(browser)
         }
     } catch (e) {
         AlertSingleton.present(`Error loading ${url}: ${e}`);
@@ -425,6 +432,9 @@ function createAppCloneButton(container) {
 
         if (browser) {
             hic.setCurrentBrowser(browser)
+            // A browser opened after initialization needs subscribing too, or its map loads would
+            // not re-evaluate the dropdown either.
+            controlMapDropdown.sync()
         }
     })
 
@@ -443,7 +453,11 @@ function configureSessionWidgets(container) {
         'igv-app-dropdown-dropbox-session-file-button',
         'igv-app-session-url-modal',
         'igv-app-session-save-modal',
-        async config => await hic.restoreSession(container, config),
+        async config => {
+            await hic.restoreSession(container, config)
+            // Restoring replaces every browser, so the subscriptions have to be remade.
+            controlMapDropdown.sync()
+        },
         () => hic.toJSON()
     )
 
@@ -562,25 +576,6 @@ function getEmbedTarget() {
     idx = href.lastIndexOf("/");
     return href.substring(0, idx) + "/embed.html"
 
-}
-
-function updateControlMapDropdownForAllBrowser() {
-    const browsers = hic.getAllBrowsers();
-    for (let browser of browsers) {
-        browser.eventBus.subscribe("MapLoad", checkControlMapDropdown);
-        updateControlMapDropdown(browser);
-    }
-
-}
-
-function checkControlMapDropdown() {
-    updateControlMapDropdown(hic.getCurrentBrowser());
-}
-
-function updateControlMapDropdown(browser) {
-    if (browser && browser.dataset) {
-        document.querySelector('#hic-control-map-dropdown').classList.remove('disabled')
-    }
 }
 
 /**
