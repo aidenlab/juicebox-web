@@ -24,7 +24,7 @@
 import hic from 'juicebox.js'
 import {registerDevUrlMapper} from './devUrlMapper.js'
 import {AlertSingleton} from './alertSingleton.js'
-import {initializationHelper} from "./initializationHelper.js"
+import {initializationHelper, syncControlMapDropdown} from "./initializationHelper.js"
 import {juiceboxConfig} from './juiceboxConfig.js'
 import 'juicebox.js/dist/css/juicebox.css'
 import 'infinite-table/css/infinite-table.css'
@@ -45,5 +45,8 @@ async function init(container) {
     initializationHelper(container, juiceboxConfig)
 
     await hic.init(container, juiceboxConfig)
+
+    // Only now do the browsers exist to subscribe to.
+    syncControlMapDropdown()
 
 }

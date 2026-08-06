@@ -49,8 +49,6 @@ function initializationHelper(container, config) {
 
     createAppCloneButton(container)
 
-    controlMapDropdown.sync()
-
     configureSessionWidgets(container)
 
     const dropboxImg = document.querySelector('img#igv-app-track-dropbox-button-image')
@@ -614,4 +612,12 @@ const dropboxDropdownItem = id =>
         </div>
     </div>`
 
-export { initializationHelper }
+/**
+ * Called once the browsers exist. `initializationHelper` runs ahead of `hic.init`, so there is
+ * nothing to subscribe at the time the shell is wired — see js/app.js.
+ */
+function syncControlMapDropdown() {
+    controlMapDropdown.sync()
+}
+
+export { initializationHelper, syncControlMapDropdown }
