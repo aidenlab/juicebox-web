@@ -1,4 +1,4 @@
-import {loadAnnotationDatalist} from "./annotationDatalist.js"
+import {loadTrackMenu} from "./trackMenu.js"
 
 import {createSessionWidgets} from './widgets/sessionWidgets.js'
 import {createTrackWidgetsWithTrackRegistry, updateTrackMenus} from './widgets/trackWidgets.js'
@@ -118,12 +118,12 @@ function initializationHelper(container, config) {
 
             if (config.trackMenu) {
                 let tracksURL = config.trackMenu.items.replace("$GENOME_ID", data);
-                await loadAnnotationDatalist(document.getElementById(config.trackMenu.id), tracksURL);
+                await loadTrackMenu(document.getElementById(config.trackMenu.id), tracksURL);
             }
 
             if (config.trackMenu2D) {
                 let annotations2dURL = config.trackMenu2D.items.replace("$GENOME_ID", data);
-                await loadAnnotationDatalist(document.getElementById(config.trackMenu2D.id), annotations2dURL);
+                await loadTrackMenu(document.getElementById(config.trackMenu2D.id), annotations2dURL);
             }
 
             const response = await fetch(config.trackRegistryFile)

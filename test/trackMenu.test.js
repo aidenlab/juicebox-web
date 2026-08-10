@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, afterEach } from 'vitest'
 
-import { loadAnnotationDatalist } from '../js/annotationDatalist.js'
+import { loadTrackMenu } from '../js/trackMenu.js'
 
 /** Just enough of a `<datalist>` to observe what the loader appended to it. */
 function fakeDatalist() {
@@ -22,14 +22,14 @@ function httpError(status) {
 function setup({ load }) {
     const datalist = fakeDatalist()
     const presentAlert = vi.fn()
-    return { datalist, presentAlert, run: url => loadAnnotationDatalist(datalist, url, { load, presentAlert }) }
+    return { datalist, presentAlert, run: url => loadTrackMenu(datalist, url, { load, presentAlert }) }
 }
 
 afterEach(() => {
     vi.restoreAllMocks()
 })
 
-describe('annotation datalist', () => {
+describe('track menu', () => {
 
     it('offers one option per tab-delimited line', async () => {
         const { datalist, run } = setup({ load: async () => 'CTCF\thttps://example.com/ctcf.bedpe\nRad21\thttps://example.com/rad21.bedpe' })
