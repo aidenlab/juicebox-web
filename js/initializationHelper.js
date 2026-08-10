@@ -1,4 +1,4 @@
-import {loadString} from "./stringLoader.js"
+import {loadTrackMenu} from "./trackMenu.js"
 
 import {createSessionWidgets} from './widgets/sessionWidgets.js'
 import {createTrackWidgetsWithTrackRegistry, updateTrackMenus} from './widgets/trackWidgets.js'
@@ -118,12 +118,12 @@ function initializationHelper(container, config) {
 
             if (config.trackMenu) {
                 let tracksURL = config.trackMenu.items.replace("$GENOME_ID", data);
-                await loadAnnotationDatalist(document.getElementById(config.trackMenu.id), tracksURL, "1D");
+                await loadTrackMenu(document.getElementById(config.trackMenu.id), tracksURL);
             }
 
             if (config.trackMenu2D) {
                 let annotations2dURL = config.trackMenu2D.items.replace("$GENOME_ID", data);
-                await loadAnnotationDatalist(document.getElementById(config.trackMenu2D.id), annotations2dURL, "2D");
+                await loadTrackMenu(document.getElementById(config.trackMenu2D.id), annotations2dURL);
             }
 
             const response = await fetch(config.trackRegistryFile)
@@ -375,45 +375,6 @@ async function loadHicFile(url, name, mapType) {
     } catch (e) {
         AlertSingleton.present(`Error loading ${url}: ${e}`);
     }
-}
-
-async function loadAnnotationDatalist(datalist, url, type) {
-
-    datalist.replaceChildren();
-
-    let data = undefined;
-
-    try {
-        data = await loadString(url);
-    } catch (e) {
-        if (404 === e) {
-            //  This is an expected condition, not all assemblies have track menus
-            console.warn(`No track menu found ${url}`)
-            return
-        } else {
-            console.log(`Error loading track menu: ${url} ${e}`);
-            AlertSingleton.present(`Error loading track menu: ${url} ${e}`);
-        }
-    }
-
-    let lines = data ? data.split(/\n|\r\n|\r/g) : []
-    if (lines.length > 0) {
-
-        for (let line of lines) {
-
-            if ('' !== line) {
-                const tokens = line.split('\t');
-
-                if (tokens.length > 1) {
-                    const [label, value] = tokens;
-                    datalist.insertAdjacentHTML('beforeend', `<option data-url="${value}">${label}</option>`);
-
-                }
-            }
-
-        }
-    }
-
 }
 
 function createAppCloneButton(container) {
