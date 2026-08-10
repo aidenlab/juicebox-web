@@ -438,17 +438,12 @@ function configureShareModal(container, config) {
         let idx = href.indexOf("?");
         if (idx > 0) href = href.substring(0, idx);
 
-        const jbUrl = await shortJuiceboxURL(href);
+        const shareUrl = await shortJuiceboxURL(href);
 
         const embedSnippet = await getEmbeddableSnippet(container, config);
         const embedInput = document.querySelector('#hic-embed');
         embedInput.value = embedSnippet;
         embedInput.select();
-
-        let shareUrl = jbUrl;
-
-        // Shorten second time
-        // e.g. converts https://aidenlab.org/juicebox?juiceboxURL=https://goo.gl/WUb1mL  to https://goo.gl/ERHp5u
 
         const shareUrlInput = document.querySelector('#hic-share-url');
         shareUrlInput.value = shareUrl;
