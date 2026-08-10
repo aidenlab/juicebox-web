@@ -18,7 +18,10 @@ export const juiceboxConfig = {
 
     urlShortener: {
         provider: 'tinyURL',
-        apiKey: import.meta.env.VITE_TINYURL_JUICEBOX_API_KEY || 'YOUR_TINYURL_JUICEBOX_API_KEY',
+        // Left undefined when the env var is absent, which is what the shortener's own guard
+        // tests for: it warns and hands back the unshortened URL. A placeholder here would be
+        // truthy, defeat the guard, and send `Bearer YOUR_...` to TinyURL — see aidenlab/juicebox-web#65.
+        apiKey: import.meta.env.VITE_TINYURL_JUICEBOX_API_KEY,
         domain: 't.3dg.io',
         endpoint: 'https://api.tinyurl.com/create',
         tags: ['juicebox'],
