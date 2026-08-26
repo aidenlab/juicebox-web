@@ -4,6 +4,7 @@
 //   https://jb.3dg.io/<hic-url>            -> the app with that map loaded
 //   https://jb.3dg.io/ENCFF622YUQ          -> the app with that ENCODE file loaded
 //   https://jb.3dg.io/4DNFI916JQ1Y         -> the app with that 4DN file loaded
+//   https://jb.3dg.io/ENCSR410MDC          -> that ENCODE experiment's contact map
 //   https://jb.3dg.io/?hicUrl=<hic-url>    -> unchanged, still works
 //
 // Replaces the redirect rule that used to sit on this hostname. A rule could not do the
@@ -40,6 +41,64 @@ const PORTALS = [
         hicUrl: (file) => file.open_data_url,
     },
 ]
+
+// ENCODE experiment and series accessions. These name a set of files rather than one file, so
+// resolving them means choosing among the contact maps the dataset holds.
+const ENCODE_DATASET = /^\/(ENCSR[0-9A-Z]{6})\/?$/i
+
+const ENCODE_SEARCH = 'https://www.encodeproject.org/search/'
+
+// Contact-map kinds, best first. This ordering is ENCODE's own rather than ours: across every
+// released .hic file the portal flags preferred_default, 284 are mapping-quality-thresholded
+// and 94 are plain contact matrices, and not one is a haplotype-specific, fold-change or
+// variants map. The last three are still ranked rather than excluded, so a dataset holding
+// only those resolves to something instead of to an error.
+const OUTPUT_TYPES = [
+    'mapping quality thresholded contact matrix',
+    'contact matrix',
+    'haplotype-specific contact matrix',
+    'fold over change matrix',
+    'variants contact matrix',
+]
+
+// Newest assembly first, for the datasets that carry a map against more than one.
+const ASSEMBLIES = [ 'GRCh38', 'hg19', 'mm10', 'mm9' ]
+
+// Narrows a dataset's contact maps to the one to load.
+//
+// Measured against the whole released corpus — 842 datasets, 629 of them holding more than one
+// .hic file — this resolves every one of the 629 to a single file, and reaches the recency
+// tiebreak already decided in all but a handful. preferred_default alone settles about half;
+// the rest need the ranking below.
+function chooseContactMap(files) {
+    // ENCODE's own opinion wins where it has one. It marks two files on a few datasets, where
+    // the same data was reprocessed under a later analysis — recency separates those.
+    let pool = files.filter((file) => file.preferred_default)
+    if (pool.length === 0) {
+        pool = files
+    }
+
+    for (const outputType of OUTPUT_TYPES) {
+        const tier = pool.filter((file) => file.output_type === outputType)
+        if (tier.length > 0) {
+            pool = tier
+            break
+        }
+    }
+
+    for (const assembly of ASSEMBLIES) {
+        const tier = pool.filter((file) => file.assembly === assembly)
+        if (tier.length > 0) {
+            pool = tier
+            break
+        }
+    }
+
+    // Whatever survives, take the most recently created: where two files are otherwise
+    // identical they come from different analyses of the same data, and the later analysis is
+    // the current one.
+    return pool.reduce((best, file) => ((file.date_created ?? '') > (best.date_created ?? '') ? file : best))
+}
 
 // file_format arrives as a bare string from ENCODE and from 4DN's collection endpoints, but as
 // an embedded object from 4DN's root endpoint, and as an @id path under some framings. Reduce
@@ -164,9 +223,84 @@ async function resolveAccession(accession, portal, context) {
     return { hicUrl }
 }
 
+// Turns an experiment or series accession into a loadable contact map.
+//
+// Two lookups rather than one. The dataset page does embed its files, but the embedded copies
+// omit preferred_default — the single most informative field here — so the files are fetched
+// through search instead, which requires the dataset's collection path (/experiments/ versus
+// /aggregate-series/). Resolving the accession at the portal root yields that path without
+// having to guess it, and works for any dataset type. Both lookups are cached.
+async function resolveDataset(accession, context) {
+    const item = await lookup(
+        `https://www.encodeproject.org/${accession}/?format=json&frame=object`,
+        new Request(`https://jb.3dg.io/__dataset/${accession}`),
+        context,
+    )
+
+    if (item.status === 404) {
+        return { error: problem(404, `No such ENCODE dataset: ${accession}`) }
+    }
+    if (!item.ok) {
+        return { error: problem(502, `ENCODE lookup for ${accession} failed (${item.status}).`) }
+    }
+
+    const dataset = await item.json()
+
+    const query = new URLSearchParams({
+        type: 'File',
+        file_format: 'hic',
+        status: 'released',
+        dataset: dataset['@id'],
+        limit: 'all',
+        format: 'json',
+    })
+    for (const field of [ 'accession', 'preferred_default', 'output_type', 'assembly', 'date_created', 'cloud_metadata' ]) {
+        query.append('field', field)
+    }
+
+    const found = await lookup(
+        `${ENCODE_SEARCH}?${query}`,
+        new Request(`https://jb.3dg.io/__dataset-files/${accession}`),
+        context,
+    )
+
+    // ENCODE answers a search with no matches as 404, so this is "holds no released contact
+    // map" rather than "the dataset is missing" — which the lookup above already ruled out.
+    if (found.status === 404) {
+        return { error: problem(404, `${accession} has no released contact map to load.`) }
+    }
+    if (!found.ok) {
+        return { error: problem(502, `ENCODE file search for ${accession} failed (${found.status}).`) }
+    }
+
+    const files = (await found.json())['@graph'] ?? []
+    if (files.length === 0) {
+        return { error: problem(404, `${accession} has no released contact map to load.`) }
+    }
+
+    const chosen = chooseContactMap(files)
+    const hicUrl = chosen.cloud_metadata?.url
+    if (!hicUrl) {
+        return { error: problem(404, `${chosen.accession} has no public cloud URL to load.`) }
+    }
+
+    // Named for both, since which map was chosen out of the dataset is not otherwise visible.
+    return { hicUrl, name: `${accession} (${chosen.accession})` }
+}
+
 export default {
     async fetch(request, env, context) {
         const url = new URL(request.url)
+
+        const dataset = url.pathname.match(ENCODE_DATASET)
+        if (dataset) {
+            const accession = dataset[1].toUpperCase()
+            const { hicUrl, name, error } = await resolveDataset(accession, context)
+            if (error) {
+                return error
+            }
+            return Response.redirect(appUrl(hicUrl, name), 302)
+        }
 
         for (const portal of PORTALS) {
             const match = url.pathname.match(portal.accession)
