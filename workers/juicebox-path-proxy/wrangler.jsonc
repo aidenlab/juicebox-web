@@ -1,5 +1,7 @@
 {
-    "$schema": "node_modules/wrangler/config-schema.json",
+    // Deployed by hand with `npx wrangler deploy` from this directory. Pages builds the site;
+    // they do not deploy workers, so this one does not redeploy on a push to release. It only
+    // needs redeploying when this file or index.js changes — not when the app changes.
     "name": "juicebox-path-proxy",
     "main": "index.js",
     "compatibility_date": "2026-08-25",
