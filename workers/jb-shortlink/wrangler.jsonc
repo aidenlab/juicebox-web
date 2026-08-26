@@ -1,0 +1,16 @@
+{
+    // Deployed by hand with `npx wrangler deploy` from this directory; Pages does not deploy
+    // workers. Requires the old jb.3dg.io redirect rule to be removed first — Cloudflare runs
+    // redirect rules ahead of workers, so the rule would preempt this route entirely.
+    "name": "jb-shortlink",
+    "main": "index.js",
+    "compatibility_date": "2026-08-25",
+
+    "routes": [
+        { "pattern": "jb.3dg.io/*", "zone_name": "3dg.io" }
+    ],
+
+    "observability": {
+        "enabled": true
+    }
+}
