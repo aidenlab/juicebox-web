@@ -63,6 +63,15 @@ export default defineConfig(async ({ command, mode }) => {
     })()
 
     return {
+        // Relative asset URLs, so one build serves both juicebox.aidenlab.org (at the domain
+        // root) and aidenlab.org/juicebox/ (behind the path-proxy worker) without a second
+        // build or a second Pages project. The alternative, base: '/juicebox/', would be
+        // correct at the path and broken at the root.
+        //
+        // The cost is that relative URLs resolve against the *directory*: reached without a
+        // trailing slash, ./assets/ would resolve to the site root. The worker redirects
+        // /juicebox to /juicebox/ for exactly this reason — see workers/juicebox-path-proxy.
+        base: './',
         build: {
             outDir: isAidenLab ? 'dist-aidenlab' : 'dist',
             rollupOptions: {

@@ -1,0 +1,17 @@
+{
+    "$schema": "node_modules/wrangler/config-schema.json",
+    "name": "juicebox-path-proxy",
+    "main": "index.js",
+    "compatibility_date": "2026-08-25",
+
+    // The route is what puts this worker in front of a live public URL, so it is committed
+    // here rather than clicked into the dashboard. `wrangler deploy` attaches it.
+    "routes": [
+        { "pattern": "aidenlab.org/juicebox/*", "zone_name": "aidenlab.org" },
+        { "pattern": "aidenlab.org/juicebox", "zone_name": "aidenlab.org" }
+    ],
+
+    "observability": {
+        "enabled": true
+    }
+}
