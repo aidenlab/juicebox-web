@@ -164,8 +164,18 @@ function problem(status, message) {
 // entries this worker chose to store. Keying on the upstream URL would share a namespace with
 // Cloudflare's own handling of the subrequest, where anything already stored under that URL
 // (a WAF 403, say) would be served back as though we had cached it deliberately.
-async function lookup(endpoint, cacheKey, context) {
-    const cached = await caches.default.match(cacheKey)
+//
+// Bump the version whenever the shape of what a key stores changes. Keys outlive deploys, so
+// reusing one after changing the request behind it reads yesterday's answer as though it were
+// today's — which is not a cache miss but a silent wrong answer.
+const CACHE_VERSION = 'v2'
+
+function cacheKey(kind, accession) {
+    return new Request(`https://jb.3dg.io/__cache/${CACHE_VERSION}/${kind}/${accession}`)
+}
+
+async function lookup(endpoint, key, context) {
+    const cached = await caches.default.match(key)
     if (cached) {
         return cached
     }
@@ -180,7 +190,7 @@ async function lookup(endpoint, cacheKey, context) {
     const storable = new Response(response.clone().body, response)
     storable.headers.set('cache-control', 'max-age=86400')
     storable.headers.delete('set-cookie')  // a response carrying one cannot be cached
-    context.waitUntil(caches.default.put(cacheKey, storable))
+    context.waitUntil(caches.default.put(key, storable))
 
     return response
 }
@@ -194,7 +204,7 @@ async function lookup(endpoint, cacheKey, context) {
 async function resolveAccession(accession, portal, context) {
     const response = await lookup(
         portal.item(accession),
-        new Request(`https://jb.3dg.io/__accession/${accession}`),
+        cacheKey('file', accession),
         context,
     )
 
@@ -223,57 +233,54 @@ async function resolveAccession(accession, portal, context) {
     return { hicUrl }
 }
 
+// Fields the choice is made from, requested as files.<field> so the dataset arrives with its
+// file list already populated. Asking for them explicitly is what makes one request enough:
+// the dataset page embeds its files by default but omits preferred_default, the single most
+// informative field here.
+const DATASET_FILE_FIELDS = [
+    'accession',
+    'file_format',
+    'output_type',
+    'preferred_default',
+    'assembly',
+    'date_created',
+    'status',
+    'cloud_metadata',
+]
+
 // Turns an experiment or series accession into a loadable contact map.
 //
-// Two lookups rather than one. The dataset page does embed its files, but the embedded copies
-// omit preferred_default — the single most informative field here — so the files are fetched
-// through search instead, which requires the dataset's collection path (/experiments/ versus
-// /aggregate-series/). Resolving the accession at the portal root yields that path without
-// having to guess it, and works for any dataset type. Both lookups are cached.
+// Searching by accession rather than fetching a collection path means this never has to know
+// whether an accession names an Experiment or an AggregateSeries — both answer here. The
+// largest dataset in the corpus returns about 95 KB this way, so the whole file list is worth
+// taking in one round trip.
 async function resolveDataset(accession, context) {
-    const item = await lookup(
-        `https://www.encodeproject.org/${accession}/?format=json&frame=object`,
-        new Request(`https://jb.3dg.io/__dataset/${accession}`),
-        context,
-    )
-
-    if (item.status === 404) {
-        return { error: problem(404, `No such ENCODE dataset: ${accession}`) }
-    }
-    if (!item.ok) {
-        return { error: problem(502, `ENCODE lookup for ${accession} failed (${item.status}).`) }
-    }
-
-    const dataset = await item.json()
-
-    const query = new URLSearchParams({
-        type: 'File',
-        file_format: 'hic',
-        status: 'released',
-        dataset: dataset['@id'],
-        limit: 'all',
-        format: 'json',
-    })
-    for (const field of [ 'accession', 'preferred_default', 'output_type', 'assembly', 'date_created', 'cloud_metadata' ]) {
-        query.append('field', field)
+    const query = new URLSearchParams({ accession, format: 'json', frame: 'embedded' })
+    for (const field of DATASET_FILE_FIELDS) {
+        query.append('field', `files.${field}`)
     }
 
     const found = await lookup(
         `${ENCODE_SEARCH}?${query}`,
-        new Request(`https://jb.3dg.io/__dataset-files/${accession}`),
+        cacheKey('dataset', accession),
         context,
     )
 
-    // ENCODE answers a search with no matches as 404, so this is "holds no released contact
-    // map" rather than "the dataset is missing" — which the lookup above already ruled out.
     if (found.status === 404) {
-        return { error: problem(404, `${accession} has no released contact map to load.`) }
+        return { error: problem(404, `No such ENCODE dataset: ${accession}`) }
     }
     if (!found.ok) {
-        return { error: problem(502, `ENCODE file search for ${accession} failed (${found.status}).`) }
+        return { error: problem(502, `ENCODE lookup for ${accession} failed (${found.status}).`) }
     }
 
-    const files = (await found.json())['@graph'] ?? []
+    const [ dataset ] = (await found.json())['@graph'] ?? []
+
+    // Filtering on status is load-bearing rather than tidy-minded: this file list is unfiltered,
+    // and supersession leaves most of it behind. One experiment here carries 68 contact maps of
+    // which 61 are archived, and the archived ones are older processings that should not win.
+    const files = (dataset?.files ?? []).filter(
+        (file) => file.file_format === 'hic' && file.status === 'released',
+    )
     if (files.length === 0) {
         return { error: problem(404, `${accession} has no released contact map to load.`) }
     }
