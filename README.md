@@ -2,6 +2,8 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/0f4a804f-32b2-4680-a8d6-9f095da45af5/deploy-status)](https://app.netlify.com/projects/juicebox-web/deploys)
 
+*Netlify status is the work-in-progress preview, not production — see [Deployment](#deployment).*
+
 The web application that wraps [juicebox.js](https://github.com/aidenlab/juicebox.js), an
 interactive viewer for Hi-C contact maps. The viewer itself belongs to the library; this repo
 owns everything around it — the catalogs a user picks data from, the load and share surfaces,
@@ -77,7 +79,19 @@ Copy `.env.example` to `.env`. Only `VITE_`-prefixed names reach the client bund
   to `embed.html`.
 
 Hosted builds read these from the deploy environment, so a name added here must also be set on
-the hosting project or the built site loses the feature.
+the hosting project — on both hosts below — or the built site loses the feature.
+
+## Deployment
+
+Two hosts, with different jobs:
+
+- **Cloudflare Pages — production.** The official deployment. It is what
+  [aidenlab.org/juicebox](https://aidenlab.org/juicebox) serves, and the only one the Workers
+  below sit in front of. `VITE_GA_MEASUREMENT_ID` is set on this host's *production*
+  environment only.
+- **Netlify — work in progress.** Preview builds for collaborators to review before anything
+  reaches production. The badge above reports this host, so a red badge means a preview is
+  broken, not that the live site is down.
 
 ## Workers
 
