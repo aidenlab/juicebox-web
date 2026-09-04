@@ -18,7 +18,8 @@ reading before making changes.
 
 ## Getting started
 
-Requires Node and npm.
+Requires Node 24 or newer, and the npm that ships with it. `.nvmrc` pins 24 so the
+deploy hosts agree; npm 10 cannot resolve this dependency tree (see Deployment).
 
 ```bash
 npm install
@@ -92,6 +93,12 @@ Two hosts, with different jobs:
 - **Netlify — work in progress.** Preview builds for collaborators to review before anything
   reaches production. The badge above reports this host, so a red badge means a preview is
   broken, not that the live site is down.
+
+Both hosts read `.nvmrc`, which pins Node 24. This is load-bearing: `juicebox.js` is a git
+dependency whose `prepare` script builds it, so npm installs its devDependencies — including
+its own `vite` and `vitest` — and deduping those against ours crashes npm 10.9.8 (the npm
+bundled with Node 22) with `Cannot read properties of null (reading 'edgesOut')`. Node 24
+ships npm 11, which resolves the tree correctly.
 
 ## Workers
 
