@@ -10,7 +10,13 @@
     // here rather than clicked into the dashboard. `wrangler deploy` attaches it.
     "routes": [
         { "pattern": "aidenlab.org/juicebox/*", "zone_name": "aidenlab.org" },
-        { "pattern": "aidenlab.org/juicebox", "zone_name": "aidenlab.org" }
+        { "pattern": "aidenlab.org/juicebox", "zone_name": "aidenlab.org" },
+        { "pattern": "www.aidenlab.org/juicebox/*", "zone_name": "aidenlab.org" },
+        { "pattern": "www.aidenlab.org/juicebox", "zone_name": "aidenlab.org" },
+        { "pattern": "3dg.io/juicebox/*", "zone_name": "3dg.io" },
+        { "pattern": "3dg.io/juicebox", "zone_name": "3dg.io" },
+        { "pattern": "www.3dg.io/juicebox/*", "zone_name": "3dg.io" },
+        { "pattern": "www.3dg.io/juicebox", "zone_name": "3dg.io" }
     ],
 
     "observability": {
