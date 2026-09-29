@@ -51,8 +51,7 @@ function configureContactMapLoaders({
                     success: async dbFiles => {
                         const paths = dbFiles.map(dbFile => dbFile.link);
                         const path = paths[0];
-                        const name = getFilename(path);
-                        await loadHandler(path, name, mapType);
+                        await loadHandler(path, undefined, mapType);
                     },
                     cancel: () => {
                     },
@@ -65,9 +64,9 @@ function configureContactMapLoaders({
         });
     });
 
+    // A URL tells us nothing juicebox.js can't work out itself, so it names the map (decoded).
     appendAndConfigureLoadURLModal(rootContainer, urlLoadModalId, path => {
-        const name = getFilename(path);
-        loadHandler(path, name, mapType);
+        loadHandler(path, undefined, mapType);
     });
 
     if (mapMenu) {
@@ -152,13 +151,6 @@ function appendAndConfigureLoadURLModal(root, id, input_handler) {
     });
 
     return html;
-}
-
-function getFilename(url) {
-    let i = url.lastIndexOf('/')
-    let name = i < 0 ? url : url.substring(i + 1)
-    i = name.indexOf('?')
-    return i > 0 ? name.substring(0, i) : name
 }
 
 export default configureContactMapLoaders

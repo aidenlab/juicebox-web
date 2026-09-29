@@ -51,6 +51,10 @@ class MultipleTrackFileLoad {
     }
 }
 
+/**
+ * No `name` is set: juicebox.js names each track from its URL or File, decoded, and lets a
+ * `track name=` line override that. `filename` stays — juicebox.js reads the format from it.
+ */
 async function ingestPaths({ paths, fileLoadHandler }) {
 
     try {
@@ -74,11 +78,11 @@ async function ingestPaths({ paths, fileLoadHandler }) {
 
             if (indexLUT.has(filename)) {
                 const { indexURL } = indexLUT.get(filename)
-                configurations.push({ url: dataPath, filename, indexURL, name: filename, _derivedName: true })
+                configurations.push({ url: dataPath, filename, indexURL })
             } else if (requireIndex.has(FileUtils.getExtension(filename))) {
                 throw new Error(`Unable to load track file ${filename} - you must select both ${filename} and its corresponding index file`)
             } else {
-                configurations.push({ url: dataPath, filename, name: filename, _derivedName: true })
+                configurations.push({ url: dataPath, filename })
             }
         }
 
@@ -100,4 +104,5 @@ function createIndexLUTKey(name, extension) {
     return key
 }
 
+export { ingestPaths }
 export default MultipleTrackFileLoad
