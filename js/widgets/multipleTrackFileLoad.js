@@ -1,3 +1,4 @@
+import hic from 'juicebox.js'
 import { AlertSingleton } from '../alertSingleton.js'
 import { FileUtils } from 'igv-utils'
 
@@ -44,25 +45,11 @@ class MultipleTrackFileLoad {
     static isValidLocalFileInput(input) {
         return input.files && input.files.length > 0
     }
-
-    /**
-     * A URL's last path segment, decoded, so encoded dots (`reads%2Ebam`, as GEO serves) still
-     * yield an extension. A malformed escape (`100%.bed`) is kept raw.
-     */
-    static getFilename(path) {
-        if (path instanceof File) return path.name
-        const segment = path.split(/[?#]/)[0].split('/').pop()
-        try {
-            return decodeURIComponent(segment)
-        } catch {
-            return segment
-        }
-    }
 }
 
 /**
- * No `name` is set: juicebox.js names each track from its URL or File, decoded, and lets a
- * `track name=` line override that. `filename` stays — juicebox.js reads the format from it.
+ * Neither `name` nor `filename` is set: juicebox.js derives both from the URL or File. Indexes are
+ * paired by that same derived filename, so GEO download links (named by `file=`) pair too.
  */
 async function ingestPaths({ paths, fileLoadHandler }) {
 
@@ -71,27 +58,26 @@ async function ingestPaths({ paths, fileLoadHandler }) {
         const dataPaths = []
 
         for (const path of paths) {
-            const name = MultipleTrackFileLoad.getFilename(path)
-            const extension = FileUtils.getExtension(name)
+            const filename = hic.filenameFromUrl(path)
+            const extension = FileUtils.getExtension(filename)
 
             if (indexExtensions.has(extension)) {
-                indexLUT.set(createIndexLUTKey(name, extension), { indexURL: path })
+                indexLUT.set(createIndexLUTKey(filename, extension), { indexURL: path })
             } else {
-                dataPaths.push(path)
+                dataPaths.push({ dataPath: path, filename })
             }
         }
 
         const configurations = []
-        for (const dataPath of dataPaths) {
-            const filename = MultipleTrackFileLoad.getFilename(dataPath)
+        for (const { dataPath, filename } of dataPaths) {
 
             if (indexLUT.has(filename)) {
                 const { indexURL } = indexLUT.get(filename)
-                configurations.push({ url: dataPath, filename, indexURL })
+                configurations.push({ url: dataPath, indexURL })
             } else if (requireIndex.has(FileUtils.getExtension(filename))) {
                 throw new Error(`Unable to load track file ${filename} - you must select both ${filename} and its corresponding index file`)
             } else {
-                configurations.push({ url: dataPath, filename })
+                configurations.push({ url: dataPath })
             }
         }
 

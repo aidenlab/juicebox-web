@@ -72,6 +72,10 @@ export default defineConfig(async ({ command, mode }) => {
         // trailing slash, ./assets/ would resolve to the site root. The worker redirects
         // /juicebox to /juicebox/ for exactly this reason — see workers/juicebox-path-proxy.
         base: './',
+        test: {
+            // igv-utils declares only `module`, which Vite's browser build honours and Vitest's resolver does not.
+            alias: { 'igv-utils': fileURLToPath(new URL('./node_modules/igv-utils/src/index.js', import.meta.url)) },
+        },
         build: {
             outDir: isAidenLab ? 'dist-aidenlab' : 'dist',
             rollupOptions: {
