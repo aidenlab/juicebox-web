@@ -108,3 +108,25 @@ describe('track configs built from URLs with encoded characters', () => {
         expect(config.filename).toBe('x.bigWig')
     })
 })
+
+/**
+ * GEO's download link names the file in its `file=` query parameter, not its path, which ends in
+ * `/download/`. The filename must come from that parameter, decoded, or the format is unknown.
+ */
+describe('track configs built from GEO download links', () => {
+
+    it('take the filename from the file= parameter', async () => {
+        const url = 'https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSM5182714&format=file&file=GSM5182714%5Fsignal%2EbigWig'
+        const [ config ] = await configsFor([ url ])
+
+        expect(config).toEqual({ url, filename: 'GSM5182714_signal.bigWig' })
+    })
+
+    it('pair a BAM with its index', async () => {
+        const bam = 'https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSM1&format=file&file=GSM1%5Freads%2Ebam'
+        const bai = 'https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSM1&format=file&file=GSM1%5Freads%2Ebam%2Ebai'
+        const configs = await configsFor([ bam, bai ])
+
+        expect(configs).toEqual([ { url: bam, filename: 'GSM1_reads.bam', indexURL: bai } ])
+    })
+})
