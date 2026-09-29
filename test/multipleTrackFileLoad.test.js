@@ -1,9 +1,8 @@
+// @vitest-environment happy-dom
+// juicebox.js's bundle touches `document` on import, and the loader pairs by juicebox.js's own filename rule.
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 
 vi.mock('../js/alertSingleton.js', () => ({ AlertSingleton: { present: vi.fn() } }))
-
-// igv-utils declares only `module`, which Vite's browser build honours and Vitest's Node resolver does not.
-vi.mock('igv-utils', () => import('../node_modules/igv-utils/src/index.js'))
 
 import { AlertSingleton } from '../js/alertSingleton.js'
 import { ingestPaths } from '../js/widgets/multipleTrackFileLoad.js'
@@ -34,24 +33,24 @@ describe('track configs built from picked paths', () => {
         expect(config.url).toBe('https://example.org/data/sample%5Fa.bigWig')
     })
 
-    it('still carry the file name juicebox.js reads the format from', async () => {
+    it('carry no filename, so juicebox.js derives the one it reads the format from', async () => {
         const [ config ] = await configsFor([ 'https://www.dropbox.com/s/abc/signal.bigWig?dl=0' ])
 
-        expect(config.filename).toBe('signal.bigWig')
+        expect(config).toEqual({ url: 'https://www.dropbox.com/s/abc/signal.bigWig?dl=0' })
     })
 
     it('name nothing for a local File either', async () => {
         const file = new File([ '' ], 'peaks.bed')
         const [ config ] = await configsFor([ file ])
 
-        expect(config).toEqual({ url: file, filename: 'peaks.bed' })
+        expect(config).toEqual({ url: file })
     })
 
     it('pair a BAM with its index into one track', async () => {
         const configs = await configsFor([ 'https://example.org/reads.bam', 'https://example.org/reads.bam.bai' ])
 
         expect(configs).toEqual([
-            { url: 'https://example.org/reads.bam', filename: 'reads.bam', indexURL: 'https://example.org/reads.bam.bai' }
+            { url: 'https://example.org/reads.bam', indexURL: 'https://example.org/reads.bam.bai' }
         ])
     })
 
@@ -64,8 +63,8 @@ describe('track configs built from picked paths', () => {
 })
 
 /**
- * GEO and others encode dots in URLs (`%2E`). The filename juicebox.js reads the format from — and
- * that the loader pairs indexes by — must be decoded, while the URL loaded stays as given.
+ * GEO and others encode dots in URLs (`%2E`). The loader pairs indexes by the decoded filename
+ * juicebox.js derives, while the URL loaded stays as given.
  */
 describe('track configs built from URLs with encoded characters', () => {
 
@@ -73,7 +72,7 @@ describe('track configs built from URLs with encoded characters', () => {
         const configs = await configsFor([ 'https://example.org/reads%2Ebam', 'https://example.org/reads%2Ebam%2Ebai' ])
 
         expect(configs).toEqual([
-            { url: 'https://example.org/reads%2Ebam', filename: 'reads.bam', indexURL: 'https://example.org/reads%2Ebam%2Ebai' }
+            { url: 'https://example.org/reads%2Ebam', indexURL: 'https://example.org/reads%2Ebam%2Ebai' }
         ])
     })
 
@@ -84,28 +83,10 @@ describe('track configs built from URLs with encoded characters', () => {
         expect(AlertSingleton.present).toHaveBeenCalledWith(expect.stringContaining('reads.bam'))
     })
 
-    it('decode the filename of a text format', async () => {
-        const [ config ] = await configsFor([ 'https://example.org/peaks%2Ebed' ])
-
-        expect(config).toEqual({ url: 'https://example.org/peaks%2Ebed', filename: 'peaks.bed' })
-    })
-
-    it('decode a .bedpe filename, which juicebox.js routes as a 2D annotation', async () => {
-        const [ config ] = await configsFor([ 'https://example.org/loops%2Ebedpe' ])
-
-        expect(config.filename).toBe('loops.bedpe')
-    })
-
-    it('keep a malformed escape raw and still load', async () => {
+    it('load a URL with a malformed escape', async () => {
         const [ config ] = await configsFor([ 'https://example.org/100%.bed' ])
 
-        expect(config).toEqual({ url: 'https://example.org/100%.bed', filename: '100%.bed' })
-    })
-
-    it('strip the query before decoding', async () => {
-        const [ config ] = await configsFor([ 'https://example.org/x.bigWig?dl=0' ])
-
-        expect(config.filename).toBe('x.bigWig')
+        expect(config).toEqual({ url: 'https://example.org/100%.bed' })
     })
 })
 
