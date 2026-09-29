@@ -110,23 +110,27 @@ describe('track configs built from URLs with encoded characters', () => {
 })
 
 /**
- * GEO's download link names the file in its `file=` query parameter, not its path, which ends in
- * `/download/`. The filename must come from that parameter, decoded, or the format is unknown.
+ * GEO's download link names the file in its `file=` query parameter; its path ends in `/download/`.
+ * Pairing picked files is the host's job alone, so it must see through that. Deriving the filename
+ * the format is read from is juicebox.js's (aidenlab/juicebox.js#698), so these say nothing of it.
  */
-describe('track configs built from GEO download links', () => {
+describe('tracks picked as GEO download links', () => {
 
-    it('take the filename from the file= parameter', async () => {
-        const url = 'https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSM5182714&format=file&file=GSM5182714%5Fsignal%2EbigWig'
-        const [ config ] = await configsFor([ url ])
+    const GEO_DOWNLOAD = 'https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSM1&format=file&file='
 
-        expect(config).toEqual({ url, filename: 'GSM5182714_signal.bigWig' })
-    })
-
-    it('pair a BAM with its index', async () => {
-        const bam = 'https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSM1&format=file&file=GSM1%5Freads%2Ebam'
-        const bai = 'https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSM1&format=file&file=GSM1%5Freads%2Ebam%2Ebai'
+    it('pair a BAM with its index into one track', async () => {
+        const bam = `${GEO_DOWNLOAD}GSM1%5Freads%2Ebam`
+        const bai = `${GEO_DOWNLOAD}GSM1%5Freads%2Ebam%2Ebai`
         const configs = await configsFor([ bam, bai ])
 
-        expect(configs).toEqual([ { url: bam, filename: 'GSM1_reads.bam', indexURL: bai } ])
+        expect(configs).toHaveLength(1)
+        expect(configs[0]).toMatchObject({ url: bam, indexURL: bai })
+    })
+
+    it('report a BAM picked without its index', async () => {
+        const configs = await configsFor([ `${GEO_DOWNLOAD}GSM1%5Freads%2Ebam` ])
+
+        expect(configs).toBeUndefined()
+        expect(AlertSingleton.present).toHaveBeenCalledWith(expect.stringContaining('GSM1_reads.bam'))
     })
 })
