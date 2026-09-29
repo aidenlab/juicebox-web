@@ -62,3 +62,49 @@ describe('track configs built from picked paths', () => {
         expect(AlertSingleton.present).toHaveBeenCalledWith(expect.stringContaining('reads.bam'))
     })
 })
+
+/**
+ * GEO and others encode dots in URLs (`%2E`). The filename juicebox.js reads the format from — and
+ * that the loader pairs indexes by — must be decoded, while the URL loaded stays as given.
+ */
+describe('track configs built from URLs with encoded characters', () => {
+
+    it('pair an encoded BAM with its encoded index', async () => {
+        const configs = await configsFor([ 'https://example.org/reads%2Ebam', 'https://example.org/reads%2Ebam%2Ebai' ])
+
+        expect(configs).toEqual([
+            { url: 'https://example.org/reads%2Ebam', filename: 'reads.bam', indexURL: 'https://example.org/reads%2Ebam%2Ebai' }
+        ])
+    })
+
+    it('report an encoded BAM picked without its index', async () => {
+        const configs = await configsFor([ 'https://example.org/reads%2Ebam' ])
+
+        expect(configs).toBeUndefined()
+        expect(AlertSingleton.present).toHaveBeenCalledWith(expect.stringContaining('reads.bam'))
+    })
+
+    it('decode the filename of a text format', async () => {
+        const [ config ] = await configsFor([ 'https://example.org/peaks%2Ebed' ])
+
+        expect(config).toEqual({ url: 'https://example.org/peaks%2Ebed', filename: 'peaks.bed' })
+    })
+
+    it('decode a .bedpe filename, which juicebox.js routes as a 2D annotation', async () => {
+        const [ config ] = await configsFor([ 'https://example.org/loops%2Ebedpe' ])
+
+        expect(config.filename).toBe('loops.bedpe')
+    })
+
+    it('keep a malformed escape raw and still load', async () => {
+        const [ config ] = await configsFor([ 'https://example.org/100%.bed' ])
+
+        expect(config).toEqual({ url: 'https://example.org/100%.bed', filename: '100%.bed' })
+    })
+
+    it('strip the query before decoding', async () => {
+        const [ config ] = await configsFor([ 'https://example.org/x.bigWig?dl=0' ])
+
+        expect(config.filename).toBe('x.bigWig')
+    })
+})

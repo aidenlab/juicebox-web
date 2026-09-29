@@ -1,5 +1,5 @@
 import { AlertSingleton } from '../alertSingleton.js'
-import { FileUtils, URIUtils } from 'igv-utils'
+import { FileUtils } from 'igv-utils'
 
 /**
  * Track-loading equivalent of FileLoad, but with multi-file selection and
@@ -45,9 +45,18 @@ class MultipleTrackFileLoad {
         return input.files && input.files.length > 0
     }
 
+    /**
+     * A URL's last path segment, decoded, so encoded dots (`reads%2Ebam`, as GEO serves) still
+     * yield an extension. A malformed escape (`100%.bed`) is kept raw.
+     */
     static getFilename(path) {
         if (path instanceof File) return path.name
-        return URIUtils.parseUri(path).file
+        const segment = path.split(/[?#]/)[0].split('/').pop()
+        try {
+            return decodeURIComponent(segment)
+        } catch {
+            return segment
+        }
     }
 }
 
