@@ -58,19 +58,18 @@ async function ingestPaths({ paths, fileLoadHandler }) {
         const dataPaths = []
 
         for (const path of paths) {
-            const name = hic.filenameFromUrl(path)
-            const extension = FileUtils.getExtension(name)
+            const filename = hic.filenameFromUrl(path)
+            const extension = FileUtils.getExtension(filename)
 
             if (indexExtensions.has(extension)) {
-                indexLUT.set(createIndexLUTKey(name, extension), { indexURL: path })
+                indexLUT.set(createIndexLUTKey(filename, extension), { indexURL: path })
             } else {
-                dataPaths.push(path)
+                dataPaths.push({ dataPath: path, filename })
             }
         }
 
         const configurations = []
-        for (const dataPath of dataPaths) {
-            const filename = hic.filenameFromUrl(dataPath)
+        for (const { dataPath, filename } of dataPaths) {
 
             if (indexLUT.has(filename)) {
                 const { indexURL } = indexLUT.get(filename)
