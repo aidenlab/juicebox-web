@@ -21,12 +21,16 @@
  *
  */
 
-function tinyURLShortener({endpoint, apiKey, domain, tags}) {
+/**
+ * Posts `{url}` to `endpoint` and reads `data.tiny_url` from the answer. The endpoint is the
+ * jb-shortlink worker's /shorten (workers/jb-shortlink), which holds the TinyURL key: TinyURL's
+ * API no longer answers browser origins, so the page cannot call it directly and no key is sent
+ * from here. Without an endpoint the url is handed back unshortened, without a request.
+ */
+function tinyURLShortener({endpoint}) {
 
-    endpoint = endpoint || "https://api.tinyurl.com/create";
-
-    if (!apiKey) {
-        console.warn("TinyURL API key not provided. Custom domain will not work.");
+    if (!endpoint) {
+        console.warn("No URL shortening endpoint configured. URLs will not be shortened.");
         return async function (url) { return url }
     }
 
@@ -34,8 +38,8 @@ function tinyURLShortener({endpoint, apiKey, domain, tags}) {
         try {
             const response = await fetch(endpoint, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiKey}`},
-                body: JSON.stringify({ url, domain: domain || 't.3dg.io', tags: tags || ['juicebox'] })
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ url })
             });
 
             if (response.ok) {

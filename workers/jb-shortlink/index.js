@@ -6,6 +6,8 @@
 //   https://jb.3dg.io/4DNFI916JQ1Y         -> the app with that 4DN file loaded
 //   https://jb.3dg.io/ENCSR410MDC          -> that ENCODE experiment's contact map
 //   https://jb.3dg.io/?hicUrl=<hic-url>    -> unchanged, still works
+//   POST https://juicebox.aidenlab.org/shorten {url}
+//                                          -> {data: {tiny_url}}: the Share modal's TinyURL link
 //
 // Replaces the redirect rule that used to sit on this hostname. A rule could not do the
 // path form: it has no way to lift the path into a query parameter, and it dropped the
@@ -295,9 +297,78 @@ async function resolveDataset(accession, context) {
     return { hicUrl, name: `${accession} (${chosen.accession})` }
 }
 
+// The Share modal's shortener. TinyURL's API answers every browser preflight with
+// access-control-allow-origin: https://tinyurl.com (since September 2026), so the page cannot
+// call it; it posts here instead and this worker calls TinyURL with the account's key, which
+// is a `wrangler secret` (TINYURL_API_KEY) rather than a string in the client bundle.
+//
+// Only the app's own hostnames (ALLOWED_ORIGINS in wrangler.jsonc, plus Pages previews) may
+// call it, and a page may only shorten links to its own origin, so this is not a public
+// shortener for the account behind t.3dg.io. The answer keeps TinyURL's shape, which is what
+// js/urlShortener.js reads.
+const SHORTEN_PATH = '/shorten'
+const TINYURL_CREATE = 'https://api.tinyurl.com/create'
+const PAGES_PREVIEW = /^https:\/\/[a-z0-9-]+\.juicebox-web\.pages\.dev$/
+
+function originAllowed(origin, env) {
+    return Boolean(origin) && ((env.ALLOWED_ORIGINS ?? []).includes(origin) || PAGES_PREVIEW.test(origin))
+}
+
+async function shorten(request, env) {
+    const origin = request.headers.get('origin')
+    if (!originAllowed(origin, env)) {
+        return problem(403, 'Origin not allowed.')
+    }
+    const headers = {
+        'access-control-allow-origin': origin,
+        'access-control-allow-methods': 'POST, OPTIONS',
+        'access-control-allow-headers': 'content-type',
+        vary: 'origin',
+    }
+    if (request.method === 'OPTIONS') {
+        return new Response(null, { status: 204, headers })
+    }
+    if (request.method !== 'POST') {
+        return new Response('Method not allowed.\n', { status: 405, headers: { ...headers, allow: 'POST, OPTIONS' } })
+    }
+
+    let target
+    try {
+        target = new URL((await request.json()).url)
+    } catch {
+        return Response.json({ error: 'Body must be JSON {url} with an absolute url.' }, { status: 400, headers })
+    }
+    if (target.origin !== origin) {
+        return Response.json({ error: 'Only links to the requesting origin are shortened.' }, { status: 400, headers })
+    }
+
+    // No key: hand the long link back rather than fail, the same degradation the page had
+    // when it was built without one.
+    if (!env.TINYURL_API_KEY) {
+        console.warn('TINYURL_API_KEY is not set; returning the link unshortened.')
+        return Response.json({ data: { tiny_url: target.href } }, { headers })
+    }
+
+    const response = await fetch(TINYURL_CREATE, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json', authorization: `Bearer ${env.TINYURL_API_KEY}` },
+        body: JSON.stringify({ url: target.href, domain: env.TINYURL_DOMAIN ?? 't.3dg.io', tags: [ 'juicebox' ] }),
+    })
+    if (!response.ok) {
+        console.error(`TinyURL answered ${response.status} ${response.statusText}`)
+        return Response.json({ error: 'Shortening failed.' }, { status: 502, headers })
+    }
+    const { data } = await response.json()
+    return Response.json({ data: { tiny_url: data.tiny_url } }, { headers })
+}
+
 export default {
     async fetch(request, env, context) {
         const url = new URL(request.url)
+
+        if (url.pathname === SHORTEN_PATH) {
+            return shorten(request, env)
+        }
 
         const dataset = url.pathname.match(ENCODE_DATASET)
         if (dataset) {

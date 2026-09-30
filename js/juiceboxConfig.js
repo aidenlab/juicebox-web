@@ -18,12 +18,10 @@ export const juiceboxConfig = {
 
     urlShortener: {
         provider: 'tinyURL',
-        // Left undefined when the env var is absent, which is what the shortener's own guard
-        // tests for: it warns and hands back the unshortened URL. A placeholder here would be
-        // truthy, defeat the guard, and send `Bearer YOUR_...` to TinyURL — see aidenlab/juicebox-web#65.
-        apiKey: import.meta.env.VITE_TINYURL_JUICEBOX_API_KEY,
-        domain: 't.3dg.io',
-        endpoint: 'https://api.tinyurl.com/create',
-        tags: ['juicebox'],
+        // The jb-shortlink worker (workers/jb-shortlink) shortens on t.3dg.io with the account's
+        // key. The page sends no key: TinyURL's API no longer answers browser origins, and the key
+        // used to ship in the bundle (aidenlab/juicebox-web#65). Every hostname the app is served
+        // on is on the worker's Origin allow-list.
+        endpoint: 'https://juicebox.aidenlab.org/shorten',
     },
 }

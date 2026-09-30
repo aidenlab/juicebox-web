@@ -2,13 +2,43 @@
     // Deployed by hand with `npx wrangler deploy` from this directory; Pages does not deploy
     // workers. Requires the old jb.3dg.io redirect rule to be removed first — Cloudflare runs
     // redirect rules ahead of workers, so the rule would preempt this route entirely.
+    //
+    // The Share modal's shortener needs the TinyURL key as a secret, set once with
+    //   npx wrangler secret put TINYURL_API_KEY
+    // Without it /shorten answers with the long link.
     "name": "jb-shortlink",
     "main": "index.js",
     "compatibility_date": "2026-08-25",
 
     "routes": [
-        { "pattern": "jb.3dg.io/*", "zone_name": "3dg.io" }
+        { "pattern": "jb.3dg.io/*", "zone_name": "3dg.io" },
+        // The Share modal posts to this one address from every hostname the app is served on.
+        // juicebox.aidenlab.org is a Pages custom domain; a worker route on one path of it
+        // takes that path away from Pages, which has nothing there anyway.
+        { "pattern": "juicebox.aidenlab.org/shorten", "zone_name": "aidenlab.org" }
     ],
+
+    "vars": {
+        "TINYURL_DOMAIN": "t.3dg.io",
+        // Exact-match Origin allow-list for /shorten: every hostname the app is served on.
+        // Pages preview deployments (<hash>.juicebox-web.pages.dev) are allowed by pattern.
+        "ALLOWED_ORIGINS": [
+            "https://aidenlab.org",
+            "https://www.aidenlab.org",
+            "https://juicebox.aidenlab.org",
+            "https://jb.aidenlab.org",
+            "https://juicebox-dev.aidenlab.org",
+            "https://3dg.io",
+            "https://www.3dg.io",
+            "https://juicebox.3dg.io",
+            "https://juicebox-dev.3dg.io",
+            "https://juicebox-v2.3dg.io",
+            "https://juicebox-web.pages.dev",
+            "https://juicebox-web-dev.pages.dev",
+            "http://localhost:5173",
+            "http://127.0.0.1:5173"
+        ]
+    },
 
     "observability": {
         "enabled": true
