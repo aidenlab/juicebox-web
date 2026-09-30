@@ -1,11 +1,12 @@
 import { describe, it, expect, vi, afterEach } from 'vitest'
 
 import { tinyURLShortener } from '../js/urlShortener.js'
+import { juiceboxConfig } from '../js/juiceboxConfig.js'
 
-const API_KEY = 'test-api-key'
+const ENDPOINT = 'https://juicebox.aidenlab.org/shorten'
 const LONG_URL = 'https://aidenlab.org/juicebox/?session=abcdef'
 
-/** Stands in for the TinyURL create endpoint. Only the fields the shortener reads are provided. */
+/** Stands in for the shortening endpoint. Only the fields the shortener reads are provided. */
 function respondWith(body) {
     const fetch = vi.fn(async () => ({
         ok: true,
@@ -24,41 +25,32 @@ function forbidRequests() {
     return fetch
 }
 
-/** The config is read at module scope, so the env has to be in place before it is imported. */
-async function loadConfig(apiKey) {
-    vi.stubEnv('VITE_TINYURL_JUICEBOX_API_KEY', apiKey)
-    vi.resetModules()
-    const { juiceboxConfig } = await import('../js/juiceboxConfig.js')
-    return juiceboxConfig
-}
-
 afterEach(() => {
     vi.unstubAllGlobals()
-    vi.unstubAllEnvs()
     vi.restoreAllMocks()
 })
 
 describe('tinyURL shortener', () => {
 
-    it('shortens through the configured endpoint when an API key is present', async () => {
+    /** The key stays on the worker (workers/jb-shortlink); the page posts the bare url. */
+    it('posts the url to the endpoint, without a key, and reads the short link back', async () => {
         const fetch = respondWith({ data: { tiny_url: 'https://t.3dg.io/xyz' } })
 
-        const shorten = tinyURLShortener({ apiKey: API_KEY, domain: 't.3dg.io', tags: ['juicebox'] })
+        const shorten = tinyURLShortener({ endpoint: ENDPOINT })
 
         await expect(shorten(LONG_URL)).resolves.toBe('https://t.3dg.io/xyz')
 
         const [ endpoint, init ] = fetch.mock.calls[0]
-        expect(endpoint).toBe('https://api.tinyurl.com/create')
-        expect(init.headers.Authorization).toBe(`Bearer ${ API_KEY }`)
-        expect(JSON.parse(init.body)).toMatchObject({ url: LONG_URL, domain: 't.3dg.io' })
+        expect(endpoint).toBe(ENDPOINT)
+        expect(init.headers.Authorization).toBeUndefined()
+        expect(JSON.parse(init.body)).toEqual({ url: LONG_URL })
     })
 
     /**
-     * The degraded path the `!apiKey` guard exists for: a build with no key must still hand back
-     * a usable link rather than throwing out of the share modal.
-     * See aidenlab/juicebox-web#65.
+     * The degraded path: a build with no endpoint must still hand back a usable link rather
+     * than throwing out of the share modal. See aidenlab/juicebox-web#65.
      */
-    it('returns the url unshortened, without a request, when no API key is configured', async () => {
+    it('returns the url unshortened, without a request, when no endpoint is configured', async () => {
         const fetch = forbidRequests()
         const warn = vi.spyOn(console, 'warn').mockImplementation(() => {})
 
@@ -68,30 +60,21 @@ describe('tinyURL shortener', () => {
         expect(fetch).not.toHaveBeenCalled()
         expect(warn).toHaveBeenCalled()
     })
+
+    it('throws on a failed answer so the modal can fall back', async () => {
+        vi.stubGlobal('fetch', vi.fn(async () => ({ ok: false, status: 502, statusText: 'Bad Gateway', json: async () => ({}) })))
+        vi.spyOn(console, 'error').mockImplementation(() => {})
+
+        const shorten = tinyURLShortener({ endpoint: ENDPOINT })
+
+        await expect(shorten(LONG_URL)).rejects.toThrow(/502/)
+    })
 })
 
 describe('url shortener configuration', () => {
 
-    /**
-     * A placeholder standing in for the missing secret is truthy, so it defeats the `!apiKey`
-     * guard in tinyURLShortener and sends `Bearer YOUR_...` to TinyURL.
-     * See aidenlab/juicebox-web#65.
-     */
-    it('leaves the API key falsy when the env var is unset', async () => {
-        const config = await loadConfig(undefined)
-
-        expect(config.urlShortener.apiKey).toBeFalsy()
-    })
-
-    it('leaves the API key falsy when the env var is set but empty', async () => {
-        const config = await loadConfig('')
-
-        expect(config.urlShortener.apiKey).toBeFalsy()
-    })
-
-    it('uses the env var when it is set', async () => {
-        const config = await loadConfig(API_KEY)
-
-        expect(config.urlShortener.apiKey).toBe(API_KEY)
+    it('points at the jb-shortlink worker and carries no key', () => {
+        expect(juiceboxConfig.urlShortener.endpoint).toBe(ENDPOINT)
+        expect(juiceboxConfig.urlShortener.apiKey).toBeUndefined()
     })
 })

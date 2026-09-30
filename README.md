@@ -73,8 +73,6 @@ map menu, ENCODE, 4DN), each turning an external catalog into rows of a searchab
 
 Copy `.env.example` to `.env`. Only `VITE_`-prefixed names reach the client bundle.
 
-- `VITE_TINYURL_JUICEBOX_API_KEY` — TinyURL key for share-link shortening. Absent, sharing
-  degrades to unshortened URLs rather than failing.
 - `VITE_GA_MEASUREMENT_ID` — GA4 measurement ID. Left empty by design: the analytics tag is
   emitted only when it is set, so local and preview builds stay untagged. It is never applied
   to `embed.html`.
@@ -109,7 +107,10 @@ worker itself changes.
 - `juicebox-path-proxy` — serves the app at `aidenlab.org/juicebox`, including the redirect to
   the trailing slash that relative asset URLs require.
 - `jb-shortlink` — the `jb.3dg.io` short-link host, which also resolves a bare ENCODE accession
-  or an embedded `.hic` URL into a loaded map.
+  or an embedded `.hic` URL into a loaded map. It also answers the Share modal's
+  `POST https://juicebox.aidenlab.org/shorten` with a `t.3dg.io` TinyURL link: TinyURL's API no
+  longer accepts browser requests, so the key lives on this worker as the `TINYURL_API_KEY`
+  secret (`npx wrangler secret put TINYURL_API_KEY`) and only the app's own hostnames may call it.
 
 ## Tests
 
