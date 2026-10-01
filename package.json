@@ -24,7 +24,7 @@
     "igv-utils": "github:igvteam/igv-utils#v1.7.1",
     "infinite-table": "github:igvteam/infinite-table#main",
     "install": "^0.13.0",
-    "juicebox.js": "^4.8.0",
+    "juicebox.js": "^4.9.0",
     "vite": "^8.0.11",
     "vitest": "^4.1.10"
   }
