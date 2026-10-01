@@ -61,21 +61,21 @@ describe('contact map load', () => {
         await loadMapIntoTargets({ url: 'https://example.org/a.hic', name: 'a' }, 'contact-map', optionsFor(registry, alerts))
 
         for (const browser of registry.browsers) {
-            const loads = browser.events.filter(e => 'reset' !== e)
-            expect(loads.map(({ kind, config }) => `${ kind }:${ config.name }`), `${ browser.name } received the map`).toEqual([ 'map:a' ])
+            expect(browser.events.map(({ kind, config }) => `${ kind }:${ config.name }`), `${ browser.name } received the map`).toEqual([ 'map:a' ])
         }
 
         expect(alerts).toEqual([])
     })
 
-    it('resets each target before its map arrives, as the single-panel load always has', async () => {
+    it('does not reset a target: with two browsers open a reset drops the aim', async () => {
 
-        const registry = fakeRegistry()
+        const registry = fakeRegistry({ browserCount: 2 })
 
         await loadMapIntoTargets({ url: 'https://example.org/a.hic', name: 'a' }, 'contact-map', optionsFor(registry))
 
         for (const browser of registry.browsers) {
-            expect(browser.events[ 0 ], `${ browser.name } was reset first`).toBe('reset')
+            expect(browser.events, `${ browser.name } was not reset`).not.toContain('reset')
+            expect(browser.events).toHaveLength(1)
         }
     })
 
@@ -90,7 +90,7 @@ describe('contact map load', () => {
         expect(loaded).toEqual([ registry.browsers[ 0 ], registry.browsers[ 2 ] ])
     })
 
-    it('loads a control map into every targeted browser, without resetting any of them', async () => {
+    it('loads a control map into every targeted browser', async () => {
 
         const registry = fakeRegistry({ withMaps: true })
         const alerts = []

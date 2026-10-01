@@ -62,9 +62,12 @@ function mapSummaryMessage({ loaded, failed, skipped }, { url, isControl }) {
  * With no aim in progress the target set resolves to `[currentBrowser]`, so this is the previous
  * single-browser behaviour — the feature is opt-in at the *gesture*, not at this call site.
  *
- * A contact map load resets each target first, as the single-panel load in this shell always has:
- * a new map starts from a clean panel. The aim survives a reset, so the set read here is the set
- * the fan-out then reaches. A control map joins the map already there and resets nothing.
+ * Nothing is reset first, though this shell used to call `browser.reset()` ahead of a contact map
+ * load. A reset takes the browser out of its registry and puts it back, and with exactly two
+ * browsers open that leaves one — at which point juicebox.js drops the aim, since an aim needs
+ * something to aim between. The borders vanished and the map reached one panel. The library's
+ * load clears the outgoing dataset on its way in, and drops the tracks of a panel whose genome the
+ * map replaces, so the reset was not needed for the load to be clean.
  *
  * `onLoaded` is called with each browser that took the map.
  */
@@ -86,9 +89,6 @@ async function loadMapIntoTargets({ url, name }, mapType, { getCurrentBrowser, p
         if (isControl) {
             summary = await registry.loadHicControlFileIntoTargets(config)
         } else {
-            for (const target of registry.targetedBrowsers) {
-                target.reset()
-            }
             summary = await registry.loadHicFileIntoTargets(config)
         }
     } catch (e) {
