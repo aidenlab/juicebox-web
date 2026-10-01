@@ -1,5 +1,6 @@
 import {loadTrackMenu} from "./trackMenu.js"
 import {loadIntoTargets, loadMenuTracks, targetsOf} from "./trackLoad.js"
+import {loadMapIntoTargets} from "./mapLoad.js"
 import {BrowserTrackIndex} from "./browserTrackIndex.js"
 
 import {createSessionWidgets} from './widgets/sessionWidgets.js'
@@ -403,28 +404,16 @@ function loadTracksIntoTargets(configs) {
     })
 }
 
-async function loadHicFile(url, name, mapType) {
-
-    try {
-        const isControl = ('control-map' === mapType)
-        const config =
-            {
-                url,
-                name,
-                isControl
-            };
-
-        const browser = hic.getCurrentBrowser()
-        if (isControl) {
-            await browser.loadHicControlFile(config)
-        } else {
-            browser.reset();
-            await browser.loadHicFile(config);
-            controlMapDropdown.enableIfMapLoaded(browser)
-        }
-    } catch (e) {
-        AlertSingleton.present(`Error loading ${url}: ${e}`);
-    }
+/**
+ * Every contact map and "B" map menu in the shell loads through here, over the same target set as
+ * a track load. The fan-out and the reporting rule live in `mapLoad.js`.
+ */
+function loadHicFile(url, name, mapType) {
+    return loadMapIntoTargets({ url, name }, mapType, {
+        getCurrentBrowser: () => hic.getCurrentBrowser(),
+        presentAlert: message => AlertSingleton.present(message),
+        onLoaded: browser => controlMapDropdown.enableIfMapLoaded(browser)
+    })
 }
 
 function createAppCloneButton(container) {
