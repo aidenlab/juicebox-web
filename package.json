@@ -20,7 +20,7 @@
     "test": "vitest run"
   },
   "devDependencies": {
-    "happy-dom": "^20.14.5",
+    "happy-dom": "^21.0.4",
     "igv-utils": "github:igvteam/igv-utils#v1.7.1",
     "infinite-table": "github:igvteam/infinite-table#main",
     "install": "^0.13.0",
